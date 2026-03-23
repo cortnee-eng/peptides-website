@@ -1,0 +1,14 @@
+# Build artifacts
+V2/
+
+# Environment variables
+.env
+
+# Temporary files
+.tmp/
+
+# macOS
+.DS_Store
+
+# Claude framework
+CLAUDE.md

@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peptide Revealed — Science-Backed Peptide Education</title>
+  <meta name="description" content="Rigorous, evidence-based analysis of peptide science. No hype. No jargon. Just research.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
+  <style>
+    /* ─── RESET ──────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ─── TOKENS ─────────────────────────────── */
+    :root {
+      --forest:      #1C3A24;
+      --sage:        #4E8C5F;
+      --fern:        #7AB88A;
+      --mint:        #C6DFC8;
+      --mint-wash:   #EBF4EC;
+      --cream:       #F4F0E8;
+      --parchment:   #EDE7DA;
+      --white:       #FFFFFF;
+      --ink:         #161D18;
+      --ink-mid:     #3D4F40;
+      --ink-soft:    #6B7E6D;
+      --ink-faint:   #9FB4A1;
+
+      --serif:  'Cormorant Garamond', Georgia, serif;
+      --sans:   'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      font-weight: 300;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.65;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── NAV ────────────────────────────────── */
+    .nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 7px 52px;
+      background: rgba(244, 240, 232, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(78, 140, 95, 0.1);
+      transition: box-shadow 0.4s var(--ease-out);
+    }
+
+    .nav.scrolled {
+      box-shadow: 0 1px 32px rgba(28, 58, 36, 0.09);
+    }
+
+    .nav-logo { text-decoration: none; display: block; line-height: 0; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--sage); }
+
+    .nav-btn {
+      font-size: 12px !important;
+      font-weight: 400 !important;
+      letter-spacing: 0.08em !important;
+      color: var(--white) !important;
+      background: var(--sage);
+      padding: 10px 24px;
+      border-radius: 2px;
+      transition: background 0.25s !important;
+    }
+
+    .nav-btn:hover { background: var(--forest); color: var(--white) !important; }
+
+    /* ─── HERO ───────────────────────────────── */
+    .hero {
+      min-height: 100svh;
+      display: grid;
+      grid-template-columns: 55fr 45fr;
+      align-items: center;
+      padding: 130px 52px 80px;
+      position: relative;
+      overflow: hidden;
+      background: var(--cream);
+      gap: 0;
+    }
+
+    /* Ambient gradient glow */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 65% 75% at 72% 48%, rgba(198, 223, 200, 0.28) 0%, transparent 65%),
+        radial-gradient(ellipse 45% 50% at 15% 85%, rgba(122, 184, 138, 0.1) 0%, transparent 55%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 640px;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      opacity: 0;
+      transform: translateY(18px);
+      animation: fadeUp 0.9s var(--ease-out) forwards 0.15s;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 1px;
+      background: var(--sage);
+      flex-shrink: 0;
+    }
+
+    .hero-headline {
+      font-family: var(--serif);
+      font-size: clamp(54px, 6.2vw, 96px);
+      font-weight: 400;
+      line-height: 0.97;
+      color: var(--forest);
+      margin-bottom: 32px;
+      letter-spacing: -0.025em;
+      opacity: 0;
+      transform: translateY(22px);
+      animation: fadeUp 1s var(--ease-out) forwards 0.3s;
+    }
+
+    .hero-headline em {
+      font-style: italic;
+      color: var(--sage);
+    }
+
+    .hero-headline .line-3 {
+      display: block;
+      padding-left: 2px;
+    }
+
+    .hero-divider {
+      width: 56px;
+      height: 1px;
+      background: linear-gradient(to right, var(--sage), transparent);
+      margin-bottom: 28px;
+      opacity: 0;
+      animation: fadeIn 0.8s var(--ease-out) forwards 0.5s;
+    }
+
+    .hero-sub {
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--ink-mid);
+      max-width: 500px;
+      margin-bottom: 48px;
+      opacity: 0;
+      transform: translateY(18px);
+      animation: fadeUp 0.9s var(--ease-out) forwards 0.48s;
+    }
+
+    .hero-form {
+      display: flex;
+      max-width: 460px;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: fadeUp 0.9s var(--ease-out) forwards 0.62s;
+    }
+
+    .hero-form input {
+      flex: 1;
+      padding: 17px 20px;
+      font-family: var(--sans);
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--ink);
+      background: var(--white);
+      border: 1px solid rgba(78, 140, 95, 0.22);
+      border-right: none;
+      border-radius: 2px 0 0 2px;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .hero-form input::placeholder { color: var(--ink-faint); }
+
+    .hero-form input:focus {
+      border-color: var(--sage);
+      box-shadow: inset 0 0 0 1px var(--sage);
+    }
+
+    .hero-form button {
+      padding: 17px 30px;
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--forest);
+      border: none;
+      border-radius: 0 2px 2px 0;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.25s;
+    }
+
+    .hero-form button:hover { background: var(--sage); }
+
+    .hero-note {
+      margin-top: 14px;
+      font-size: 12px;
+      color: var(--ink-faint);
+      letter-spacing: 0.02em;
+      opacity: 0;
+      animation: fadeIn 0.8s var(--ease-out) forwards 0.85s;
+    }
+
+    /* Hero visual */
+    .hero-visual {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      animation: fadeIn 1.4s var(--ease-out) forwards 0.3s;
+    }
+
+    .hero-mol-svg {
+      width: 100%;
+      max-width: 540px;
+    }
+
+    /* Molecule animations */
+    .mol-float {
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+
+    .mol-float-a { animation: floatA 7s ease-in-out infinite; }
+    .mol-float-b { animation: floatB 9s ease-in-out infinite; animation-delay: -3s; }
+    .mol-float-c { animation: floatA 6s ease-in-out infinite reverse; animation-delay: -5s; }
+    .mol-float-d { animation: floatB 8s ease-in-out infinite; animation-delay: -1.5s; }
+    .mol-float-e { animation: floatA 5.5s ease-in-out infinite reverse; animation-delay: -4s; }
+    .mol-float-f { animation: floatB 7.5s ease-in-out infinite; animation-delay: -2s; }
+
+    .mol-center-pulse {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: centerPulse 4s ease-in-out infinite;
+    }
+
+    .mol-line {
+      stroke-dasharray: 350;
+      stroke-dashoffset: 350;
+      animation: drawLine 1.2s var(--ease-out) forwards, bondBreath 5s ease-in-out infinite 2s;
+    }
+
+    .mol-group {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: molTwist 16s ease-in-out infinite;
+    }
+
+    @keyframes drawLine   { to { stroke-dashoffset: 0; } }
+    @keyframes bondBreath {
+      0%, 100% { stroke-dashoffset: 0; opacity: 1; }
+      50%      { stroke-dashoffset: 55; opacity: 0.5; }
+    }
+    @keyframes floatA     { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    @keyframes floatB     { 0%,100% { transform: translateY(0); } 50% { transform: translateY(9px); } }
+    @keyframes centerPulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50%       { transform: scale(1.12); opacity: 0.82; }
+    }
+    @keyframes molTwist {
+      0%, 100% { transform: rotate(0deg); }
+      25%      { transform: rotate(5deg); }
+      75%      { transform: rotate(-5deg); }
+    }
+
+    /* ─── SHARED SECTION STYLES ──────────────── */
+    section { padding: 108px 52px; }
+
+    .section-eyebrow {
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--sage);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .section-eyebrow::before {
+      content: '';
+      display: block;
+      width: 22px;
+      height: 1px;
+      background: var(--sage);
+      flex-shrink: 0;
+    }
+
+    .section-heading {
+      font-family: var(--serif);
+      font-size: clamp(38px, 4.2vw, 62px);
+      font-weight: 400;
+      line-height: 1.06;
+      color: var(--forest);
+      letter-spacing: -0.02em;
+    }
+
+    .section-heading em {
+      font-style: italic;
+      color: var(--sage);
+    }
+
+    /* ─── WHAT WE COVER ──────────────────────── */
+    .covers {
+      background: var(--white);
+    }
+
+    .covers-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 72px;
+    }
+
+    .covers-header-text { max-width: 520px; }
+
+    .covers-header-aside {
+      max-width: 340px;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--ink-soft);
+      text-align: right;
+      padding-bottom: 8px;
+    }
+
+    .covers-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: rgba(28, 58, 36, 0.06);
+    }
+
+    .cover-card {
+      background: var(--cream);
+      padding: 48px 38px 44px;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.35s;
+    }
+
+    .cover-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--sage);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.45s var(--ease-out);
+    }
+
+    .cover-card:hover { background: var(--mint-wash); }
+    .cover-card:hover::after { transform: scaleX(1); }
+
+    .cover-icon {
+      width: 44px;
+      height: 44px;
+      margin-bottom: 30px;
+    }
+
+    .cover-num {
+      font-family: var(--sans);
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-bottom: 10px;
+    }
+
+    .cover-title {
+      font-family: var(--serif);
+      font-size: 26px;
+      font-weight: 500;
+      line-height: 1.18;
+      color: var(--forest);
+      margin-bottom: 14px;
+    }
+
+    .cover-desc {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--ink-soft);
+    }
+
+    /* ─── FEATURED ARTICLES ──────────────────── */
+    .articles {
+      background: var(--cream);
+    }
+
+    .articles-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 60px;
+      gap: 24px;
+    }
+
+    .view-all {
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--sage);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding-bottom: 3px;
+      border-bottom: 1px solid rgba(78, 140, 95, 0.3);
+      transition: gap 0.25s, border-color 0.25s;
+      white-space: nowrap;
+    }
+
+    .view-all:hover { gap: 18px; border-color: var(--sage); }
+
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .article-card {
+      background: var(--white);
+      border-radius: 2px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
+    }
+
+    .article-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 56px rgba(28, 58, 36, 0.11);
+    }
+
+    .article-thumb {
+      height: 210px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .article-thumb svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+      transition: transform 0.6s var(--ease-out);
+    }
+
+    .article-card:hover .article-thumb svg { transform: scale(1.04); }
+
+    .article-body {
+      padding: 32px 30px 28px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .article-tag {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sage);
+      background: rgba(78, 140, 95, 0.1);
+      padding: 4px 11px;
+      border-radius: 20px;
+    }
+
+    .article-time {
+      font-size: 12px;
+      font-weight: 300;
+      color: var(--ink-faint);
+    }
+
+    .article-title {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 1.28;
+      color: var(--forest);
+      margin-bottom: 12px;
+      transition: color 0.2s;
+    }
+
+    .article-card:hover .article-title { color: var(--sage); }
+
+    .article-excerpt {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--ink-soft);
+      flex: 1;
+      margin-bottom: 22px;
+    }
+
+    .article-cta {
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--sage);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: gap 0.22s;
+    }
+
+    .article-cta:hover { gap: 14px; }
+
+    /* ─── MISSION ─────────────────────────────── */
+    .mission {
+      background: var(--forest);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mission-watermark {
+      position: absolute;
+      right: -80px;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0.055;
+      pointer-events: none;
+    }
+
+    .mission-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 96px;
+      align-items: center;
+    }
+
+    .mission-pull {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(30px, 3.8vw, 52px);
+      font-weight: 300;
+      line-height: 1.22;
+      color: var(--mint);
+      letter-spacing: -0.015em;
+    }
+
+    .mission-pull strong {
+      font-weight: 400;
+      font-style: normal;
+      color: var(--white);
+    }
+
+    .mission-label {
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(198, 223, 200, 0.5);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .mission-label::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 1px;
+      background: rgba(198, 223, 200, 0.4);
+      flex-shrink: 0;
+    }
+
+    .mission-body {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.85;
+      color: rgba(255, 255, 255, 0.65);
+      margin-bottom: 20px;
+    }
+
+    .mission-body + .mission-body {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 15px;
+    }
+
+    .mission-link {
+      margin-top: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--mint);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(198, 223, 200, 0.25);
+      padding-bottom: 4px;
+      transition: gap 0.22s, border-color 0.22s;
+    }
+
+    .mission-link:hover { gap: 18px; border-color: rgba(198, 223, 200, 0.7); }
+
+    /* ─── NEWSLETTER ─────────────────────────── */
+    .newsletter {
+      background: var(--mint-wash);
+      text-align: center;
+    }
+
+    .newsletter-mol {
+      display: block;
+      margin: 0 auto 44px;
+    }
+
+    .newsletter-heading {
+      font-family: var(--serif);
+      font-size: clamp(38px, 4.5vw, 60px);
+      font-weight: 400;
+      color: var(--forest);
+      line-height: 1.08;
+      margin-bottom: 18px;
+      letter-spacing: -0.02em;
+    }
+
+    .newsletter-heading em {
+      font-style: italic;
+      color: var(--sage);
+    }
+
+    .newsletter-sub {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--ink-mid);
+      max-width: 520px;
+      margin: 0 auto 44px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      padding: 18px 22px;
+      font-family: var(--sans);
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--ink);
+      background: var(--white);
+      border: 1px solid rgba(78, 140, 95, 0.2);
+      border-right: none;
+      border-radius: 2px 0 0 2px;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .newsletter-form input:focus {
+      border-color: var(--sage);
+      box-shadow: inset 0 0 0 1px var(--sage);
+    }
+
+    .newsletter-form button {
+      padding: 18px 36px;
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--sage);
+      border: none;
+      border-radius: 0 2px 2px 0;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.25s;
+    }
+
+    .newsletter-form button:hover { background: var(--forest); }
+
+    .newsletter-note {
+      margin-top: 14px;
+      font-size: 12px;
+      color: var(--ink-faint);
+    }
+
+    .newsletter-stats {
+      display: flex;
+      justify-content: center;
+      gap: 72px;
+      margin-top: 72px;
+      padding-top: 56px;
+      border-top: 1px solid rgba(78, 140, 95, 0.14);
+    }
+
+    .stat { text-align: center; }
+
+    .stat-number {
+      font-family: var(--serif);
+      font-size: 46px;
+      font-weight: 400;
+      color: var(--forest);
+      line-height: 1;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+
+    /* ─── FOOTER ─────────────────────────────── */
+    footer {
+      background: var(--forest);
+      padding: 80px 52px 44px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .footer-watermark {
+      position: absolute;
+      bottom: -60px;
+      left: -60px;
+      opacity: 0.045;
+      pointer-events: none;
+    }
+
+    .footer-inner { position: relative; z-index: 1; }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2.2fr 1fr 1fr 1fr;
+      gap: 64px;
+      margin-bottom: 72px;
+    }
+
+    .footer-brand-desc {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.85;
+      color: rgba(255, 255, 255, 0.48);
+      max-width: 260px;
+      margin-top: 22px;
+    }
+
+    .footer-col-head {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(198, 223, 200, 0.5);
+      margin-bottom: 22px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .footer-links a {
+      font-size: 14px;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.52);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--mint); }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 36px;
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
+      gap: 24px;
+    }
+
+    .footer-copy {
+      font-size: 12px;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    .footer-legal {
+      display: flex;
+      gap: 28px;
+    }
+
+    .footer-legal a {
+      font-size: 12px;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.3);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-legal a:hover { color: rgba(255, 255, 255, 0.65); }
+
+    /* ─── SCROLL REVEAL ──────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.85s var(--ease-out), transform 0.85s var(--ease-out);
+    }
+
+    .reveal.in { opacity: 1; transform: translateY(0); }
+
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.32s; }
+    .delay-4 { transition-delay: 0.44s; }
+
+    /* ─── KEYFRAMES ──────────────────────────── */
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    /* ─── RESPONSIVE ─────────────────────────── */
+    @media (max-width: 1100px) {
+      .covers-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid  { grid-template-columns: 1fr 1fr; gap: 40px; }
+    }
+
+    @media (max-width: 960px) {
+      .hero { grid-template-columns: 1fr; padding-top: 150px; }
+      .hero-visual { display: none; }
+      .covers-header { flex-direction: column; align-items: flex-start; }
+      .covers-header-aside { text-align: left; max-width: none; }
+      .mission-inner { grid-template-columns: 1fr; gap: 52px; }
+      .articles-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 680px) {
+      section { padding: 80px 24px; }
+      .nav { padding: 16px 24px; }
+      .nav-links { display: none; }
+      .hero { padding: 110px 24px 60px; }
+      .covers-grid { grid-template-columns: 1fr; }
+      .articles-grid { grid-template-columns: 1fr; }
+      .articles-header { flex-direction: column; align-items: flex-start; }
+      .newsletter-form { flex-direction: column; }
+      .newsletter-form input { border-right: 1px solid rgba(78,140,95,0.2); border-bottom: none; border-radius: 2px 2px 0 0; }
+      .newsletter-form button { border-radius: 0 0 2px 2px; }
+      .newsletter-stats { flex-direction: column; gap: 32px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 36px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      footer { padding: 64px 24px 36px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       NAV
+  ════════════════════════════════════════════ -->
+  <nav class="nav" id="mainNav" aria-label="Main navigation">
+    <a href="#" class="nav-logo" aria-label="Peptide Revealed — Home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" height="56" aria-hidden="true">
+        <g transform="translate(10, 8) scale(1.28)">
+          <line x1="38" y1="38" x2="16" y2="18" stroke="#4E8C5F" stroke-width="2" stroke-linecap="round"/>
+          <line x1="42" y1="36" x2="62" y2="16" stroke="#4E8C5F" stroke-width="2" stroke-linecap="round"/>
+          <line x1="44" y1="40" x2="66" y2="44" stroke="#7AB88A" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="40" y1="44" x2="32" y2="64" stroke="#7AB88A" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="36" y1="42" x2="14" y2="58" stroke="#C6DFC8" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="16" y1="18" x2="6" y2="10" stroke="#C6DFC8" stroke-width="1" stroke-linecap="round"/>
+          <line x1="16" y1="18" x2="18" y2="6" stroke="#C6DFC8" stroke-width="1" stroke-linecap="round"/>
+          <line x1="62" y1="16" x2="72" y2="8" stroke="#C6DFC8" stroke-width="1" stroke-linecap="round"/>
+          <circle cx="16" cy="18" r="6" fill="#4E8C5F"/>
+          <circle cx="62" cy="16" r="5" fill="#4E8C5F"/>
+          <circle cx="66" cy="44" r="4" fill="#7AB88A"/>
+          <circle cx="32" cy="64" r="4" fill="#7AB88A"/>
+          <circle cx="14" cy="58" r="3" fill="#C6DFC8"/>
+          <circle cx="6"  cy="10" r="2" fill="#C6DFC8"/>
+          <circle cx="18" cy="6"  r="2" fill="#C6DFC8"/>
+          <circle cx="72" cy="8"  r="2" fill="#C6DFC8"/>
+          <circle cx="40" cy="40" r="8"   fill="#1C3A24"/>
+          <circle cx="40" cy="40" r="4.5" fill="#4E8C5F"/>
+        </g>
+        <text x="118" y="62" font-family="Georgia,'Times New Roman',serif" font-size="44" font-weight="400" fill="#1C3A24" letter-spacing="-0.5">Peptide</text>
+        <text x="120" y="90" font-family="'Helvetica Neue',Arial,sans-serif" font-size="16" font-weight="300" fill="#4E8C5F" letter-spacing="5">REVEALED</text>
+      </svg>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#covers">Topics</a></li>
+      <li><a href="articles.html">Articles</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#newsletter" class="nav-btn">Subscribe Free</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════════ -->
+  <section class="hero" id="hero" aria-labelledby="hero-heading">
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">Science-Backed Peptide Research</p>
+
+      <h1 class="hero-headline" id="hero-heading">
+        The science<br>
+        of peptides,<br>
+        <em class="line-3">finally clear.</em>
+      </h1>
+
+      <div class="hero-divider" aria-hidden="true"></div>
+
+      <p class="hero-sub">
+        Independent research summaries, dosing protocols, safety profiles, and sourcing guides. No vendor affiliations influencing our content. No medical claims. Just clear, cited information.
+      </p>
+
+      <form class="hero-form" onsubmit="handleSignup(event)" aria-label="Email signup">
+        <label for="hero-email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Email address</label>
+        <input type="email" id="hero-email" placeholder="Enter your email address" autocomplete="email" required>
+        <button type="submit">Subscribe Free</button>
+      </form>
+      <p class="hero-note">No spam. No hype. Just research. Unsubscribe anytime.</p>
+    </div>
+
+    <!-- Large decorative molecular network -->
+    <div class="hero-visual" aria-hidden="true">
+      <svg class="hero-mol-svg" viewBox="0 0 520 500" xmlns="http://www.w3.org/2000/svg">
+
+        <!-- Ambient glow -->
+        <circle cx="260" cy="250" r="180" fill="rgba(78,140,95,0.03)"/>
+        <circle cx="260" cy="250" r="120" fill="rgba(198,223,200,0.05)"/>
+
+        <g class="mol-group">
+
+        <!-- Bond lines — primary -->
+        <line class="mol-line" style="animation-delay:0.2s" x1="260" y1="250" x2="148" y2="155" stroke="#4E8C5F" stroke-width="2"   stroke-linecap="round" opacity="0.75"/>
+        <line class="mol-line" style="animation-delay:0.3s" x1="260" y1="250" x2="358" y2="145" stroke="#4E8C5F" stroke-width="2"   stroke-linecap="round" opacity="0.70"/>
+        <line class="mol-line" style="animation-delay:0.38s" x1="260" y1="250" x2="395" y2="285" stroke="#7AB88A" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+        <line class="mol-line" style="animation-delay:0.46s" x1="260" y1="250" x2="310" y2="370" stroke="#7AB88A" stroke-width="1.5" stroke-linecap="round" opacity="0.60"/>
+        <line class="mol-line" style="animation-delay:0.52s" x1="260" y1="250" x2="148" y2="348" stroke="#7AB88A" stroke-width="1.5" stroke-linecap="round" opacity="0.55"/>
+        <line class="mol-line" style="animation-delay:0.58s" x1="260" y1="250" x2="112" y2="270" stroke="#C6DFC8" stroke-width="1.2" stroke-linecap="round" opacity="0.55"/>
+
+        <!-- Bond lines — secondary -->
+        <line class="mol-line" style="animation-delay:0.65s" x1="148" y1="155" x2="72"  y2="96"  stroke="#C6DFC8" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+        <line class="mol-line" style="animation-delay:0.68s" x1="148" y1="155" x2="106" y2="76"  stroke="#C6DFC8" stroke-width="1" stroke-linecap="round" opacity="0.45"/>
+        <line class="mol-line" style="animation-delay:0.71s" x1="148" y1="155" x2="208" y2="78"  stroke="#4E8C5F" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+        <line class="mol-line" style="animation-delay:0.74s" x1="358" y1="145" x2="418" y2="82"  stroke="#C6DFC8" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
+        <line class="mol-line" style="animation-delay:0.77s" x1="358" y1="145" x2="438" y2="130" stroke="#C6DFC8" stroke-width="1" stroke-linecap="round" opacity="0.35"/>
+        <line class="mol-line" style="animation-delay:0.80s" x1="395" y1="285" x2="456" y2="312" stroke="#C6DFC8" stroke-width="1" stroke-linecap="round" opacity="0.35"/>
+        <line class="mol-line" style="animation-delay:0.83s" x1="310" y1="370" x2="336" y2="440" stroke="#C6DFC8" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+        <line class="mol-line" style="animation-delay:0.86s" x1="148" y1="348" x2="82"  y2="404" stroke="#C6DFC8" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+
+        <!-- Cross-connections (dashed) -->
+        <line class="mol-line" style="animation-delay:0.9s" x1="148" y1="155" x2="358" y2="145" stroke="#7AB88A" stroke-width="1" stroke-linecap="round" opacity="0.2" stroke-dasharray="5 5"/>
+        <line class="mol-line" style="animation-delay:0.95s" x1="310" y1="370" x2="148" y2="348" stroke="#7AB88A" stroke-width="1" stroke-linecap="round" opacity="0.18" stroke-dasharray="5 5"/>
+
+        <!-- Terminal nodes -->
+        <circle class="mol-float mol-float-a" cx="72"  cy="96"  r="5"  fill="#C6DFC8" opacity="0.65"/>
+        <circle class="mol-float mol-float-b" cx="106" cy="76"  r="4"  fill="#C6DFC8" opacity="0.55"/>
+        <circle class="mol-float mol-float-c" cx="208" cy="78"  r="7"  fill="#7AB88A" opacity="0.70"/>
+        <circle class="mol-float mol-float-d" cx="418" cy="82"  r="4"  fill="#C6DFC8" opacity="0.50"/>
+        <circle class="mol-float mol-float-e" cx="438" cy="130" r="3"  fill="#C6DFC8" opacity="0.42"/>
+        <circle class="mol-float mol-float-f" cx="456" cy="312" r="4"  fill="#C6DFC8" opacity="0.40"/>
+        <circle class="mol-float mol-float-a" cx="336" cy="440" r="4"  fill="#C6DFC8" opacity="0.38" style="animation-delay:-4s"/>
+        <circle class="mol-float mol-float-b" cx="82"  cy="404" r="3"  fill="#C6DFC8" opacity="0.32" style="animation-delay:-6s"/>
+
+        <!-- Mid nodes -->
+        <circle class="mol-float mol-float-b" cx="148" cy="155" r="15" fill="#4E8C5F" opacity="0.88"/>
+        <circle class="mol-float mol-float-c" cx="358" cy="145" r="13" fill="#4E8C5F" opacity="0.82"/>
+        <circle class="mol-float mol-float-a" cx="395" cy="285" r="10" fill="#7AB88A" opacity="0.78" style="animation-delay:-2s"/>
+        <circle class="mol-float mol-float-d" cx="310" cy="370" r="11" fill="#7AB88A" opacity="0.72"/>
+        <circle class="mol-float mol-float-e" cx="148" cy="348" r="9"  fill="#7AB88A" opacity="0.65"/>
+        <circle class="mol-float mol-float-f" cx="112" cy="270" r="7"  fill="#C6DFC8" opacity="0.68"/>
+
+        <!-- Center node -->
+        <circle class="mol-center-pulse" cx="260" cy="250" r="26" fill="#1C3A24" opacity="0.95"/>
+        <circle cx="260" cy="250" r="14" fill="#4E8C5F"/>
+        <circle cx="260" cy="250" r="6"  fill="rgba(198,223,200,0.85)"/>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       WHAT WE COVER
+  ════════════════════════════════════════════ -->
+  <section class="covers" id="covers" aria-labelledby="covers-heading">
+    <div class="covers-header">
+      <div class="covers-header-text">
+        <p class="section-eyebrow reveal">What We Cover</p>
+        <h2 class="section-heading reveal delay-1" id="covers-heading">
+          Research you can<br><em>actually trust.</em>
+        </h2>
+      </div>
+      <p class="covers-header-aside reveal delay-2">
+        Every article is grounded in peer-reviewed literature. We cite sources, explain methodology, and flag clearly where evidence is limited or contested.
+      </p>
+    </div>
+
+    <div class="covers-grid">
+
+      <!-- Card 1 -->
+      <article class="cover-card reveal">
+        <svg class="cover-icon" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="22" cy="22" r="9"  fill="none" stroke="#4E8C5F" stroke-width="1.5"/>
+          <circle cx="22" cy="22" r="3"  fill="#4E8C5F"/>
+          <line x1="22" y1="6"  x2="22" y2="12" stroke="#7AB88A" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="22" y1="32" x2="22" y2="38" stroke="#7AB88A" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="6"  y1="22" x2="12" y2="22" stroke="#7AB88A" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="32" y1="22" x2="38" y2="22" stroke="#7AB88A" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="10.7" y1="10.7" x2="15.2" y2="15.2" stroke="#C6DFC8" stroke-width="1" stroke-linecap="round"/>
+          <line x1="28.8" y1="28.8" x2="33.3" y2="33.3" stroke="#C6DFC8" stroke-width="1" stroke-linecap="round"/>
+          <line x1="33.3" y1="10.7" x2="28.8" y2="15.2" stroke="#C6DFC8" stroke-width="1" stroke-linecap="round"/>
+          <line x1="15.2" y1="28.8" x2="10.7" y2="33.3" stroke="#C6DFC8" stroke-width="1" stroke-linecap="round"/>
+        </svg>
+        <p class="cover-num">01 — Profiles</p>
+        <h3 class="cover-title">Peptide Profiles</h3>
+        <p class="cover-desc">Deep dives on individual compounds — mechanisms of action, what the animal and human data shows, dosing protocols discussed in the literature, and safety considerations.</p>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="cover-card reveal delay-1">
+        <svg class="cover-icon" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="8"  y="6"  width="28" height="34" rx="2" fill="none" stroke="#4E8C5F" stroke-width="1.5"/>
+          <line x1="14" y1="16" x2="30" y2="16" stroke="#7AB88A" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="14" y1="22" x2="30" y2="22" stroke="#7AB88A" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="14" y1="28" x2="24" y2="28" stroke="#C6DFC8" stroke-width="1.2" stroke-linecap="round"/>
+          <circle cx="33" cy="33" r="7"  fill="none" stroke="#1C3A24" stroke-width="1.5"/>
+          <line x1="38"  y1="38"  x2="43" y2="43" stroke="#1C3A24" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <p class="cover-num">02 — Beginners</p>
+        <h3 class="cover-title">Beginner Guides</h3>
+        <p class="cover-desc">Start here if you're new to peptides. Foundational knowledge explained clearly — what peptides are, how they work, how they're administered, and how to think critically about claims.</p>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="cover-card reveal delay-2">
+        <svg class="cover-icon" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M8 38 L8 13 Q8 8 13 8 L31 8 Q36 8 36 13 L36 38" fill="none" stroke="#4E8C5F" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="8" y1="38" x2="36" y2="38" stroke="#4E8C5F" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M16 8 L16 29 L22 25 L28 29 L28 8" fill="none" stroke="#7AB88A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p class="cover-num">03 — Legal</p>
+        <h3 class="cover-title">Legal &amp; Regulation</h3>
+        <p class="cover-desc">FDA regulations, the research chemical landscape, state-level variations, and what the 2025–2026 enforcement shift means for access and the broader peptide market.</p>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="cover-card reveal delay-3">
+        <svg class="cover-icon" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="22" cy="22" r="14" fill="none" stroke="#4E8C5F" stroke-width="1.5"/>
+          <path d="M15 22 l5 5 l9-10" fill="none" stroke="#7AB88A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p class="cover-num">04 — Sourcing</p>
+        <h3 class="cover-title">Sourcing &amp; Safety</h3>
+        <p class="cover-desc">How to evaluate vendors, read a Certificate of Analysis, spot red flags, and handle peptides safely. In an unregulated market, you are your own quality control.</p>
+      </article>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       FEATURED ARTICLES
+  ════════════════════════════════════════════ -->
+  <section class="articles" id="articles" aria-labelledby="articles-heading">
+    <div class="articles-header">
+      <div>
+        <p class="section-eyebrow reveal">Featured Articles</p>
+        <h2 class="section-heading reveal delay-1" id="articles-heading">Recent <em>deep dives.</em></h2>
+      </div>
+      <a href="articles.html" class="view-all reveal delay-2" aria-label="View all articles">
+        View all articles
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="#4E8C5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="articles-grid">
+
+      <!-- Article 1: GHK-Cu -->
+      <article class="article-card reveal">
+        <div class="article-thumb">
+          <svg viewBox="0 0 400 210" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="210" fill="#1C3A24"/>
+            <circle cx="200" cy="105" r="100" fill="none" stroke="rgba(78,140,95,0.18)" stroke-width="1"/>
+            <circle cx="200" cy="105" r="60"  fill="none" stroke="rgba(78,140,95,0.12)" stroke-width="1"/>
+            <circle cx="200" cy="105" r="16" fill="rgba(78,140,95,0.45)"/>
+            <circle cx="200" cy="105" r="7"  fill="#4E8C5F"/>
+            <line x1="200" y1="105" x2="124" y2="55"  stroke="#4E8C5F" stroke-width="1.5" opacity="0.65"/>
+            <line x1="200" y1="105" x2="278" y2="50"  stroke="#4E8C5F" stroke-width="1.5" opacity="0.60"/>
+            <line x1="200" y1="105" x2="304" y2="140" stroke="#7AB88A" stroke-width="1.2" opacity="0.55"/>
+            <line x1="200" y1="105" x2="240" y2="174" stroke="#7AB88A" stroke-width="1.2" opacity="0.50"/>
+            <line x1="200" y1="105" x2="118" y2="165" stroke="#C6DFC8" stroke-width="1"   opacity="0.45"/>
+            <circle cx="124" cy="55"  r="9" fill="rgba(78,140,95,0.60)"/>
+            <circle cx="278" cy="50"  r="8" fill="rgba(78,140,95,0.55)"/>
+            <circle cx="304" cy="140" r="6" fill="rgba(122,184,138,0.55)"/>
+            <circle cx="240" cy="174" r="5" fill="rgba(122,184,138,0.50)"/>
+            <circle cx="118" cy="165" r="4" fill="rgba(198,223,200,0.45)"/>
+            <circle cx="70"  cy="28"  r="3" fill="rgba(198,223,200,0.30)"/>
+            <circle cx="318" cy="28"  r="3" fill="rgba(198,223,200,0.28)"/>
+            <circle cx="356" cy="158" r="2" fill="rgba(198,223,200,0.24)"/>
+          </svg>
+        </div>
+        <div class="article-body">
+          <div class="article-meta">
+            <span class="article-tag">Anti-Aging</span>
+            <span class="article-time">11 min read</span>
+          </div>
+          <h3 class="article-title">GHK-Cu: the copper peptide exploding in search</h3>
+          <p class="article-excerpt">Up 1,000%+ in search volume year-over-year. What the dermatology and longevity research actually says about this trending compound.</p>
+          <a href="articles/ghk-cu-copper-peptide.html" class="article-cta">
+            Read article
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2 7h10M8 3l4 4-4 4" stroke="#4E8C5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Article 2: Are Peptides Legal -->
+      <article class="article-card reveal delay-1">
+        <div class="article-thumb">
+          <svg viewBox="0 0 400 210" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="210" fill="#234D2E"/>
+            <line x1="40"  y1="105" x2="120" y2="70"  stroke="rgba(78,140,95,0.45)" stroke-width="2"/>
+            <line x1="120" y1="70"  x2="200" y2="105" stroke="rgba(78,140,95,0.45)" stroke-width="2"/>
+            <line x1="200" y1="105" x2="280" y2="70"  stroke="rgba(78,140,95,0.45)" stroke-width="2"/>
+            <line x1="280" y1="70"  x2="360" y2="105" stroke="rgba(78,140,95,0.45)" stroke-width="2"/>
+            <line x1="120" y1="70"  x2="100" y2="30"  stroke="rgba(198,223,200,0.3)" stroke-width="1.2"/>
+            <line x1="200" y1="105" x2="200" y2="165" stroke="rgba(122,184,138,0.35)" stroke-width="1.2"/>
+            <line x1="280" y1="70"  x2="300" y2="30"  stroke="rgba(198,223,200,0.3)" stroke-width="1.2"/>
+            <circle cx="40"  cy="105" r="10" fill="rgba(78,140,95,0.55)"/>
+            <circle cx="40"  cy="105" r="4"  fill="#4E8C5F"/>
+            <circle cx="120" cy="70"  r="14" fill="rgba(78,140,95,0.55)"/>
+            <circle cx="120" cy="70"  r="6"  fill="#4E8C5F"/>
+            <circle cx="200" cy="105" r="18" fill="rgba(78,140,95,0.6)"/>
+            <circle cx="200" cy="105" r="8"  fill="#4E8C5F"/>
+            <circle cx="280" cy="70"  r="14" fill="rgba(78,140,95,0.55)"/>
+            <circle cx="280" cy="70"  r="6"  fill="#4E8C5F"/>
+            <circle cx="360" cy="105" r="10" fill="rgba(78,140,95,0.50)"/>
+            <circle cx="360" cy="105" r="4"  fill="#4E8C5F"/>
+            <circle cx="100" cy="30"  r="4"  fill="rgba(198,223,200,0.40)"/>
+            <circle cx="200" cy="165" r="5"  fill="rgba(122,184,138,0.45)"/>
+            <circle cx="300" cy="30"  r="4"  fill="rgba(198,223,200,0.38)"/>
+          </svg>
+        </div>
+        <div class="article-body">
+          <div class="article-meta">
+            <span class="article-tag">Legal &amp; Regulation</span>
+            <span class="article-time">10 min read</span>
+          </div>
+          <h3 class="article-title">Are peptides legal in 2026?</h3>
+          <p class="article-excerpt">FDA regulations, the research chemical loophole, state-by-state variations, and what the Peptide Sciences shutdown means for the market.</p>
+          <a href="articles/are-peptides-legal.html" class="article-cta">
+            Read article
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2 7h10M8 3l4 4-4 4" stroke="#4E8C5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Article 3: How to Source -->
+      <article class="article-card reveal delay-2">
+        <div class="article-thumb">
+          <svg viewBox="0 0 400 210" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="210" fill="#122018"/>
+            <ellipse cx="200" cy="105" rx="130" ry="75" fill="none" stroke="rgba(78,140,95,0.14)" stroke-width="1" stroke-dasharray="6 6"/>
+            <ellipse cx="200" cy="105" rx="80"  ry="45" fill="none" stroke="rgba(122,184,138,0.12)" stroke-width="1" stroke-dasharray="4 8"/>
+            <circle  cx="200" cy="105" r="22" fill="none" stroke="rgba(78,140,95,0.22)" stroke-width="1.5"/>
+            <circle  cx="200" cy="105" r="8"  fill="#4E8C5F" opacity="0.85"/>
+            <circle cx="330" cy="105" r="7" fill="#7AB88A" opacity="0.70"/>
+            <circle cx="70"  cy="105" r="6" fill="#7AB88A" opacity="0.65"/>
+            <circle cx="200" cy="30"  r="6" fill="#7AB88A" opacity="0.65"/>
+            <circle cx="200" cy="180" r="5" fill="#C6DFC8" opacity="0.50"/>
+            <circle cx="314" cy="58"  r="5" fill="#C6DFC8" opacity="0.45"/>
+            <circle cx="86"  cy="58"  r="4" fill="#C6DFC8" opacity="0.40"/>
+            <circle cx="86"  cy="152" r="4" fill="#C6DFC8" opacity="0.38"/>
+            <circle cx="314" cy="152" r="4" fill="#C6DFC8" opacity="0.35"/>
+            <circle cx="200" cy="105" r="4" fill="rgba(198,223,200,0.75)"/>
+          </svg>
+        </div>
+        <div class="article-body">
+          <div class="article-meta">
+            <span class="article-tag">Sourcing &amp; Safety</span>
+            <span class="article-time">9 min read</span>
+          </div>
+          <h3 class="article-title">How to source quality peptides safely</h3>
+          <p class="article-excerpt">What to look for in a peptide vendor, how to read a Certificate of Analysis, and red flags that should send you running.</p>
+          <a href="articles/how-to-source-quality-peptides-safely.html" class="article-cta">
+            Read article
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2 7h10M8 3l4 4-4 4" stroke="#4E8C5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       MISSION
+  ════════════════════════════════════════════ -->
+  <section class="mission" id="mission" aria-labelledby="mission-heading">
+
+    <!-- Watermark molecular motif -->
+    <svg class="mission-watermark" viewBox="0 0 600 580" width="600" height="580" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="300" cy="290" r="24" fill="white"/>
+      <line x1="300" y1="290" x2="165" y2="172" stroke="white" stroke-width="2.5"/>
+      <line x1="300" y1="290" x2="432" y2="162" stroke="white" stroke-width="2.5"/>
+      <line x1="300" y1="290" x2="462" y2="332" stroke="white" stroke-width="2"/>
+      <line x1="300" y1="290" x2="362" y2="434" stroke="white" stroke-width="2"/>
+      <line x1="300" y1="290" x2="172" y2="414" stroke="white" stroke-width="2"/>
+      <line x1="300" y1="290" x2="122" y2="312" stroke="white" stroke-width="1.5"/>
+      <circle cx="165" cy="172" r="18" fill="white" opacity="0.8"/>
+      <circle cx="432" cy="162" r="15" fill="white" opacity="0.8"/>
+      <circle cx="462" cy="332" r="12" fill="white" opacity="0.7"/>
+      <circle cx="362" cy="434" r="12" fill="white" opacity="0.7"/>
+      <circle cx="172" cy="414" r="10" fill="white" opacity="0.6"/>
+      <circle cx="122" cy="312" r="8"  fill="white" opacity="0.6"/>
+      <line x1="165" y1="172" x2="86"  y2="104" stroke="white" stroke-width="1.2"/>
+      <line x1="165" y1="172" x2="114" y2="82"  stroke="white" stroke-width="1.2"/>
+      <circle cx="86"  cy="104" r="5" fill="white" opacity="0.45"/>
+      <circle cx="114" cy="82"  r="4" fill="white" opacity="0.38"/>
+      <line x1="432" y1="162" x2="504" y2="94"  stroke="white" stroke-width="1.2"/>
+      <circle cx="504" cy="94"  r="4" fill="white" opacity="0.38"/>
+      <line x1="462" y1="332" x2="532" y2="362" stroke="white" stroke-width="1"/>
+      <circle cx="532" cy="362" r="3" fill="white" opacity="0.30"/>
+      <line x1="362" y1="434" x2="392" y2="512" stroke="white" stroke-width="1"/>
+      <circle cx="392" cy="512" r="3" fill="white" opacity="0.26"/>
+    </svg>
+
+    <div class="mission-inner">
+      <blockquote class="mission-pull reveal" aria-label="Mission statement quote">
+        <em>"Peptide science</em> is advancing faster than the internet can explain it — <strong>we exist</strong> to close that gap."
+      </blockquote>
+
+      <div class="reveal delay-2">
+        <p class="mission-label" id="mission-heading">Our Mission</p>
+        <p class="mission-body">
+          Peptide Revealed exists because the peptide space desperately needs better information. Too much of what's available online is either vendor-funded marketing dressed up as education, anonymous posts with no sourcing, or fear-mongering content designed to drive clicks rather than inform.
+        </p>
+        <p class="mission-body">
+          Every article we publish is grounded in peer-reviewed research, clearly cited, and written to help you understand what the evidence actually says. We maintain strict editorial independence from peptide vendors and supplement companies. When the evidence is limited or conflicting, we say so.
+        </p>
+        <a href="about.html" class="mission-link">
+          Our editorial standards
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       NEWSLETTER
+  ════════════════════════════════════════════ -->
+  <section class="newsletter" id="newsletter" aria-labelledby="newsletter-heading">
+
+    <!-- Small molecular icon -->
+    <svg class="newsletter-mol" viewBox="0 0 88 56" width="88" height="56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="44" cy="28" r="10" fill="#1C3A24"/>
+      <circle cx="44" cy="28" r="5"  fill="#4E8C5F"/>
+      <line x1="44" y1="28" x2="16" y2="13" stroke="#4E8C5F"  stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="44" y1="28" x2="72" y2="13" stroke="#4E8C5F"  stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="44" y1="28" x2="72" y2="43" stroke="#7AB88A"  stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="44" y1="28" x2="16" y2="43" stroke="#7AB88A"  stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="16" y1="13" x2="4"  y2="6"  stroke="#C6DFC8"  stroke-width="1" stroke-linecap="round"/>
+      <line x1="72" y1="13" x2="84" y2="6"  stroke="#C6DFC8"  stroke-width="1" stroke-linecap="round"/>
+      <circle cx="16" cy="13" r="6"  fill="#4E8C5F"/>
+      <circle cx="72" cy="13" r="5"  fill="#4E8C5F"/>
+      <circle cx="72" cy="43" r="4"  fill="#7AB88A"/>
+      <circle cx="16" cy="43" r="4"  fill="#7AB88A"/>
+      <circle cx="4"  cy="6"  r="2"  fill="#C6DFC8"/>
+      <circle cx="84" cy="6"  r="2"  fill="#C6DFC8"/>
+    </svg>
+
+    <h2 class="newsletter-heading reveal" id="newsletter-heading">
+      Stay at the frontier<br>of <em>peptide science.</em>
+    </h2>
+
+    <p class="newsletter-sub reveal delay-1">
+      Join researchers, clinicians, and curious minds who rely on Peptide Revealed for rigorous, unbiased analysis — delivered twice monthly, free.
+    </p>
+
+    <form class="newsletter-form reveal delay-2" onsubmit="handleSignup(event)" aria-label="Newsletter signup">
+      <label for="nl-email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Email address</label>
+      <input type="email" id="nl-email" placeholder="Your email address" autocomplete="email" required>
+      <button type="submit">Subscribe Free</button>
+    </form>
+    <p class="newsletter-note reveal delay-3">Free forever. Unsubscribe anytime. No spam, ever.</p>
+
+    <div class="newsletter-stats reveal delay-2" role="list" aria-label="Content statistics">
+      <div class="stat" role="listitem">
+        <div class="stat-number" aria-label="340 plus research citations">340+</div>
+        <div class="stat-label">Research Citations</div>
+      </div>
+      <div class="stat" role="listitem">
+        <div class="stat-number" aria-label="45 plus peptides profiled">45+</div>
+        <div class="stat-label">Peptides Profiled</div>
+      </div>
+      <div class="stat" role="listitem">
+        <div class="stat-number" aria-label="Updated weekly">Weekly</div>
+        <div class="stat-label">Content Updates</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       DISCLAIMER
+  ════════════════════════════════════════════ -->
+  <section style="padding: 36px 52px; background: var(--parchment); border-top: 1px solid rgba(28,58,36,0.08);">
+    <p style="font-size: 12px; color: var(--ink-soft); line-height: 1.8; max-width: 820px; margin: 0 auto; text-align: center;">
+      <strong style="color: var(--ink-mid);">Medical disclaimer:</strong> Peptide Revealed provides educational content only. Nothing on this site constitutes medical advice, diagnosis, or treatment recommendations. Always consult a qualified healthcare professional before using any peptide, supplement, or medication. All research references are cited from peer-reviewed sources.
+    </p>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════ -->
+  <footer aria-label="Site footer">
+
+    <!-- Watermark -->
+    <svg class="footer-watermark" viewBox="0 0 520 500" width="520" height="500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="260" cy="250" r="22" fill="white"/>
+      <line x1="260" y1="250" x2="148" y2="155" stroke="white" stroke-width="2"/>
+      <line x1="260" y1="250" x2="358" y2="145" stroke="white" stroke-width="2"/>
+      <line x1="260" y1="250" x2="395" y2="285" stroke="white" stroke-width="1.5"/>
+      <line x1="260" y1="250" x2="310" y2="370" stroke="white" stroke-width="1.5"/>
+      <line x1="260" y1="250" x2="148" y2="348" stroke="white" stroke-width="1.5"/>
+      <circle cx="148" cy="155" r="15" fill="white" opacity="0.8"/>
+      <circle cx="358" cy="145" r="13" fill="white" opacity="0.8"/>
+      <circle cx="395" cy="285" r="10" fill="white" opacity="0.7"/>
+      <circle cx="310" cy="370" r="11" fill="white" opacity="0.7"/>
+      <circle cx="148" cy="348" r="9"  fill="white" opacity="0.6"/>
+    </svg>
+
+    <div class="footer-inner">
+      <div class="footer-grid">
+
+        <!-- Brand column -->
+        <div>
+          <!-- Footer logo — light version -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" height="34" aria-label="Peptide Revealed">
+            <g transform="translate(10, 8) scale(1.28)">
+              <line x1="38" y1="38" x2="16" y2="18" stroke="#7AB88A" stroke-width="2" stroke-linecap="round"/>
+              <line x1="42" y1="36" x2="62" y2="16" stroke="#7AB88A" stroke-width="2" stroke-linecap="round"/>
+              <line x1="44" y1="40" x2="66" y2="44" stroke="#C6DFC8" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="40" y1="44" x2="32" y2="64" stroke="#C6DFC8" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="36" y1="42" x2="14" y2="58" stroke="rgba(198,223,200,0.5)" stroke-width="1.2" stroke-linecap="round"/>
+              <line x1="16" y1="18" x2="6"  y2="10" stroke="rgba(198,223,200,0.4)" stroke-width="1" stroke-linecap="round"/>
+              <line x1="16" y1="18" x2="18" y2="6"  stroke="rgba(198,223,200,0.4)" stroke-width="1" stroke-linecap="round"/>
+              <line x1="62" y1="16" x2="72" y2="8"  stroke="rgba(198,223,200,0.4)" stroke-width="1" stroke-linecap="round"/>
+              <circle cx="16" cy="18" r="6"   fill="#7AB88A"/>
+              <circle cx="62" cy="16" r="5"   fill="#7AB88A"/>
+              <circle cx="66" cy="44" r="4"   fill="#C6DFC8" opacity="0.8"/>
+              <circle cx="32" cy="64" r="4"   fill="#C6DFC8" opacity="0.8"/>
+              <circle cx="14" cy="58" r="3"   fill="#C6DFC8" opacity="0.6"/>
+              <circle cx="6"  cy="10" r="2"   fill="#C6DFC8" opacity="0.5"/>
+              <circle cx="18" cy="6"  r="2"   fill="#C6DFC8" opacity="0.5"/>
+              <circle cx="72" cy="8"  r="2"   fill="#C6DFC8" opacity="0.5"/>
+              <circle cx="40" cy="40" r="8"   fill="rgba(255,255,255,0.15)"/>
+              <circle cx="40" cy="40" r="4.5" fill="#7AB88A"/>
+            </g>
+            <text x="118" y="62"  font-family="Georgia,'Times New Roman',serif" font-size="44" font-weight="400" fill="white"   letter-spacing="-0.5">Peptide</text>
+            <text x="120" y="90" font-family="'Helvetica Neue',Arial,sans-serif" font-size="16" font-weight="300" fill="#7AB88A" letter-spacing="5">REVEALED</text>
+          </svg>
+          <p class="footer-brand-desc">
+            Rigorous, evidence-based analysis of peptide science for researchers, clinicians, and the intellectually curious. Founded on a commitment to accuracy over influence.
+          </p>
+        </div>
+
+        <!-- Topics -->
+        <div>
+          <p class="footer-col-head">Topics</p>
+          <ul class="footer-links">
+            <li><a href="articles.html">Peptide Profiles</a></li>
+            <li><a href="articles.html">Beginner Guides</a></li>
+            <li><a href="articles.html">Legal &amp; Regulation</a></li>
+            <li><a href="articles.html">Sourcing &amp; Safety</a></li>
+            <li><a href="articles.html">Weight Loss &amp; GLP-1</a></li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div>
+          <p class="footer-col-head">Company</p>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="about.html">Editorial Standards</a></li>
+            <li><a href="about.html">Medical Disclaimer</a></li>
+            <li><a href="mailto:hello@peptiderevealed.com">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Follow -->
+        <div>
+          <p class="footer-col-head">Follow</p>
+          <ul class="footer-links">
+            <li><a href="#">Twitter / X</a></li>
+            <li><a href="#">Substack</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="#">RSS Feed</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Peptide Revealed. All rights reserved. For informational purposes only — not medical advice.</p>
+        <nav class="footer-legal" aria-label="Legal links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Disclaimer</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    /* ─── Nav shadow on scroll ─── */
+    const nav = document.getElementById('mainNav');
+    const onScroll = () => {
+      nav.classList.toggle('scrolled', window.scrollY > 24);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    /* ─── Scroll reveal ─── */
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          revealObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
+
+    revealEls.forEach(el => revealObs.observe(el));
+
+    /* ─── Email signup handler ─── */
+    function handleSignup(e) {
+      e.preventDefault();
+      const form   = e.currentTarget;
+      const input  = form.querySelector('input[type="email"]');
+      const btn    = form.querySelector('button');
+      const email  = input.value.trim();
+
+      if (!email) return;
+
+      btn.textContent = 'Subscribed!';
+      btn.style.background = 'var(--forest)';
+      input.value = '';
+      input.disabled = true;
+      btn.disabled   = true;
+
+      setTimeout(() => {
+        btn.textContent = 'Subscribe Free';
+        btn.style.background = '';
+        input.disabled = false;
+        btn.disabled   = false;
+      }, 4000);
+    }
+  </script>
+</body>
+</html>

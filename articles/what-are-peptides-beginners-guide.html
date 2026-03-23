@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What are peptides? A beginner's guide — Peptide Revealed</title>
+  <meta name="description" content="Everything you need to know about peptides before diving deeper. What they are, how they work, and why they matter.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --forest:#1C3A24; --sage:#4E8C5F; --fern:#7AB88A; --mint:#C6DFC8;
+      --mint-wash:#EBF4EC; --cream:#F4F0E8; --parchment:#EDE7DA; --white:#FFFFFF;
+      --ink:#161D18; --ink-mid:#3D4F40; --ink-soft:#6B7E6D; --ink-faint:#9FB4A1;
+      --serif:'Cormorant Garamond',Georgia,serif; --sans:'DM Sans','Helvetica Neue',Arial,sans-serif;
+      --ease-out:cubic-bezier(0.22,1,0.36,1);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family:var(--sans); font-weight:300; color:var(--ink); background:var(--cream); line-height:1.65; overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+    .nav { position:fixed; inset:0 0 auto 0; z-index:200; display:flex; align-items:center; justify-content:space-between; padding:18px 52px; background:rgba(244,240,232,0.88); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-bottom:1px solid rgba(78,140,95,0.1); transition:box-shadow 0.4s var(--ease-out); }
+    .nav.scrolled { box-shadow:0 1px 32px rgba(28,58,36,0.09); }
+    .nav-logo { text-decoration:none; display:block; line-height:0; }
+    .nav-links { display:flex; align-items:center; gap:40px; list-style:none; }
+    .nav-links a { font-family:var(--sans); font-size:12px; font-weight:400; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-soft); text-decoration:none; transition:color 0.2s; }
+    .nav-links a:hover { color:var(--sage); }
+    .nav-btn { font-size:12px !important; font-weight:400 !important; letter-spacing:0.08em !important; color:var(--white) !important; background:var(--sage); padding:10px 24px; border-radius:2px; transition:background 0.25s !important; }
+    .nav-btn:hover { background:var(--forest); color:var(--white) !important; }
+    .article-header { padding:140px 52px 56px; background:var(--white); border-bottom:1px solid rgba(28,58,36,0.08); }
+    .article-header-inner { max-width:760px; margin:0 auto; }
+    .breadcrumb { display:flex; align-items:center; gap:8px; font-size:12px; color:var(--ink-faint); margin-bottom:24px; }
+    .breadcrumb a { color:var(--ink-faint); text-decoration:none; transition:color 0.2s; }
+    .breadcrumb a:hover { color:var(--sage); }
+    .breadcrumb-sep { opacity:0.5; }
+    .article-tag { display:inline-block; font-size:10px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--sage); background:rgba(78,140,95,0.1); padding:5px 13px; border-radius:20px; margin-bottom:20px; }
+    .article-title { font-family:var(--serif); font-size:clamp(32px,5vw,58px); font-weight:400; line-height:1.08; color:var(--forest); letter-spacing:-0.02em; margin-bottom:20px; }
+    .article-excerpt { font-size:18px; font-weight:300; line-height:1.7; color:var(--ink-soft); margin-bottom:28px; max-width:640px; }
+    .article-byline { display:flex; align-items:center; gap:20px; font-size:13px; color:var(--ink-faint); padding-top:20px; border-top:1px solid rgba(28,58,36,0.07); flex-wrap:wrap; }
+    .byline-sep { opacity:0.4; }
+    .article-body-wrap { max-width:760px; margin:0 auto; padding:64px 52px 100px; }
+    .prose h2 { font-family:var(--serif); font-size:30px; font-weight:400; color:var(--forest); letter-spacing:-0.015em; line-height:1.2; margin:52px 0 16px; }
+    .prose p { font-size:16px; font-weight:300; line-height:1.85; color:var(--ink-mid); margin-bottom:20px; }
+    .prose ul, .prose ol { margin:0 0 20px 24px; }
+    .prose li { font-size:16px; font-weight:300; line-height:1.85; color:var(--ink-mid); margin-bottom:6px; }
+    .prose strong { font-weight:500; color:var(--ink); }
+    .prose a { color:var(--sage); text-decoration:underline; text-underline-offset:3px; }
+    .prose a:hover { color:var(--forest); }
+    .divider { width:48px; height:1px; background:linear-gradient(to right,var(--sage),transparent); margin:48px 0; }
+    .disclaimer-bar { background:var(--parchment); border-top:1px solid rgba(28,58,36,0.08); padding:28px 52px; text-align:center; }
+    .disclaimer-bar p { font-size:12px; color:var(--ink-soft); line-height:1.8; max-width:720px; margin:0 auto; }
+    footer { background:var(--forest); padding:48px 52px 36px; }
+    .footer-bottom { display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; }
+    .footer-copy { font-size:12px; font-weight:300; color:rgba(255,255,255,0.3); }
+    .footer-legal { display:flex; gap:28px; }
+    .footer-legal a { font-size:12px; font-weight:300; color:rgba(255,255,255,0.3); text-decoration:none; transition:color 0.2s; }
+    .footer-legal a:hover { color:rgba(255,255,255,0.65); }
+    @media (max-width:680px) {
+      .nav { padding:16px 24px; } .nav-links { display:none; }
+      .article-header { padding:110px 24px 44px; }
+      .article-body-wrap { padding:44px 24px 72px; }
+      .disclaimer-bar { padding:24px; } footer { padding:40px 24px 28px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav" id="mainNav">
+    <a href="../index.html" class="nav-logo" aria-label="Peptide Revealed — Home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" height="34" aria-hidden="true">
+        <g transform="translate(10,8) scale(1.28)">
+          <line x1="38" y1="38" x2="16" y2="18" stroke="#4E8C5F" stroke-width="2" stroke-linecap="round"/>
+          <line x1="42" y1="36" x2="62" y2="16" stroke="#4E8C5F" stroke-width="2" stroke-linecap="round"/>
+          <line x1="44" y1="40" x2="66" y2="44" stroke="#7AB88A" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="40" y1="44" x2="32" y2="64" stroke="#7AB88A" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="36" y1="42" x2="14" y2="58" stroke="#C6DFC8" stroke-width="1.2" stroke-linecap="round"/>
+          <circle cx="16" cy="18" r="6" fill="#4E8C5F"/><circle cx="62" cy="16" r="5" fill="#4E8C5F"/>
+          <circle cx="66" cy="44" r="4" fill="#7AB88A"/><circle cx="32" cy="64" r="4" fill="#7AB88A"/>
+          <circle cx="40" cy="40" r="8" fill="#1C3A24"/><circle cx="40" cy="40" r="4.5" fill="#4E8C5F"/>
+        </g>
+        <text x="118" y="62" font-family="Georgia,serif" font-size="44" font-weight="400" fill="#1C3A24" letter-spacing="-0.5">Peptide</text>
+        <text x="120" y="90" font-family="'Helvetica Neue',Arial,sans-serif" font-size="16" font-weight="300" fill="#4E8C5F" letter-spacing="5">REVEALED</text>
+      </svg>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html#covers">Topics</a></li>
+      <li><a href="../articles.html">Articles</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../index.html#newsletter" class="nav-btn">Subscribe Free</a></li>
+    </ul>
+  </nav>
+
+  <div class="article-header">
+    <div class="article-header-inner">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <a href="../articles.html">Articles</a>
+        <span class="breadcrumb-sep">›</span>
+        <span>Beginner Guides</span>
+      </div>
+      <span class="article-tag">Beginner Guides</span>
+      <h1 class="article-title">What are peptides? A beginner's guide</h1>
+      <p class="article-excerpt">Everything you need to know about peptides before diving deeper. What they are, how they work, and why they matter.</p>
+      <div class="article-byline">
+        <span>Peptide Revealed</span>
+        <span class="byline-sep">·</span>
+        <span>January 16, 2026</span>
+        <span class="byline-sep">·</span>
+        <span>8 min read</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="article-body-wrap">
+    <article class="prose">
+      <p>If you've landed here, you're probably curious about peptides but not sure where to start. Maybe you've seen them mentioned in the context of weight loss, anti-aging, injury recovery, or athletic performance. The information online ranges from rigorously scientific to wildly promotional, which makes it hard to know what to trust.</p>
+      <p>This guide gives you the foundational knowledge to navigate the peptide space with a critical eye.</p>
+
+      <h2>The basics: what are peptides?</h2>
+      <p>Peptides are short chains of amino acids — the same building blocks that make up proteins. The difference between a peptide and a protein is essentially length: peptides are typically 2–50 amino acids long, while proteins are longer chains.</p>
+      <p>Your body produces thousands of peptides naturally. They function as signaling molecules, hormones, and regulators of countless biological processes. Insulin, for example, is a peptide hormone. So are oxytocin and endorphins.</p>
+      <p>When people talk about "peptides" in the health and wellness context, they're usually referring to synthetic or semi-synthetic versions of these naturally occurring compounds, designed to produce specific biological effects.</p>
+
+      <h2>Why peptides are generating so much interest</h2>
+      <p>Several factors have converged to make peptides one of the most-discussed topics in health:</p>
+      <p><strong>The GLP-1 revolution:</strong> The success of semaglutide (Ozempic/Wegovy) and tirzepatide (Mounjaro) for weight loss has put peptide-based therapies in the mainstream spotlight. These are FDA-approved medications that have demonstrated unprecedented efficacy.</p>
+      <p><strong>The longevity movement:</strong> High-profile researchers and influencers in the anti-aging space have popularized peptides like BPC-157, GHK-Cu, and epithalon as potential tools for healthspan extension.</p>
+      <p><strong>Accessibility:</strong> Peptides have been relatively easy to obtain through research chemical vendors and compounding pharmacies, though this landscape is changing as regulatory enforcement increases.</p>
+      <p><strong>Growing research base:</strong> PubMed shows a steady increase in peptide-related publications over the past decade, with particularly strong growth in therapeutic applications.</p>
+
+      <h2>Categories of peptides</h2>
+      <p>Peptides can be grouped by their primary applications:</p>
+      <ul>
+        <li><strong>Metabolic/weight loss:</strong> GLP-1 agonists (semaglutide, tirzepatide), growth hormone secretagogues (CJC-1295, ipamorelin)</li>
+        <li><strong>Healing/recovery:</strong> BPC-157, TB-500 (thymosin beta-4)</li>
+        <li><strong>Anti-aging/skin:</strong> GHK-Cu, epithalon, collagen peptides</li>
+        <li><strong>Cognitive:</strong> Selank, semax, dihexa</li>
+        <li><strong>Immune:</strong> Thymosin alpha-1, LL-37</li>
+      </ul>
+      <p>Each category has its own evidence base, risk profile, and regulatory status. We cover these in depth in our individual peptide profiles.</p>
+
+      <h2>How peptides are administered</h2>
+      <p><strong>Injection</strong> (subcutaneous or intramuscular): The most common route for research peptides. Provides high bioavailability but requires proper technique and sterile handling.</p>
+      <p><strong>Oral:</strong> Some peptides can be taken by mouth, though most are degraded by stomach acid and digestive enzymes before absorption. Oral peptide delivery is an active area of pharmaceutical research.</p>
+      <p><strong>Topical:</strong> Primarily used for skin-targeted peptides like GHK-Cu. Limited to local effects.</p>
+      <p><strong>Nasal:</strong> Some cognitive peptides (selank, semax) are administered intranasally for faster CNS access.</p>
+
+      <h2>What to be cautious about</h2>
+      <p>The peptide space has legitimate scientific excitement, but it also has real pitfalls:</p>
+      <p><strong>Animal-only evidence:</strong> Many peptides with enthusiastic followings have been studied only in animal models. Rat studies don't automatically translate to human efficacy or safety.</p>
+      <p><strong>Source quality:</strong> Unregulated peptide vendors vary enormously in quality. Purity, dosing accuracy, and sterility are real concerns with research-grade products.</p>
+      <p><strong>Hype cycles:</strong> Social media amplifies both legitimate research and unfounded claims. Always look for primary sources (actual published studies) rather than relying on influencer testimonials.</p>
+      <p><strong>Regulatory risk:</strong> The legal landscape for research peptides is tightening. What's available today may not be tomorrow.</p>
+
+      <h2>How to use this site</h2>
+      <p>Peptide Revealed is organized to help you go as deep as you want.</p>
+      <p>Start with our <a href="../articles.html">peptide profiles</a> for detailed breakdowns of individual compounds. Check the <a href="are-peptides-legal.html">legal and regulation</a> section for the latest on what's changing. Browse <a href="how-to-source-quality-peptides-safely.html">sourcing and safety guides</a> if you're evaluating vendors.</p>
+      <p>Every article cites its sources. When the evidence is strong, we say so. When it's limited or conflicting, we say that too.</p>
+      <p>Welcome to the space. Take your time and think critically.</p>
+    </article>
+  </main>
+
+  <div class="disclaimer-bar">
+    <p><strong>Medical disclaimer:</strong> This article provides educational content only. Nothing here constitutes medical advice, diagnosis, or treatment recommendations. Always consult a qualified healthcare professional before using any peptide or supplement.</p>
+  </div>
+
+  <footer>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Peptide Revealed. For informational purposes only — not medical advice.</p>
+      <nav class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Disclaimer</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 24), { passive: true });
+  </script>
+</body>
+</html>

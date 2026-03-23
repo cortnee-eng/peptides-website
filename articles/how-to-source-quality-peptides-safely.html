@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to source quality peptides safely — Peptide Revealed</title>
+  <meta name="description" content="What to look for in a peptide vendor, how to read a Certificate of Analysis, and red flags that should send you running.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --forest:#1C3A24; --sage:#4E8C5F; --fern:#7AB88A; --mint:#C6DFC8;
+      --mint-wash:#EBF4EC; --cream:#F4F0E8; --parchment:#EDE7DA; --white:#FFFFFF;
+      --ink:#161D18; --ink-mid:#3D4F40; --ink-soft:#6B7E6D; --ink-faint:#9FB4A1;
+      --serif:'Cormorant Garamond',Georgia,serif; --sans:'DM Sans','Helvetica Neue',Arial,sans-serif;
+      --ease-out:cubic-bezier(0.22,1,0.36,1);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family:var(--sans); font-weight:300; color:var(--ink); background:var(--cream); line-height:1.65; overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+    .nav { position:fixed; inset:0 0 auto 0; z-index:200; display:flex; align-items:center; justify-content:space-between; padding:18px 52px; background:rgba(244,240,232,0.88); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-bottom:1px solid rgba(78,140,95,0.1); transition:box-shadow 0.4s var(--ease-out); }
+    .nav.scrolled { box-shadow:0 1px 32px rgba(28,58,36,0.09); }
+    .nav-logo { text-decoration:none; display:block; line-height:0; }
+    .nav-links { display:flex; align-items:center; gap:40px; list-style:none; }
+    .nav-links a { font-family:var(--sans); font-size:12px; font-weight:400; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-soft); text-decoration:none; transition:color 0.2s; }
+    .nav-links a:hover { color:var(--sage); }
+    .nav-btn { font-size:12px !important; font-weight:400 !important; letter-spacing:0.08em !important; color:var(--white) !important; background:var(--sage); padding:10px 24px; border-radius:2px; transition:background 0.25s !important; }
+    .nav-btn:hover { background:var(--forest); color:var(--white) !important; }
+    .article-header { padding:140px 52px 56px; background:var(--white); border-bottom:1px solid rgba(28,58,36,0.08); }
+    .article-header-inner { max-width:760px; margin:0 auto; }
+    .breadcrumb { display:flex; align-items:center; gap:8px; font-size:12px; color:var(--ink-faint); margin-bottom:24px; }
+    .breadcrumb a { color:var(--ink-faint); text-decoration:none; transition:color 0.2s; }
+    .breadcrumb a:hover { color:var(--sage); }
+    .breadcrumb-sep { opacity:0.5; }
+    .article-tag { display:inline-block; font-size:10px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--sage); background:rgba(78,140,95,0.1); padding:5px 13px; border-radius:20px; margin-bottom:20px; }
+    .article-title { font-family:var(--serif); font-size:clamp(32px,5vw,58px); font-weight:400; line-height:1.08; color:var(--forest); letter-spacing:-0.02em; margin-bottom:20px; }
+    .article-excerpt { font-size:18px; font-weight:300; line-height:1.7; color:var(--ink-soft); margin-bottom:28px; max-width:640px; }
+    .article-byline { display:flex; align-items:center; gap:20px; font-size:13px; color:var(--ink-faint); padding-top:20px; border-top:1px solid rgba(28,58,36,0.07); flex-wrap:wrap; }
+    .byline-sep { opacity:0.4; }
+    .article-body-wrap { max-width:760px; margin:0 auto; padding:64px 52px 100px; }
+    .prose h2 { font-family:var(--serif); font-size:30px; font-weight:400; color:var(--forest); letter-spacing:-0.015em; line-height:1.2; margin:52px 0 16px; }
+    .prose p { font-size:16px; font-weight:300; line-height:1.85; color:var(--ink-mid); margin-bottom:20px; }
+    .prose ul, .prose ol { margin:0 0 20px 24px; }
+    .prose li { font-size:16px; font-weight:300; line-height:1.85; color:var(--ink-mid); margin-bottom:6px; }
+    .prose strong { font-weight:500; color:var(--ink); }
+    .prose a { color:var(--sage); text-decoration:underline; text-underline-offset:3px; }
+    .prose a:hover { color:var(--forest); }
+    .divider { width:48px; height:1px; background:linear-gradient(to right,var(--sage),transparent); margin:48px 0; }
+    .disclaimer-bar { background:var(--parchment); border-top:1px solid rgba(28,58,36,0.08); padding:28px 52px; text-align:center; }
+    .disclaimer-bar p { font-size:12px; color:var(--ink-soft); line-height:1.8; max-width:720px; margin:0 auto; }
+    footer { background:var(--forest); padding:48px 52px 36px; }
+    .footer-bottom { display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; }
+    .footer-copy { font-size:12px; font-weight:300; color:rgba(255,255,255,0.3); }
+    .footer-legal { display:flex; gap:28px; }
+    .footer-legal a { font-size:12px; font-weight:300; color:rgba(255,255,255,0.3); text-decoration:none; transition:color 0.2s; }
+    .footer-legal a:hover { color:rgba(255,255,255,0.65); }
+    @media (max-width:680px) {
+      .nav { padding:16px 24px; } .nav-links { display:none; }
+      .article-header { padding:110px 24px 44px; }
+      .article-body-wrap { padding:44px 24px 72px; }
+      .disclaimer-bar { padding:24px; } footer { padding:40px 24px 28px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav" id="mainNav">
+    <a href="../index.html" class="nav-logo" aria-label="Peptide Revealed — Home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" height="34" aria-hidden="true">
+        <g transform="translate(10,8) scale(1.28)">
+          <line x1="38" y1="38" x2="16" y2="18" stroke="#4E8C5F" stroke-width="2" stroke-linecap="round"/>
+          <line x1="42" y1="36" x2="62" y2="16" stroke="#4E8C5F" stroke-width="2" stroke-linecap="round"/>
+          <line x1="44" y1="40" x2="66" y2="44" stroke="#7AB88A" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="40" y1="44" x2="32" y2="64" stroke="#7AB88A" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="36" y1="42" x2="14" y2="58" stroke="#C6DFC8" stroke-width="1.2" stroke-linecap="round"/>
+          <circle cx="16" cy="18" r="6" fill="#4E8C5F"/><circle cx="62" cy="16" r="5" fill="#4E8C5F"/>
+          <circle cx="66" cy="44" r="4" fill="#7AB88A"/><circle cx="32" cy="64" r="4" fill="#7AB88A"/>
+          <circle cx="40" cy="40" r="8" fill="#1C3A24"/><circle cx="40" cy="40" r="4.5" fill="#4E8C5F"/>
+        </g>
+        <text x="118" y="62" font-family="Georgia,serif" font-size="44" font-weight="400" fill="#1C3A24" letter-spacing="-0.5">Peptide</text>
+        <text x="120" y="90" font-family="'Helvetica Neue',Arial,sans-serif" font-size="16" font-weight="300" fill="#4E8C5F" letter-spacing="5">REVEALED</text>
+      </svg>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html#covers">Topics</a></li>
+      <li><a href="../articles.html">Articles</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../index.html#newsletter" class="nav-btn">Subscribe Free</a></li>
+    </ul>
+  </nav>
+
+  <div class="article-header">
+    <div class="article-header-inner">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <a href="../articles.html">Articles</a>
+        <span class="breadcrumb-sep">›</span>
+        <span>Sourcing &amp; Safety</span>
+      </div>
+      <span class="article-tag">Sourcing &amp; Safety</span>
+      <h1 class="article-title">How to source quality peptides safely</h1>
+      <p class="article-excerpt">What to look for in a peptide vendor, how to read a Certificate of Analysis, and red flags that should send you running.</p>
+      <div class="article-byline">
+        <span>Peptide Revealed</span>
+        <span class="byline-sep">·</span>
+        <span>March 2, 2026</span>
+        <span class="byline-sep">·</span>
+        <span>9 min read</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="article-body-wrap">
+    <article class="prose">
+      <p>Learning how to source quality peptides safely is one of the most important — and overlooked — parts of navigating the peptide space. Unlike FDA-approved medications where quality, purity, and dosing are tightly regulated, most research peptides exist in an unregulated marketplace where vendor quality varies enormously.</p>
+
+      <h2>Why sourcing matters</h2>
+      <p>The difference between a high-quality peptide and a low-quality one isn't just about efficacy — it's about safety. Impurities in poorly manufactured peptides can include residual solvents, bacterial endotoxins, heavy metals, incomplete peptide sequences, and other synthesis byproducts.</p>
+      <p>When you're injecting a compound subcutaneously, purity isn't an academic concern. It's a health concern.</p>
+
+      <h2>How to evaluate a vendor</h2>
+      <p>There are several key criteria to assess:</p>
+      <p><strong>Third-party testing:</strong> The most important factor. Reputable vendors provide Certificates of Analysis (COAs) from independent, third-party laboratories — not just in-house testing. In-house COAs are essentially a company grading its own homework.</p>
+      <p><strong>HPLC purity results:</strong> High-Performance Liquid Chromatography is the standard method for assessing peptide purity. Look for purity levels above 98%. Anything below 95% is a red flag for injectable compounds.</p>
+      <p><strong>Mass spectrometry confirmation:</strong> Mass spec data confirms that the compound is actually what it claims to be. This is separate from purity — a vial could be 99% pure but contain the wrong peptide. Mass spec catches this.</p>
+      <p><strong>Business transparency:</strong> Legitimate vendors have verifiable business addresses, real customer service, clear return policies, and a professional web presence. Anonymous operations with only cryptocurrency payment options should raise concerns.</p>
+      <p><strong>Community reputation:</strong> While not a substitute for documentation, long-standing positive reputation across multiple independent forums and review sites provides some signal.</p>
+
+      <h2>How to read a COA</h2>
+      <p>A Certificate of Analysis should include:</p>
+      <ul>
+        <li>The peptide name and sequence</li>
+        <li>The batch or lot number</li>
+        <li>The date of analysis</li>
+        <li>The name of the testing laboratory</li>
+        <li>HPLC purity percentage with a chromatogram</li>
+        <li>Mass spectrometry results showing the expected molecular weight</li>
+        <li>Appearance and solubility data</li>
+      </ul>
+      <p>If a vendor provides a COA that's missing the lab name, doesn't include a chromatogram, or shows results from a lab you can't verify exists — treat it as unreliable.</p>
+
+      <h2>Red flags</h2>
+      <p>Certain patterns should make you walk away from a vendor immediately:</p>
+      <p>Prices that are dramatically below the market average. Quality peptide synthesis is expensive. If someone is selling BPC-157 at a fraction of what established vendors charge, corners are being cut somewhere.</p>
+      <p>No COAs available, or COAs only provided "upon request" that never materialize. Legitimate vendors make this documentation readily accessible.</p>
+      <p>Aggressive health claims on the vendor website. Companies selling "research use only" peptides while simultaneously making therapeutic claims are both legally vulnerable and ethically questionable.</p>
+      <p>Payment only via cryptocurrency or wire transfer with no traditional payment options. While some legitimate vendors accept crypto, it shouldn't be the only option.</p>
+      <p>Website launched recently with no verifiable history. The peptide vendor space has a significant problem with fly-by-night operations that appear, sell questionable products, and disappear.</p>
+
+      <h2>The current landscape</h2>
+      <p>The vendor landscape is shifting significantly in 2026. The closure of Peptide Sciences — previously the largest US research peptide vendor — has disrupted the market. Remaining vendors are operating in an environment of increased regulatory scrutiny.</p>
+      <p>This means the importance of due diligence has actually increased. As established vendors exit and new ones enter to fill the gap, the risk of encountering low-quality products rises.</p>
+
+      <h2>Storage and handling</h2>
+      <p>Even high-quality peptides degrade if stored improperly. Key principles:</p>
+      <ul>
+        <li>Keep lyophilized (freeze-dried) peptides refrigerated or frozen</li>
+        <li>Reconstitute with bacteriostatic water rather than sterile water for multi-use vials</li>
+        <li>Store reconstituted peptides in the refrigerator and use within 2–4 weeks</li>
+        <li>Avoid repeated freeze-thaw cycles</li>
+      </ul>
+
+      <h2>The bottom line</h2>
+      <p>In an unregulated market, you are your own quality control department. Take the time to verify COAs, research vendors, and understand what you're buying. The extra effort is worth it when you're dealing with compounds that go into your body.</p>
+      <p>When in doubt, work with a licensed healthcare provider who can prescribe pharmaceutical-grade peptides through legitimate compounding pharmacies.</p>
+    </article>
+  </main>
+
+  <div class="disclaimer-bar">
+    <p><strong>Medical disclaimer:</strong> This article provides educational content only. Nothing here constitutes medical advice, diagnosis, or treatment recommendations. Always consult a qualified healthcare professional before using any peptide or supplement.</p>
+  </div>
+
+  <footer>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Peptide Revealed. For informational purposes only — not medical advice.</p>
+      <nav class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Disclaimer</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 24), { passive: true });
+  </script>
+</body>
+</html>

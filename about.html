@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Peptide Revealed</title>
+  <meta name="description" content="Learn about Peptide Revealed's mission, editorial standards, and commitment to evidence-based peptide education.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --forest:    #1C3A24;
+      --sage:      #4E8C5F;
+      --fern:      #7AB88A;
+      --mint:      #C6DFC8;
+      --mint-wash: #EBF4EC;
+      --cream:     #F4F0E8;
+      --parchment: #EDE7DA;
+      --white:     #FFFFFF;
+      --ink:       #161D18;
+      --ink-mid:   #3D4F40;
+      --ink-soft:  #6B7E6D;
+      --ink-faint: #9FB4A1;
+      --serif:  'Cormorant Garamond', Georgia, serif;
+      --sans:   'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      font-weight: 300;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.65;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── NAV ─── */
+    .nav {
+      position: fixed; inset: 0 0 auto 0; z-index: 200;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 52px;
+      background: rgba(244, 240, 232, 0.88);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(78, 140, 95, 0.1);
+      transition: box-shadow 0.4s var(--ease-out);
+    }
+    .nav.scrolled { box-shadow: 0 1px 32px rgba(28, 58, 36, 0.09); }
+    .nav-logo { text-decoration: none; display: block; line-height: 0; }
+    .nav-links { display: flex; align-items: center; gap: 40px; list-style: none; }
+    .nav-links a {
+      font-family: var(--sans); font-size: 12px; font-weight: 400;
+      letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--sage); }
+    .nav-links a.active { color: var(--sage); }
+    .nav-btn {
+      font-size: 12px !important; font-weight: 400 !important;
+      letter-spacing: 0.08em !important; color: var(--white) !important;
+      background: var(--sage); padding: 10px 24px; border-radius: 2px;
+      transition: background 0.25s !important;
+    }
+    .nav-btn:hover { background: var(--forest); color: var(--white) !important; }
+
+    /* ─── PAGE HEADER ─── */
+    .page-header {
+      padding: 140px 52px 60px;
+      background: var(--forest);
+      position: relative; overflow: hidden;
+    }
+    .page-header::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(122,184,138,0.1) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .page-header-inner { max-width: 760px; position: relative; z-index: 1; }
+    .page-eyebrow {
+      font-size: 11px; font-weight: 400; letter-spacing: 0.22em;
+      text-transform: uppercase; color: rgba(198,223,200,0.6); margin-bottom: 20px;
+      display: flex; align-items: center; gap: 14px;
+    }
+    .page-eyebrow::before {
+      content: ''; display: block; width: 28px; height: 1px;
+      background: rgba(198,223,200,0.4); flex-shrink: 0;
+    }
+    .page-title {
+      font-family: var(--serif); font-size: clamp(38px, 5vw, 64px);
+      font-weight: 400; line-height: 1.06; color: var(--white);
+      letter-spacing: -0.02em; margin-bottom: 20px;
+    }
+    .page-title em { font-style: italic; color: var(--mint); }
+    .page-subtitle {
+      font-size: 17px; font-weight: 300; color: rgba(255,255,255,0.65);
+      line-height: 1.75; max-width: 540px;
+    }
+
+    /* ─── CONTENT ─── */
+    .content-wrap {
+      max-width: 760px; margin: 0 auto; padding: 80px 52px 100px;
+    }
+    .prose h2 {
+      font-family: var(--serif); font-size: 32px; font-weight: 400;
+      color: var(--forest); letter-spacing: -0.015em; line-height: 1.2;
+      margin: 52px 0 18px;
+    }
+    .prose p {
+      font-size: 16px; font-weight: 300; line-height: 1.85;
+      color: var(--ink-mid); margin-bottom: 20px;
+    }
+    .prose a { color: var(--sage); text-decoration: underline; text-underline-offset: 3px; }
+    .prose a:hover { color: var(--forest); }
+
+    .divider {
+      width: 56px; height: 1px;
+      background: linear-gradient(to right, var(--sage), transparent);
+      margin: 48px 0;
+    }
+
+    /* ─── NEWSLETTER ─── */
+    .newsletter-strip {
+      background: var(--mint-wash);
+      border-top: 1px solid rgba(78, 140, 95, 0.14);
+      padding: 64px 52px;
+      text-align: center;
+    }
+    .newsletter-strip h2 {
+      font-family: var(--serif); font-size: clamp(30px, 4vw, 46px);
+      font-weight: 400; color: var(--forest); line-height: 1.1;
+      letter-spacing: -0.02em; margin-bottom: 14px;
+    }
+    .newsletter-strip h2 em { font-style: italic; color: var(--sage); }
+    .newsletter-strip p {
+      font-size: 16px; font-weight: 300; color: var(--ink-mid);
+      line-height: 1.75; margin-bottom: 36px;
+    }
+    .nl-form { display: flex; max-width: 460px; margin: 0 auto; }
+    .nl-form input {
+      flex: 1; padding: 16px 20px; font-family: var(--sans); font-size: 14px;
+      font-weight: 300; color: var(--ink); background: var(--white);
+      border: 1px solid rgba(78, 140, 95, 0.22); border-right: none;
+      border-radius: 2px 0 0 2px; outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .nl-form input:focus { border-color: var(--sage); box-shadow: inset 0 0 0 1px var(--sage); }
+    .nl-form button {
+      padding: 16px 28px; font-family: var(--sans); font-size: 12px;
+      font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--white); background: var(--sage); border: none;
+      border-radius: 0 2px 2px 0; cursor: pointer; white-space: nowrap;
+      transition: background 0.25s;
+    }
+    .nl-form button:hover { background: var(--forest); }
+
+    /* ─── FOOTER ─── */
+    footer { background: var(--forest); padding: 48px 52px 36px; }
+    .footer-bottom {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 24px; flex-wrap: wrap;
+    }
+    .footer-copy { font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.3); }
+    .footer-legal { display: flex; gap: 28px; }
+    .footer-legal a {
+      font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.3);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .footer-legal a:hover { color: rgba(255,255,255,0.65); }
+
+    @media (max-width: 680px) {
+      .nav { padding: 16px 24px; }
+      .nav-links { display: none; }
+      .page-header { padding: 110px 24px 48px; }
+      .content-wrap { padding: 52px 24px 72px; }
+      .newsletter-strip { padding: 48px 24px; }
+      .nl-form { flex-direction: column; }
+      .nl-form input { border-right: 1px solid rgba(78,140,95,0.22); border-bottom: none; border-radius: 2px 2px 0 0; }
+      .nl-form button { border-radius: 0 0 2px 2px; }
+      footer { padding: 40px 24px 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" id="mainNav" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo" aria-label="Peptide Revealed — Home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" height="34" aria-hidden="true">
+        <g transform="translate(10, 8) scale(1.28)">
+          <line x1="38" y1="38" x2="16" y2="18" stroke="#4E8C5F" stroke-width="2" stroke-linecap="round"/>
+          <line x1="42" y1="36" x2="62" y2="16" stroke="#4E8C5F" stroke-width="2" stroke-linecap="round"/>
+          <line x1="44" y1="40" x2="66" y2="44" stroke="#7AB88A" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="40" y1="44" x2="32" y2="64" stroke="#7AB88A" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="36" y1="42" x2="14" y2="58" stroke="#C6DFC8" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="16" y1="18" x2="6"  y2="10" stroke="#C6DFC8" stroke-width="1" stroke-linecap="round"/>
+          <line x1="16" y1="18" x2="18" y2="6"  stroke="#C6DFC8" stroke-width="1" stroke-linecap="round"/>
+          <line x1="62" y1="16" x2="72" y2="8"  stroke="#C6DFC8" stroke-width="1" stroke-linecap="round"/>
+          <circle cx="16" cy="18" r="6" fill="#4E8C5F"/>
+          <circle cx="62" cy="16" r="5" fill="#4E8C5F"/>
+          <circle cx="66" cy="44" r="4" fill="#7AB88A"/>
+          <circle cx="32" cy="64" r="4" fill="#7AB88A"/>
+          <circle cx="14" cy="58" r="3" fill="#C6DFC8"/>
+          <circle cx="6"  cy="10" r="2" fill="#C6DFC8"/>
+          <circle cx="18" cy="6"  r="2" fill="#C6DFC8"/>
+          <circle cx="72" cy="8"  r="2" fill="#C6DFC8"/>
+          <circle cx="40" cy="40" r="8"   fill="#1C3A24"/>
+          <circle cx="40" cy="40" r="4.5" fill="#4E8C5F"/>
+        </g>
+        <text x="118" y="62" font-family="Georgia,'Times New Roman',serif" font-size="44" font-weight="400" fill="#1C3A24" letter-spacing="-0.5">Peptide</text>
+        <text x="120" y="90" font-family="'Helvetica Neue',Arial,sans-serif" font-size="16" font-weight="300" fill="#4E8C5F" letter-spacing="5">REVEALED</text>
+      </svg>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#covers">Topics</a></li>
+      <li><a href="articles.html">Articles</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="index.html#newsletter" class="nav-btn">Subscribe Free</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <div class="page-header-inner">
+      <p class="page-eyebrow">About us</p>
+      <h1 class="page-title">Peptide science,<br><em>explained honestly.</em></h1>
+      <p class="page-subtitle">We exist because the peptide space desperately needs better information. Here's how we approach it.</p>
+    </div>
+  </div>
+
+  <main class="content-wrap">
+    <article class="prose">
+      <p>
+        Peptide Revealed exists because the peptide space desperately needs better information. Too much of what's available online is either vendor-funded marketing dressed up as education, anonymous posts with no sourcing, or fear-mongering content designed to drive clicks rather than inform.
+      </p>
+      <p>
+        We take a different approach. Every article we publish is grounded in peer-reviewed research, clearly cited, and written to help you understand what the evidence actually says — not what we want it to say.
+      </p>
+
+      <div class="divider"></div>
+
+      <h2>Our editorial standards</h2>
+      <p>
+        We maintain strict editorial independence from peptide vendors, supplement companies, and pharmaceutical manufacturers. Our revenue comes from advertising and affiliate partnerships, but these relationships never influence our editorial content or recommendations.
+      </p>
+      <p>
+        When we reference research, we cite it. When the evidence is limited or conflicting, we say so. When something is animal-only research being marketed as proven in humans, we call that out.
+      </p>
+
+      <h2>What we cover</h2>
+      <p>
+        Our content spans the full spectrum of peptide research, including individual peptide profiles with mechanisms of action and safety data, regulatory and legal analysis, sourcing and quality evaluation guides, emerging research in longevity, cognitive, and metabolic peptides, and practical protocol information grounded in available evidence.
+      </p>
+
+      <h2>What we don't do</h2>
+      <p>
+        We don't provide medical advice. We don't make treatment recommendations. We don't sell peptides or any health products directly. If you're considering using any peptide, consult a qualified healthcare professional who can evaluate your specific situation, potential drug interactions, and help you weigh the risk-benefit ratio based on the available evidence.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        For corrections, feedback, or editorial inquiries, reach us at <a href="mailto:hello@peptiderevealed.com">hello@peptiderevealed.com</a>.
+      </p>
+    </article>
+  </main>
+
+  <div class="newsletter-strip">
+    <h2>Stay at the frontier<br>of <em>peptide science.</em></h2>
+    <p>Join researchers, clinicians, and curious minds who rely on Peptide Revealed<br>for rigorous, unbiased analysis — delivered twice monthly, free.</p>
+    <form class="nl-form" onsubmit="handleSignup(event)" aria-label="Newsletter signup">
+      <label for="nl-email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Email address</label>
+      <input type="email" id="nl-email" placeholder="Your email address" autocomplete="email" required>
+      <button type="submit">Subscribe Free</button>
+    </form>
+  </div>
+
+  <footer>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Peptide Revealed. All rights reserved. For informational purposes only — not medical advice.</p>
+      <nav class="footer-legal" aria-label="Legal links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Disclaimer</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 24);
+    }, { passive: true });
+
+    function handleSignup(e) {
+      e.preventDefault();
+      const form = e.currentTarget;
+      const input = form.querySelector('input[type="email"]');
+      const btn = form.querySelector('button');
+      btn.textContent = 'Subscribed!';
+      btn.style.background = 'var(--forest)';
+      input.value = ''; input.disabled = true; btn.disabled = true;
+      setTimeout(() => {
+        btn.textContent = 'Subscribe Free'; btn.style.background = '';
+        input.disabled = false; btn.disabled = false;
+      }, 4000);
+    }
+  </script>
+</body>
+</html>

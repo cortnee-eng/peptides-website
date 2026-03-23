@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Articles — Peptide Revealed</title>
+  <meta name="description" content="Research-backed guides on peptides, protocols, safety, and regulation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --forest:    #1C3A24;
+      --sage:      #4E8C5F;
+      --fern:      #7AB88A;
+      --mint:      #C6DFC8;
+      --mint-wash: #EBF4EC;
+      --cream:     #F4F0E8;
+      --parchment: #EDE7DA;
+      --white:     #FFFFFF;
+      --ink:       #161D18;
+      --ink-mid:   #3D4F40;
+      --ink-soft:  #6B7E6D;
+      --ink-faint: #9FB4A1;
+      --serif:  'Cormorant Garamond', Georgia, serif;
+      --sans:   'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      font-weight: 300;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.65;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── NAV ─── */
+    .nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 52px;
+      background: rgba(244, 240, 232, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(78, 140, 95, 0.1);
+      transition: box-shadow 0.4s var(--ease-out);
+    }
+    .nav.scrolled { box-shadow: 0 1px 32px rgba(28, 58, 36, 0.09); }
+    .nav-logo { text-decoration: none; display: block; line-height: 0; }
+    .nav-links { display: flex; align-items: center; gap: 40px; list-style: none; }
+    .nav-links a {
+      font-family: var(--sans); font-size: 12px; font-weight: 400;
+      letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--sage); }
+    .nav-links a.active { color: var(--sage); }
+    .nav-btn {
+      font-size: 12px !important; font-weight: 400 !important;
+      letter-spacing: 0.08em !important; color: var(--white) !important;
+      background: var(--sage); padding: 10px 24px; border-radius: 2px;
+      transition: background 0.25s !important;
+    }
+    .nav-btn:hover { background: var(--forest); color: var(--white) !important; }
+
+    /* ─── PAGE HEADER ─── */
+    .page-header {
+      padding: 140px 52px 60px;
+      background: var(--white);
+      border-bottom: 1px solid rgba(28, 58, 36, 0.08);
+    }
+    .page-header-inner { max-width: 1200px; margin: 0 auto; }
+    .page-eyebrow {
+      font-size: 11px; font-weight: 400; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--sage); margin-bottom: 18px;
+      display: flex; align-items: center; gap: 14px;
+    }
+    .page-eyebrow::before {
+      content: ''; display: block; width: 28px; height: 1px;
+      background: var(--sage); flex-shrink: 0;
+    }
+    .page-title {
+      font-family: var(--serif); font-size: clamp(38px, 5vw, 64px);
+      font-weight: 400; line-height: 1.06; color: var(--forest);
+      letter-spacing: -0.02em; margin-bottom: 16px;
+    }
+    .page-title em { font-style: italic; color: var(--sage); }
+    .page-subtitle {
+      font-size: 17px; font-weight: 300; color: var(--ink-soft);
+      line-height: 1.7; max-width: 560px;
+    }
+
+    /* ─── FILTER BAR ─── */
+    .filter-bar {
+      padding: 24px 52px;
+      background: var(--cream);
+      border-bottom: 1px solid rgba(28, 58, 36, 0.07);
+      display: flex; gap: 10px; flex-wrap: wrap;
+    }
+    .filter-btn {
+      font-family: var(--sans); font-size: 11px; font-weight: 400;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--ink-soft); background: transparent;
+      border: 1px solid rgba(78, 140, 95, 0.25);
+      padding: 8px 18px; border-radius: 2px; cursor: pointer;
+      transition: all 0.2s; text-decoration: none; display: inline-block;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      color: var(--forest); background: var(--mint-wash);
+      border-color: var(--sage);
+    }
+
+    /* ─── ARTICLES LIST ─── */
+    .articles-section { padding: 60px 52px 100px; max-width: 1200px; margin: 0 auto; }
+
+    .category-group { margin-bottom: 64px; }
+    .category-label {
+      font-size: 11px; font-weight: 400; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--ink-faint);
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 28px; padding-bottom: 12px;
+      border-bottom: 1px solid rgba(28, 58, 36, 0.07);
+    }
+    .category-label::before {
+      content: ''; display: block; width: 16px; height: 1px;
+      background: var(--ink-faint); flex-shrink: 0;
+    }
+
+    .article-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: start;
+      padding: 28px 0;
+      border-bottom: 1px solid rgba(28, 58, 36, 0.06);
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.25s;
+    }
+    .article-row:hover { background: var(--white); margin: 0 -20px; padding: 28px 20px; }
+
+    .article-row-body {}
+    .article-row-meta {
+      display: flex; align-items: center; gap: 14px; margin-bottom: 10px;
+    }
+    .article-tag {
+      font-size: 10px; font-weight: 500; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--sage);
+      background: rgba(78, 140, 95, 0.1); padding: 4px 11px; border-radius: 20px;
+    }
+    .article-date {
+      font-size: 12px; font-weight: 300; color: var(--ink-faint);
+    }
+    .article-row-title {
+      font-family: var(--serif); font-size: 22px; font-weight: 500;
+      line-height: 1.28; color: var(--forest); margin-bottom: 8px;
+      transition: color 0.2s;
+    }
+    .article-row:hover .article-row-title { color: var(--sage); }
+    .article-row-excerpt {
+      font-size: 14px; font-weight: 300; line-height: 1.75; color: var(--ink-soft);
+    }
+    .article-row-cta {
+      font-size: 11px; font-weight: 400; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--sage); white-space: nowrap;
+      display: flex; align-items: center; gap: 8px; padding-top: 4px;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--forest); padding: 60px 52px 40px;
+    }
+    .footer-bottom {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-top: 0; gap: 24px; flex-wrap: wrap;
+    }
+    .footer-copy { font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.3); }
+    .footer-legal { display: flex; gap: 28px; }
+    .footer-legal a {
+      font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.3);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .footer-legal a:hover { color: rgba(255,255,255,0.65); }
+
+    @media (max-width: 680px) {
+      .nav { padding: 16px 24px; }
+      .nav-links { display: none; }
+      .page-header { padding: 110px 24px 48px; }
+      .filter-bar { padding: 20px 24px; }
+      .articles-section { padding: 40px 24px 72px; }
+      footer { padding: 48px 24px 32px; }
+      .article-row { grid-template-columns: 1fr; }
+      .article-row-cta { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" id="mainNav" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo" aria-label="Peptide Revealed — Home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" height="34" aria-hidden="true">
+        <g transform="translate(10, 8) scale(1.28)">
+          <line x1="38" y1="38" x2="16" y2="18" stroke="#4E8C5F" stroke-width="2" stroke-linecap="round"/>
+          <line x1="42" y1="36" x2="62" y2="16" stroke="#4E8C5F" stroke-width="2" stroke-linecap="round"/>
+          <line x1="44" y1="40" x2="66" y2="44" stroke="#7AB88A" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="40" y1="44" x2="32" y2="64" stroke="#7AB88A" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="36" y1="42" x2="14" y2="58" stroke="#C6DFC8" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="16" y1="18" x2="6"  y2="10" stroke="#C6DFC8" stroke-width="1" stroke-linecap="round"/>
+          <line x1="16" y1="18" x2="18" y2="6"  stroke="#C6DFC8" stroke-width="1" stroke-linecap="round"/>
+          <line x1="62" y1="16" x2="72" y2="8"  stroke="#C6DFC8" stroke-width="1" stroke-linecap="round"/>
+          <circle cx="16" cy="18" r="6" fill="#4E8C5F"/>
+          <circle cx="62" cy="16" r="5" fill="#4E8C5F"/>
+          <circle cx="66" cy="44" r="4" fill="#7AB88A"/>
+          <circle cx="32" cy="64" r="4" fill="#7AB88A"/>
+          <circle cx="14" cy="58" r="3" fill="#C6DFC8"/>
+          <circle cx="6"  cy="10" r="2" fill="#C6DFC8"/>
+          <circle cx="18" cy="6"  r="2" fill="#C6DFC8"/>
+          <circle cx="72" cy="8"  r="2" fill="#C6DFC8"/>
+          <circle cx="40" cy="40" r="8"   fill="#1C3A24"/>
+          <circle cx="40" cy="40" r="4.5" fill="#4E8C5F"/>
+        </g>
+        <text x="118" y="62" font-family="Georgia,'Times New Roman',serif" font-size="44" font-weight="400" fill="#1C3A24" letter-spacing="-0.5">Peptide</text>
+        <text x="120" y="90" font-family="'Helvetica Neue',Arial,sans-serif" font-size="16" font-weight="300" fill="#4E8C5F" letter-spacing="5">REVEALED</text>
+      </svg>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#covers">Topics</a></li>
+      <li><a href="articles.html" class="active">Articles</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#newsletter" class="nav-btn">Subscribe Free</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <div class="page-header-inner">
+      <p class="page-eyebrow">All articles</p>
+      <h1 class="page-title">Research-backed guides on<br><em>peptides and protocols.</em></h1>
+      <p class="page-subtitle">Every article is grounded in peer-reviewed literature. We cite sources, flag where evidence is limited, and distinguish animal research from human data.</p>
+    </div>
+  </div>
+
+  <div class="filter-bar">
+    <a href="#all" class="filter-btn active">All</a>
+    <a href="#peptide-profiles" class="filter-btn">Peptide Profiles</a>
+    <a href="#beginner-guides" class="filter-btn">Beginner Guides</a>
+    <a href="#legal" class="filter-btn">Legal &amp; Regulation</a>
+    <a href="#sourcing" class="filter-btn">Sourcing &amp; Safety</a>
+    <a href="#weight-loss" class="filter-btn">Weight Loss</a>
+    <a href="#anti-aging" class="filter-btn">Anti-Aging</a>
+  </div>
+
+  <main class="articles-section" id="all">
+
+    <!-- Anti-Aging -->
+    <div class="category-group" id="anti-aging">
+      <p class="category-label">Anti-Aging</p>
+      <a href="articles/ghk-cu-copper-peptide.html" class="article-row">
+        <div class="article-row-body">
+          <div class="article-row-meta">
+            <span class="article-tag">Anti-Aging</span>
+            <span class="article-date">Mar 15, 2026 · 11 min read</span>
+          </div>
+          <h2 class="article-row-title">GHK-Cu: the copper peptide exploding in search</h2>
+          <p class="article-row-excerpt">Up 1,000%+ in search volume year-over-year. What the dermatology and longevity research actually says about this trending compound.</p>
+        </div>
+        <span class="article-row-cta">
+          Read
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2 7h10M8 3l4 4-4 4" stroke="#4E8C5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </a>
+    </div>
+
+    <!-- Legal & Regulation -->
+    <div class="category-group" id="legal">
+      <p class="category-label">Legal &amp; Regulation</p>
+      <a href="articles/are-peptides-legal.html" class="article-row">
+        <div class="article-row-body">
+          <div class="article-row-meta">
+            <span class="article-tag">Legal &amp; Regulation</span>
+            <span class="article-date">Feb 27, 2026 · Updated Mar 15 · 10 min read</span>
+          </div>
+          <h2 class="article-row-title">Are peptides legal in 2026?</h2>
+          <p class="article-row-excerpt">FDA regulations, the research chemical loophole, state-by-state variations, and what the Peptide Sciences shutdown means for the market.</p>
+        </div>
+        <span class="article-row-cta">
+          Read
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2 7h10M8 3l4 4-4 4" stroke="#4E8C5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </a>
+    </div>
+
+    <!-- Sourcing & Safety -->
+    <div class="category-group" id="sourcing">
+      <p class="category-label">Sourcing &amp; Safety</p>
+      <a href="articles/how-to-source-quality-peptides-safely.html" class="article-row">
+        <div class="article-row-body">
+          <div class="article-row-meta">
+            <span class="article-tag">Sourcing &amp; Safety</span>
+            <span class="article-date">Mar 2, 2026 · 9 min read</span>
+          </div>
+          <h2 class="article-row-title">How to source quality peptides safely</h2>
+          <p class="article-row-excerpt">What to look for in a peptide vendor, how to read a Certificate of Analysis, and red flags that should send you running.</p>
+        </div>
+        <span class="article-row-cta">
+          Read
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2 7h10M8 3l4 4-4 4" stroke="#4E8C5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </a>
+    </div>
+
+    <!-- Peptide Profiles -->
+    <div class="category-group" id="peptide-profiles">
+      <p class="category-label">Peptide Profiles</p>
+      <a href="articles/bpc-157-guide.html" class="article-row">
+        <div class="article-row-body">
+          <div class="article-row-meta">
+            <span class="article-tag">Peptide Profiles</span>
+            <span class="article-date">Feb 27, 2026 · Updated Mar 2 · 14 min read</span>
+          </div>
+          <h2 class="article-row-title">BPC-157: complete research guide</h2>
+          <p class="article-row-excerpt">Mechanisms of action, animal vs. human evidence, dosing protocols, and what the research actually supports for this widely-discussed healing peptide.</p>
+        </div>
+        <span class="article-row-cta">
+          Read
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2 7h10M8 3l4 4-4 4" stroke="#4E8C5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </a>
+      <a href="articles/tb-500.html" class="article-row">
+        <div class="article-row-body">
+          <div class="article-row-meta">
+            <span class="article-tag">Peptide Profiles</span>
+            <span class="article-date">Feb 27, 2026 · Updated Mar 2 · 12 min read</span>
+          </div>
+          <h2 class="article-row-title">TB-500: benefits, research, side effects &amp; legal status</h2>
+          <p class="article-row-excerpt">How TB-500 differs from BPC-157, what the research shows for tissue repair, and what you need to know about its regulatory status.</p>
+        </div>
+        <span class="article-row-cta">
+          Read
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2 7h10M8 3l4 4-4 4" stroke="#4E8C5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </a>
+    </div>
+
+    <!-- Weight Loss -->
+    <div class="category-group" id="weight-loss">
+      <p class="category-label">Weight Loss</p>
+      <a href="articles/glp-1-peptides.html" class="article-row">
+        <div class="article-row-body">
+          <div class="article-row-meta">
+            <span class="article-tag">Weight Loss</span>
+            <span class="article-date">Feb 27, 2026 · 15 min read</span>
+          </div>
+          <h2 class="article-row-title">GLP-1 peptides: how they work for weight loss</h2>
+          <p class="article-row-excerpt">Semaglutide, tirzepatide, and retatrutide — mechanisms, efficacy data, and the science behind the biggest pharmaceutical story of the decade.</p>
+        </div>
+        <span class="article-row-cta">
+          Read
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2 7h10M8 3l4 4-4 4" stroke="#4E8C5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </a>
+    </div>
+
+    <!-- Beginner Guides -->
+    <div class="category-group" id="beginner-guides">
+      <p class="category-label">Beginner Guides</p>
+      <a href="articles/what-are-peptides-beginners-guide.html" class="article-row">
+        <div class="article-row-body">
+          <div class="article-row-meta">
+            <span class="article-tag">Beginner Guides</span>
+            <span class="article-date">Jan 16, 2026 · 8 min read</span>
+          </div>
+          <h2 class="article-row-title">What are peptides? A beginner's guide</h2>
+          <p class="article-row-excerpt">Everything you need to know about peptides before diving deeper. What they are, how they work, and why they matter.</p>
+        </div>
+        <span class="article-row-cta">
+          Read
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2 7h10M8 3l4 4-4 4" stroke="#4E8C5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </a>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Peptide Revealed. All rights reserved. For informational purposes only — not medical advice.</p>
+      <nav class="footer-legal" aria-label="Legal links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Disclaimer</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 24);
+    }, { passive: true });
+  </script>
+</body>
+</html>
