@@ -81,6 +81,18 @@
       transition: background 0.25s !important;
     }
     .nav-btn:hover { background: var(--forest); color: var(--white) !important; }
+    .nav-toggle { display:none; background:none; border:none; cursor:pointer; padding:8px; z-index:210; }
+    .nav-toggle span { display:block; width:24px; height:2px; background:var(--forest); margin:5px 0; border-radius:2px; transition:transform 0.3s var(--ease-out), opacity 0.3s var(--ease-out); }
+    .nav-toggle.active span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+    .nav-toggle.active span:nth-child(2) { opacity:0; }
+    .nav-toggle.active span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+    @media (max-width:768px) {
+      .nav { padding:7px 20px; }
+      .nav-toggle { display:block; }
+      .nav-links { display:none; position:fixed; inset:0; top:0; flex-direction:column; align-items:center; justify-content:center; gap:32px; background:rgba(244,240,232,0.97); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); z-index:205; padding:80px 20px 40px; }
+      .nav-links.open { display:flex; }
+      .nav-links a { font-size:14px; letter-spacing:0.12em; }
+    }
 
     /* ─── PAGE HEADER ─── */
     .page-header {
@@ -242,7 +254,10 @@
         <text x="120" y="90" font-family="'Helvetica Neue',Arial,sans-serif" font-size="16" font-weight="300" fill="#4E8C5F" letter-spacing="5">REVEALED</text>
       </svg>
     </a>
-    <ul class="nav-links">
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
       <li><a href="index.html#covers">Topics</a></li>
       <li><a href="articles.html" class="active">Articles</a></li>
       <li><a href="meal-planner.html">Meal Planner</a></li>
@@ -495,6 +510,22 @@
     window.addEventListener('scroll', () => {
       nav.classList.toggle('scrolled', window.scrollY > 24);
     }, { passive: true });
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      navToggle.classList.toggle('active', open);
+      navToggle.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
   </script>
 </body>
 </html>
