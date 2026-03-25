@@ -11,8 +11,8 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About — Peptide Revealed</title>
-  <meta name="description" content="Learn about Peptide Revealed's mission, editorial standards, and commitment to evidence-based peptide education.">
+  <title>Privacy Policy — Peptide Revealed</title>
+  <meta name="description" content="Privacy policy for Peptide Revealed. Learn how we collect, use, and protect your information.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
@@ -68,7 +68,6 @@
       text-decoration: none; transition: color 0.2s;
     }
     .nav-links a:hover { color: var(--sage); }
-    .nav-links a.active { color: var(--sage); }
     .nav-btn {
       font-size: 12px !important; font-weight: 400 !important;
       letter-spacing: 0.08em !important; color: var(--white) !important;
@@ -130,53 +129,23 @@
       color: var(--forest); letter-spacing: -0.015em; line-height: 1.2;
       margin: 52px 0 18px;
     }
+    .prose h2:first-child { margin-top: 0; }
     .prose p {
       font-size: 16px; font-weight: 300; line-height: 1.85;
       color: var(--ink-mid); margin-bottom: 20px;
     }
+    .prose ul { margin: 0 0 20px 24px; }
+    .prose li {
+      font-size: 16px; font-weight: 300; line-height: 1.85;
+      color: var(--ink-mid); margin-bottom: 6px;
+    }
     .prose a { color: var(--sage); text-decoration: underline; text-underline-offset: 3px; }
     .prose a:hover { color: var(--forest); }
-
-    .divider {
-      width: 56px; height: 1px;
-      background: linear-gradient(to right, var(--sage), transparent);
-      margin: 48px 0;
+    .prose strong { font-weight: 500; color: var(--ink); }
+    .last-updated {
+      font-size: 13px; font-weight: 300; color: var(--ink-faint);
+      margin-bottom: 40px;
     }
-
-    /* ─── NEWSLETTER ─── */
-    .newsletter-strip {
-      background: var(--mint-wash);
-      border-top: 1px solid rgba(78, 140, 95, 0.14);
-      padding: 64px 52px;
-      text-align: center;
-    }
-    .newsletter-strip h2 {
-      font-family: var(--serif); font-size: clamp(30px, 4vw, 46px);
-      font-weight: 400; color: var(--forest); line-height: 1.1;
-      letter-spacing: -0.02em; margin-bottom: 14px;
-    }
-    .newsletter-strip h2 em { font-style: italic; color: var(--sage); }
-    .newsletter-strip p {
-      font-size: 16px; font-weight: 300; color: var(--ink-mid);
-      line-height: 1.75; margin-bottom: 36px;
-    }
-    .nl-form { display: flex; max-width: 460px; margin: 0 auto; }
-    .nl-form input {
-      flex: 1; padding: 16px 20px; font-family: var(--sans); font-size: 14px;
-      font-weight: 300; color: var(--ink); background: var(--white);
-      border: 1px solid rgba(78, 140, 95, 0.22); border-right: none;
-      border-radius: 2px 0 0 2px; outline: none;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-    .nl-form input:focus { border-color: var(--sage); box-shadow: inset 0 0 0 1px var(--sage); }
-    .nl-form button {
-      padding: 16px 28px; font-family: var(--sans); font-size: 12px;
-      font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--white); background: var(--sage); border: none;
-      border-radius: 0 2px 2px 0; cursor: pointer; white-space: nowrap;
-      transition: background 0.25s;
-    }
-    .nl-form button:hover { background: var(--forest); }
 
     /* ─── FOOTER ─── */
     footer { background: var(--forest); padding: 48px 52px 36px; }
@@ -193,14 +162,8 @@
     .footer-legal a:hover { color: rgba(255,255,255,0.65); }
 
     @media (max-width: 680px) {
-      .nav { padding: 16px 24px; }
-      .nav-links { display: none; }
       .page-header { padding: 110px 24px 48px; }
       .content-wrap { padding: 52px 24px 72px; }
-      .newsletter-strip { padding: 48px 24px; }
-      .nl-form { flex-direction: column; }
-      .nl-form input { border-right: 1px solid rgba(78,140,95,0.22); border-bottom: none; border-radius: 2px 2px 0 0; }
-      .nl-form button { border-radius: 0 0 2px 2px; }
       footer { padding: 40px 24px 28px; }
     }
   </style>
@@ -241,68 +204,90 @@
       <li><a href="index.html#covers">Topics</a></li>
       <li><a href="articles.html">Articles</a></li>
       <li><a href="meal-planner.html">Meal Planner</a></li>
-      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="about.html">About</a></li>
       <li><a href="index.html#newsletter" class="nav-btn">Subscribe Free</a></li>
     </ul>
   </nav>
 
   <div class="page-header">
     <div class="page-header-inner">
-      <p class="page-eyebrow">About us</p>
-      <h1 class="page-title">Peptide science,<br><em>explained honestly.</em></h1>
-      <p class="page-subtitle">We exist because the peptide space desperately needs better information. Here's how we approach it.</p>
+      <p class="page-eyebrow">Legal</p>
+      <h1 class="page-title">Privacy <em>Policy</em></h1>
+      <p class="page-subtitle">How we collect, use, and protect your information when you visit Peptide Revealed.</p>
     </div>
   </div>
 
   <main class="content-wrap">
     <article class="prose">
-      <p>
-        Peptide Revealed exists because the peptide space desperately needs better information. Too much of what's available online is either vendor-funded marketing dressed up as education, anonymous posts with no sourcing, or fear-mongering content designed to drive clicks rather than inform.
-      </p>
-      <p>
-        We take a different approach. Every article we publish is grounded in peer-reviewed research, clearly cited, and written to help you understand what the evidence actually says — not what we want it to say.
-      </p>
+      <p class="last-updated">Last updated: March 24, 2026</p>
 
-      <div class="divider"></div>
+      <h2>Who we are</h2>
+      <p>Peptide Revealed ("we," "us," or "our") operates the website peptiderevealed.com. This privacy policy explains how we collect, use, disclose, and safeguard your information when you visit our website.</p>
 
-      <h2 id="editorial-standards">Our editorial standards</h2>
-      <p>
-        We maintain strict editorial independence from peptide vendors, supplement companies, and pharmaceutical manufacturers. Our revenue comes from advertising and affiliate partnerships, but these relationships never influence our editorial content or recommendations.
-      </p>
-      <p>
-        When we reference research, we cite it. When the evidence is limited or conflicting, we say so. When something is animal-only research being marketed as proven in humans, we call that out.
-      </p>
+      <h2>Information we collect</h2>
+      <p><strong>Information you provide directly:</strong> If you subscribe to our newsletter, we collect your email address. If you contact us via email, we collect the information you include in your message.</p>
+      <p><strong>Information collected automatically:</strong> When you visit our site, we automatically collect certain information about your device and your visit, including:</p>
+      <ul>
+        <li>IP address (anonymized)</li>
+        <li>Browser type and version</li>
+        <li>Pages visited and time spent on pages</li>
+        <li>Referring website or search terms</li>
+        <li>Device type and screen resolution</li>
+        <li>General geographic location (city/country level)</li>
+      </ul>
+      <p>This information is collected through Google Analytics (measurement ID: G-0QX7QDH0J0), which uses cookies and similar technologies.</p>
 
-      <h2>What we cover</h2>
-      <p>
-        Our content spans the full spectrum of peptide research, including individual peptide profiles with mechanisms of action and safety data, regulatory and legal analysis, sourcing and quality evaluation guides, emerging research in longevity, cognitive, and metabolic peptides, and practical protocol information grounded in available evidence.
-      </p>
+      <h2>How we use your information</h2>
+      <p>We use the information we collect to:</p>
+      <ul>
+        <li>Deliver our newsletter to subscribers who have opted in</li>
+        <li>Understand how visitors use our site so we can improve content and user experience</li>
+        <li>Monitor site performance and diagnose technical issues</li>
+        <li>Respond to inquiries and feedback</li>
+      </ul>
+      <p>We do not sell, rent, or trade your personal information to third parties. We do not use your information for automated decision-making or profiling.</p>
 
-      <h2 id="disclaimer">What we don't do</h2>
-      <p>
-        We don't provide medical advice. We don't make treatment recommendations. We don't sell peptides or any health products directly. If you're considering using any peptide, consult a qualified healthcare professional who can evaluate your specific situation, potential drug interactions, and help you weigh the risk-benefit ratio based on the available evidence.
-      </p>
+      <h2>Cookies and tracking</h2>
+      <p>Our site uses cookies primarily through Google Analytics to understand traffic patterns and user behavior. These cookies do not identify you personally. You can control cookies through your browser settings. Disabling cookies will not prevent you from accessing our content.</p>
 
-      <h2>Contact</h2>
-      <p>
-        For corrections, feedback, or editorial inquiries, reach us at <a href="mailto:hello@peptiderevealed.com">hello@peptiderevealed.com</a>.
-      </p>
+      <h2>Affiliate links</h2>
+      <p>Some pages on our site contain affiliate links. When you click an affiliate link and make a purchase, the affiliate partner may use cookies to track the referral. These third-party cookies are governed by the respective partner's privacy policy, not ours. We clearly disclose affiliate relationships where they exist.</p>
+
+      <h2>Third-party services</h2>
+      <p>We use the following third-party services that may collect data:</p>
+      <ul>
+        <li><strong>Google Analytics</strong> — website traffic analysis (<a href="https://policies.google.com/privacy">Google's privacy policy</a>)</li>
+        <li><strong>Vercel</strong> — website hosting (<a href="https://vercel.com/legal/privacy-policy">Vercel's privacy policy</a>)</li>
+      </ul>
+      <p>We do not control how these third parties handle your data. We encourage you to review their privacy policies.</p>
+
+      <h2>Data retention</h2>
+      <p>Analytics data is retained according to Google Analytics' default retention settings (14 months). Newsletter subscriber email addresses are retained until you unsubscribe. Contact emails are retained as long as needed to address your inquiry.</p>
+
+      <h2>Your rights</h2>
+      <p>Depending on your jurisdiction, you may have the right to:</p>
+      <ul>
+        <li>Access the personal data we hold about you</li>
+        <li>Request correction of inaccurate data</li>
+        <li>Request deletion of your data</li>
+        <li>Opt out of analytics tracking (via browser settings or the <a href="https://tools.google.com/dlpage/gaoptout">Google Analytics Opt-out Browser Add-on</a>)</li>
+        <li>Unsubscribe from our newsletter at any time using the link in every email</li>
+      </ul>
+
+      <h2>Children's privacy</h2>
+      <p>Our website is not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If you believe we have inadvertently collected information from a minor, please contact us and we will promptly delete it.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>We may update this privacy policy from time to time. Changes will be posted on this page with an updated "last updated" date. Your continued use of our site after changes are posted constitutes acceptance of the revised policy.</p>
+
+      <h2>Contact us</h2>
+      <p>If you have questions about this privacy policy or your personal data, contact us at <a href="mailto:hello@peptiderevealed.com">hello@peptiderevealed.com</a>.</p>
     </article>
   </main>
 
-  <div class="newsletter-strip">
-    <h2>Stay at the frontier<br>of <em>peptide science.</em></h2>
-    <p>Join researchers, clinicians, and curious minds who rely on Peptide Revealed<br>for rigorous, unbiased analysis — delivered twice monthly, free.</p>
-    <form class="nl-form" onsubmit="handleSignup(event)" aria-label="Newsletter signup">
-      <label for="nl-email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Email address</label>
-      <input type="email" id="nl-email" placeholder="Your email address" autocomplete="email" required>
-      <button type="submit">Subscribe Free</button>
-    </form>
-  </div>
-
   <footer>
     <div class="footer-bottom">
-      <p class="footer-copy">© 2026 Peptide Revealed. All rights reserved. For informational purposes only — not medical advice.</p>
+      <p class="footer-copy">&copy; 2026 Peptide Revealed. For informational purposes only — not medical advice.</p>
       <nav class="footer-legal" aria-label="Legal links">
         <a href="privacy-policy.html">Privacy Policy</a>
         <a href="terms-of-use.html">Terms of Use</a>
@@ -333,20 +318,6 @@
         document.body.style.overflow = '';
       });
     });
-
-    function handleSignup(e) {
-      e.preventDefault();
-      const form = e.currentTarget;
-      const input = form.querySelector('input[type="email"]');
-      const btn = form.querySelector('button');
-      btn.textContent = 'Subscribed!';
-      btn.style.background = 'var(--forest)';
-      input.value = ''; input.disabled = true; btn.disabled = true;
-      setTimeout(() => {
-        btn.textContent = 'Subscribe Free'; btn.style.background = '';
-        input.disabled = false; btn.disabled = false;
-      }, 4000);
-    }
   </script>
 </body>
 </html>

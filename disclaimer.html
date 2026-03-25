@@ -11,8 +11,8 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About — Peptide Revealed</title>
-  <meta name="description" content="Learn about Peptide Revealed's mission, editorial standards, and commitment to evidence-based peptide education.">
+  <title>Disclaimer — Peptide Revealed</title>
+  <meta name="description" content="Medical and legal disclaimer for Peptide Revealed. Understand the limitations of our educational content.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
@@ -68,7 +68,6 @@
       text-decoration: none; transition: color 0.2s;
     }
     .nav-links a:hover { color: var(--sage); }
-    .nav-links a.active { color: var(--sage); }
     .nav-btn {
       font-size: 12px !important; font-weight: 400 !important;
       letter-spacing: 0.08em !important; color: var(--white) !important;
@@ -130,53 +129,23 @@
       color: var(--forest); letter-spacing: -0.015em; line-height: 1.2;
       margin: 52px 0 18px;
     }
+    .prose h2:first-child { margin-top: 0; }
     .prose p {
       font-size: 16px; font-weight: 300; line-height: 1.85;
       color: var(--ink-mid); margin-bottom: 20px;
     }
+    .prose ul { margin: 0 0 20px 24px; }
+    .prose li {
+      font-size: 16px; font-weight: 300; line-height: 1.85;
+      color: var(--ink-mid); margin-bottom: 6px;
+    }
     .prose a { color: var(--sage); text-decoration: underline; text-underline-offset: 3px; }
     .prose a:hover { color: var(--forest); }
-
-    .divider {
-      width: 56px; height: 1px;
-      background: linear-gradient(to right, var(--sage), transparent);
-      margin: 48px 0;
+    .prose strong { font-weight: 500; color: var(--ink); }
+    .last-updated {
+      font-size: 13px; font-weight: 300; color: var(--ink-faint);
+      margin-bottom: 40px;
     }
-
-    /* ─── NEWSLETTER ─── */
-    .newsletter-strip {
-      background: var(--mint-wash);
-      border-top: 1px solid rgba(78, 140, 95, 0.14);
-      padding: 64px 52px;
-      text-align: center;
-    }
-    .newsletter-strip h2 {
-      font-family: var(--serif); font-size: clamp(30px, 4vw, 46px);
-      font-weight: 400; color: var(--forest); line-height: 1.1;
-      letter-spacing: -0.02em; margin-bottom: 14px;
-    }
-    .newsletter-strip h2 em { font-style: italic; color: var(--sage); }
-    .newsletter-strip p {
-      font-size: 16px; font-weight: 300; color: var(--ink-mid);
-      line-height: 1.75; margin-bottom: 36px;
-    }
-    .nl-form { display: flex; max-width: 460px; margin: 0 auto; }
-    .nl-form input {
-      flex: 1; padding: 16px 20px; font-family: var(--sans); font-size: 14px;
-      font-weight: 300; color: var(--ink); background: var(--white);
-      border: 1px solid rgba(78, 140, 95, 0.22); border-right: none;
-      border-radius: 2px 0 0 2px; outline: none;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-    .nl-form input:focus { border-color: var(--sage); box-shadow: inset 0 0 0 1px var(--sage); }
-    .nl-form button {
-      padding: 16px 28px; font-family: var(--sans); font-size: 12px;
-      font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--white); background: var(--sage); border: none;
-      border-radius: 0 2px 2px 0; cursor: pointer; white-space: nowrap;
-      transition: background 0.25s;
-    }
-    .nl-form button:hover { background: var(--forest); }
 
     /* ─── FOOTER ─── */
     footer { background: var(--forest); padding: 48px 52px 36px; }
@@ -193,14 +162,8 @@
     .footer-legal a:hover { color: rgba(255,255,255,0.65); }
 
     @media (max-width: 680px) {
-      .nav { padding: 16px 24px; }
-      .nav-links { display: none; }
       .page-header { padding: 110px 24px 48px; }
       .content-wrap { padding: 52px 24px 72px; }
-      .newsletter-strip { padding: 48px 24px; }
-      .nl-form { flex-direction: column; }
-      .nl-form input { border-right: 1px solid rgba(78,140,95,0.22); border-bottom: none; border-radius: 2px 2px 0 0; }
-      .nl-form button { border-radius: 0 0 2px 2px; }
       footer { padding: 40px 24px 28px; }
     }
   </style>
@@ -241,68 +204,75 @@
       <li><a href="index.html#covers">Topics</a></li>
       <li><a href="articles.html">Articles</a></li>
       <li><a href="meal-planner.html">Meal Planner</a></li>
-      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="about.html">About</a></li>
       <li><a href="index.html#newsletter" class="nav-btn">Subscribe Free</a></li>
     </ul>
   </nav>
 
   <div class="page-header">
     <div class="page-header-inner">
-      <p class="page-eyebrow">About us</p>
-      <h1 class="page-title">Peptide science,<br><em>explained honestly.</em></h1>
-      <p class="page-subtitle">We exist because the peptide space desperately needs better information. Here's how we approach it.</p>
+      <p class="page-eyebrow">Legal</p>
+      <h1 class="page-title">Medical <em>Disclaimer</em></h1>
+      <p class="page-subtitle">Important information about the nature and limitations of the content on this website.</p>
     </div>
   </div>
 
   <main class="content-wrap">
     <article class="prose">
-      <p>
-        Peptide Revealed exists because the peptide space desperately needs better information. Too much of what's available online is either vendor-funded marketing dressed up as education, anonymous posts with no sourcing, or fear-mongering content designed to drive clicks rather than inform.
-      </p>
-      <p>
-        We take a different approach. Every article we publish is grounded in peer-reviewed research, clearly cited, and written to help you understand what the evidence actually says — not what we want it to say.
-      </p>
+      <p class="last-updated">Last updated: March 24, 2026</p>
 
-      <div class="divider"></div>
+      <h2>Not medical advice</h2>
+      <p>The information provided on peptiderevealed.com ("the Site") is for <strong>general educational and informational purposes only</strong>. It is not intended to be, and should not be construed as, medical advice, diagnosis, or treatment recommendations.</p>
+      <p>The content on this Site is not a substitute for professional medical advice, examination, diagnosis, or treatment. Never disregard professional medical advice or delay seeking it because of something you have read on this Site.</p>
 
-      <h2 id="editorial-standards">Our editorial standards</h2>
-      <p>
-        We maintain strict editorial independence from peptide vendors, supplement companies, and pharmaceutical manufacturers. Our revenue comes from advertising and affiliate partnerships, but these relationships never influence our editorial content or recommendations.
-      </p>
-      <p>
-        When we reference research, we cite it. When the evidence is limited or conflicting, we say so. When something is animal-only research being marketed as proven in humans, we call that out.
-      </p>
+      <h2>No healthcare provider relationship</h2>
+      <p>Reading our content does not create a healthcare provider-patient relationship between you and Peptide Revealed or any of its contributors. We are not licensed healthcare providers, and we do not provide individualized medical recommendations.</p>
 
-      <h2>What we cover</h2>
-      <p>
-        Our content spans the full spectrum of peptide research, including individual peptide profiles with mechanisms of action and safety data, regulatory and legal analysis, sourcing and quality evaluation guides, emerging research in longevity, cognitive, and metabolic peptides, and practical protocol information grounded in available evidence.
-      </p>
+      <h2>Consult your healthcare provider</h2>
+      <p>If you are considering using any peptide, supplement, or medication discussed on this Site, you must consult a qualified healthcare professional first. This is especially important if you:</p>
+      <ul>
+        <li>Have any pre-existing medical condition</li>
+        <li>Are taking prescription medications</li>
+        <li>Are pregnant, nursing, or planning to become pregnant</li>
+        <li>Have a history of allergic reactions to biological compounds</li>
+        <li>Are under the age of 18</li>
+      </ul>
+      <p>Only a qualified healthcare provider who has examined you personally can determine what treatments or interventions are appropriate for your situation.</p>
 
-      <h2 id="disclaimer">What we don't do</h2>
-      <p>
-        We don't provide medical advice. We don't make treatment recommendations. We don't sell peptides or any health products directly. If you're considering using any peptide, consult a qualified healthcare professional who can evaluate your specific situation, potential drug interactions, and help you weigh the risk-benefit ratio based on the available evidence.
-      </p>
+      <h2>Research limitations</h2>
+      <p>Many of the peptides discussed on this Site are subjects of ongoing research. It is important to understand that:</p>
+      <ul>
+        <li>Much of the available research has been conducted in animal models, not humans</li>
+        <li>Early-phase clinical trials may not reflect long-term safety or efficacy in broader populations</li>
+        <li>Dosing information discussed in research literature does not constitute a recommendation</li>
+        <li>Individual responses to any compound vary significantly based on genetics, health status, and other factors</li>
+        <li>The regulatory status of peptides varies by jurisdiction and changes frequently</li>
+      </ul>
+      <p>When we cite research, we clearly indicate whether it comes from animal studies, in vitro experiments, or human clinical trials. We also note when evidence is preliminary, limited, or conflicting.</p>
 
-      <h2>Contact</h2>
-      <p>
-        For corrections, feedback, or editorial inquiries, reach us at <a href="mailto:hello@peptiderevealed.com">hello@peptiderevealed.com</a>.
-      </p>
+      <h2>No endorsement of products or vendors</h2>
+      <p>Discussion of any specific peptide, product, or vendor on this Site does not constitute an endorsement or recommendation. We do not guarantee the quality, purity, or safety of any product sold by any vendor. The peptide market includes unregulated products that may not meet pharmaceutical standards.</p>
+
+      <h2>Affiliate disclosure</h2>
+      <p>Some links on this Site are affiliate links. If you click an affiliate link and make a purchase, we may receive a commission. Affiliate relationships are always disclosed and never influence the accuracy, tone, or conclusions of our editorial content.</p>
+
+      <h2>Assumption of risk</h2>
+      <p>By using this Site, you acknowledge that you are responsible for your own health decisions. Any action you take based on the information on this Site is strictly at your own risk. Peptide Revealed is not responsible for any adverse effects, harm, or consequences resulting from the use or misuse of any information provided on this Site.</p>
+
+      <h2>Accuracy and timeliness</h2>
+      <p>While we strive for accuracy in all our content, peptide science is a rapidly evolving field. Regulatory landscapes shift, new research is published, and previously held understandings may be revised. We make reasonable efforts to keep our content current, but we cannot guarantee that every piece of information reflects the very latest developments at the time you read it.</p>
+
+      <h2>Emergency situations</h2>
+      <p>If you are experiencing a medical emergency, call your local emergency number immediately. Do not rely on this website for emergency medical guidance.</p>
+
+      <h2>Questions</h2>
+      <p>If you have questions about this disclaimer, contact us at <a href="mailto:hello@peptiderevealed.com">hello@peptiderevealed.com</a>.</p>
     </article>
   </main>
 
-  <div class="newsletter-strip">
-    <h2>Stay at the frontier<br>of <em>peptide science.</em></h2>
-    <p>Join researchers, clinicians, and curious minds who rely on Peptide Revealed<br>for rigorous, unbiased analysis — delivered twice monthly, free.</p>
-    <form class="nl-form" onsubmit="handleSignup(event)" aria-label="Newsletter signup">
-      <label for="nl-email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Email address</label>
-      <input type="email" id="nl-email" placeholder="Your email address" autocomplete="email" required>
-      <button type="submit">Subscribe Free</button>
-    </form>
-  </div>
-
   <footer>
     <div class="footer-bottom">
-      <p class="footer-copy">© 2026 Peptide Revealed. All rights reserved. For informational purposes only — not medical advice.</p>
+      <p class="footer-copy">&copy; 2026 Peptide Revealed. For informational purposes only — not medical advice.</p>
       <nav class="footer-legal" aria-label="Legal links">
         <a href="privacy-policy.html">Privacy Policy</a>
         <a href="terms-of-use.html">Terms of Use</a>
@@ -333,20 +303,6 @@
         document.body.style.overflow = '';
       });
     });
-
-    function handleSignup(e) {
-      e.preventDefault();
-      const form = e.currentTarget;
-      const input = form.querySelector('input[type="email"]');
-      const btn = form.querySelector('button');
-      btn.textContent = 'Subscribed!';
-      btn.style.background = 'var(--forest)';
-      input.value = ''; input.disabled = true; btn.disabled = true;
-      setTimeout(() => {
-        btn.textContent = 'Subscribe Free'; btn.style.background = '';
-        input.disabled = false; btn.disabled = false;
-      }, 4000);
-    }
   </script>
 </body>
 </html>
