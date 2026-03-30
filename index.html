@@ -1040,6 +1040,7 @@
       <li><a href="#covers">Topics</a></li>
       <li><a href="articles.html">Articles</a></li>
       <li><a href="meal-planner.html">Meal Planner</a></li>
+      <li><a href="reconstitution-calculator.html">Calculator</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="#newsletter" class="nav-btn">Subscribe Free</a></li>
     </ul>
@@ -1613,28 +1614,47 @@
 
     revealEls.forEach(el => revealObs.observe(el));
 
-    /* ─── Email signup handler ─── */
+    /* ─── Email signup handler (ConvertKit form 9267405) ─── */
     function handleSignup(e) {
       e.preventDefault();
-      const form   = e.currentTarget;
-      const input  = form.querySelector('input[type="email"]');
-      const btn    = form.querySelector('button');
-      const email  = input.value.trim();
+      const form  = e.currentTarget;
+      const input = form.querySelector('input[type="email"]');
+      const btn   = form.querySelector('button');
+      const email = input.value.trim();
 
       if (!email) return;
 
-      btn.textContent = 'Subscribed!';
-      btn.style.background = 'var(--forest)';
-      input.value = '';
-      input.disabled = true;
-      btn.disabled   = true;
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
 
-      setTimeout(() => {
-        btn.textContent = 'Subscribe Free';
-        btn.style.background = '';
-        input.disabled = false;
-        btn.disabled   = false;
-      }, 4000);
+      const formData = new FormData();
+      formData.append('email_address', email);
+
+      fetch('https://app.kit.com/forms/9267405/subscriptions', {
+        method: 'POST',
+        body: formData
+      })
+      .then(r => {
+        if (r.ok || r.status === 200 || r.status === 302) {
+          btn.textContent = 'Check your email!';
+          btn.style.background = 'var(--forest)';
+          input.value = '';
+          input.disabled = true;
+        } else {
+          btn.textContent = 'Try again';
+        }
+      })
+      .catch(() => {
+        btn.textContent = 'Try again';
+      })
+      .finally(() => {
+        setTimeout(() => {
+          btn.textContent = 'Subscribe Free';
+          btn.style.background = '';
+          input.disabled = false;
+          btn.disabled = false;
+        }, 4000);
+      });
     }
   </script>
 </body>
