@@ -1215,10 +1215,11 @@
 
       fetch('https://app.kit.com/forms/9267405/subscriptions', {
         method: 'POST',
-        body: formData
+        body: formData,
+        redirect: 'manual'
       })
       .then(r => {
-        if (r.ok || r.status === 200 || r.status === 302) {
+        if (r.ok || r.status === 0 || r.status === 200 || r.status === 302 || r.type === 'opaqueredirect') {
           btn.textContent = 'Check your email!';
           btn.style.background = 'var(--forest)';
           input.value = '';
