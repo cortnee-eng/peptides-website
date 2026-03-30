@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0QX7QDH0J0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0QX7QDH0J0');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to reconstitute peptides: step-by-step guide — Peptide Revealed</title>
+  <meta name="description" content="Learn how to safely reconstitute lyophilized peptides with bacteriostatic water. Step-by-step instructions, dosing calculator formula, and storage tips.">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Peptide Revealed">
+  <meta property="og:title" content="How to reconstitute peptides: step-by-step guide">
+  <meta property="og:description" content="Learn how to safely reconstitute lyophilized peptides with bacteriostatic water. Step-by-step instructions, dosing calculator formula, and storage tips.">
+  <meta property="og:url" content="https://peptiderevealed.com/articles/how-to-reconstitute-peptides.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --forest:#1C3A24; --sage:#4E8C5F; --fern:#7AB88A; --mint:#C6DFC8;
+      --mint-wash:#EBF4EC; --cream:#F4F0E8; --parchment:#EDE7DA; --white:#FFFFFF;
+      --ink:#161D18; --ink-mid:#3D4F40; --ink-soft:#6B7E6D; --ink-faint:#9FB4A1;
+      --serif:'Cormorant Garamond',Georgia,serif; --sans:'DM Sans','Helvetica Neue',Arial,sans-serif;
+      --ease-out:cubic-bezier(0.22,1,0.36,1);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family:var(--sans); font-weight:300; color:var(--ink); background:var(--cream); line-height:1.65; overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+    .nav { position:fixed; inset:0 0 auto 0; z-index:200; display:flex; align-items:center; justify-content:space-between; padding:18px 52px; background:rgba(244,240,232,0.88); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-bottom:1px solid rgba(78,140,95,0.1); transition:box-shadow 0.4s var(--ease-out); }
+    .nav.scrolled { box-shadow:0 1px 32px rgba(28,58,36,0.09); }
+    .nav-logo { text-decoration:none; display:block; line-height:0; }
+    .nav-links { display:flex; align-items:center; gap:40px; list-style:none; }
+    .nav-links a { font-family:var(--sans); font-size:12px; font-weight:400; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-soft); text-decoration:none; transition:color 0.2s; }
+    .nav-links a:hover { color:var(--sage); }
+    .nav-btn { font-size:12px !important; font-weight:400 !important; letter-spacing:0.08em !important; color:var(--white) !important; background:var(--sage); padding:10px 24px; border-radius:2px; transition:background 0.25s !important; }
+    .nav-btn:hover { background:var(--forest); color:var(--white) !important; }
+    .nav-toggle { display:none; background:none; border:none; cursor:pointer; padding:8px; z-index:210; }
+    .nav-toggle span { display:block; width:24px; height:2px; background:var(--forest); margin:5px 0; border-radius:2px; transition:transform 0.3s var(--ease-out), opacity 0.3s var(--ease-out); }
+    .nav-toggle.active span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+    .nav-toggle.active span:nth-child(2) { opacity:0; }
+    .nav-toggle.active span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+    .article-header { padding:140px 52px 56px; background:var(--white); border-bottom:1px solid rgba(28,58,36,0.08); }
+    .article-header-inner { max-width:760px; margin:0 auto; }
+    .breadcrumb { display:flex; align-items:center; gap:8px; font-size:12px; color:var(--ink-faint); margin-bottom:24px; }
+    .breadcrumb a { color:var(--ink-faint); text-decoration:none; transition:color 0.2s; }
+    .breadcrumb a:hover { color:var(--sage); }
+    .breadcrumb-sep { opacity:0.5; }
+    .article-tag { display:inline-block; font-size:10px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--sage); background:rgba(78,140,95,0.1); padding:5px 13px; border-radius:20px; margin-bottom:20px; }
+    .article-title { font-family:var(--serif); font-size:clamp(32px,5vw,58px); font-weight:400; line-height:1.08; color:var(--forest); letter-spacing:-0.02em; margin-bottom:20px; }
+    .article-excerpt { font-size:18px; font-weight:300; line-height:1.7; color:var(--ink-soft); margin-bottom:28px; max-width:640px; }
+    .article-byline { display:flex; align-items:center; gap:20px; font-size:13px; color:var(--ink-faint); padding-top:20px; border-top:1px solid rgba(28,58,36,0.07); flex-wrap:wrap; }
+    .byline-sep { opacity:0.4; }
+    .update-badge { font-size:11px; background:var(--mint-wash); color:var(--sage); border:1px solid rgba(78,140,95,0.2); padding:3px 10px; border-radius:20px; }
+    .article-body-wrap { max-width:760px; margin:0 auto; padding:64px 52px 100px; }
+    .prose h2 { font-family:var(--serif); font-size:30px; font-weight:400; color:var(--forest); letter-spacing:-0.015em; line-height:1.2; margin:52px 0 16px; }
+    .prose p { font-size:16px; font-weight:300; line-height:1.85; color:var(--ink-mid); margin-bottom:20px; }
+    .prose ul, .prose ol { margin:0 0 20px 24px; }
+    .prose li { font-size:16px; font-weight:300; line-height:1.85; color:var(--ink-mid); margin-bottom:6px; }
+    .prose strong { font-weight:500; color:var(--ink); }
+    .prose a { color:var(--sage); text-decoration:underline; text-underline-offset:3px; }
+    .callout { background:var(--mint-wash); border-left:3px solid var(--sage); padding:20px 24px; margin:32px 0; border-radius:0 4px 4px 0; }
+    .callout p { margin-bottom:0; font-size:15px; }
+    .divider { width:48px; height:1px; background:linear-gradient(to right,var(--sage),transparent); margin:48px 0; }
+    .references { margin-top:56px; padding-top:36px; border-top:1px solid rgba(28,58,36,0.08); }
+    .references h2 { font-family:var(--sans); font-size:11px; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:20px; }
+    .references ol { margin-left:20px; }
+    .references li { font-size:13px; font-weight:300; line-height:1.7; color:var(--ink-soft); margin-bottom:10px; }
+    .disclaimer-bar { background:var(--parchment); border-top:1px solid rgba(28,58,36,0.08); padding:28px 52px; text-align:center; }
+    .disclaimer-bar p { font-size:12px; color:var(--ink-soft); line-height:1.8; max-width:720px; margin:0 auto; }
+    footer { background:var(--forest); padding:48px 52px 36px; }
+    .footer-bottom { display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; }
+    .footer-copy { font-size:12px; font-weight:300; color:rgba(255,255,255,0.3); }
+    .footer-legal { display:flex; gap:28px; }
+    .footer-legal a { font-size:12px; font-weight:300; color:rgba(255,255,255,0.3); text-decoration:none; transition:color 0.2s; }
+    .footer-legal a:hover { color:rgba(255,255,255,0.65); }
+    @media (max-width:680px) {
+      .nav { padding:7px 20px; } .nav-toggle { display:block; } .nav-links { display:none; position:fixed; inset:0; top:0; flex-direction:column; align-items:center; justify-content:center; gap:32px; background:rgba(244,240,232,0.97); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); z-index:205; padding:80px 20px 40px; } .nav-links.open { display:flex; } .nav-links a { font-size:14px; letter-spacing:0.12em; }
+      .article-header { padding:110px 24px 44px; }
+      .article-body-wrap { padding:44px 24px 72px; }
+      .disclaimer-bar { padding:24px; } footer { padding:40px 24px 28px; }
+    }
+    .svg-figure { margin:40px 0; text-align:center; }
+    .svg-figure svg { max-width:100%; height:auto; }
+    .svg-caption { font-size:13px; color:var(--ink-faint); margin-top:12px; font-style:italic; }
+  </style>
+</head>
+<body>
+  <nav class="nav" id="mainNav">
+    <a href="../index.html" class="nav-logo" aria-label="Peptide Revealed — Home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" height="34" aria-hidden="true">
+        <g transform="translate(10,8) scale(1.28)">
+          <line x1="38" y1="38" x2="16" y2="18" stroke="#4E8C5F" stroke-width="2" stroke-linecap="round"/>
+          <line x1="42" y1="36" x2="62" y2="16" stroke="#4E8C5F" stroke-width="2" stroke-linecap="round"/>
+          <line x1="44" y1="40" x2="66" y2="44" stroke="#7AB88A" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="40" y1="44" x2="32" y2="64" stroke="#7AB88A" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="36" y1="42" x2="14" y2="58" stroke="#C6DFC8" stroke-width="1.2" stroke-linecap="round"/>
+          <circle cx="16" cy="18" r="6" fill="#4E8C5F"/><circle cx="62" cy="16" r="5" fill="#4E8C5F"/>
+          <circle cx="66" cy="44" r="4" fill="#7AB88A"/><circle cx="32" cy="64" r="4" fill="#7AB88A"/>
+          <circle cx="40" cy="40" r="8" fill="#1C3A24"/><circle cx="40" cy="40" r="4.5" fill="#4E8C5F"/>
+        </g>
+        <text x="118" y="62" font-family="Georgia,serif" font-size="44" font-weight="400" fill="#1C3A24" letter-spacing="-0.5">Peptide</text>
+        <text x="120" y="90" font-family="'Helvetica Neue',Arial,sans-serif" font-size="16" font-weight="300" fill="#4E8C5F" letter-spacing="5">REVEALED</text>
+      </svg>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#covers">Topics</a></li>
+      <li><a href="../articles.html">Articles</a></li>
+      <li><a href="../meal-planner.html">Meal Planner</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../index.html#newsletter" class="nav-btn">Subscribe Free</a></li>
+    </ul>
+  </nav>
+
+  <div class="article-header">
+    <div class="article-header-inner">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <a href="../articles.html">Articles</a>
+        <span class="breadcrumb-sep">›</span>
+        <span>Sourcing &amp; Safety</span>
+      </div>
+      <span class="article-tag">Sourcing &amp; Safety</span>
+      <h1 class="article-title">How to reconstitute peptides: a step-by-step guide</h1>
+      <p class="article-excerpt">Everything you need to safely mix, measure, and store lyophilized peptides — with a simple dosing formula you can use every time.</p>
+      <div class="article-byline">
+        <span>Peptide Revealed</span>
+        <span class="byline-sep">·</span>
+        <span>March 30, 2026</span>
+        <span class="byline-sep">·</span>
+        <span>12 min read</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="article-body-wrap">
+    <article class="prose">
+      <p>If you've recently purchased a peptide — whether it's <a href="bpc-157-guide.html">BPC-157</a>, <a href="tb-500.html">TB-500</a>, <a href="ghk-cu-copper-peptide.html">GHK-Cu</a>, or any other research compound — there's a good chance it arrived as a small vial of white powder. That's normal. Most peptides ship in lyophilized (freeze-dried) form because it dramatically extends shelf life. But before you can use it, you need to know how to reconstitute peptides safely — and that's what this guide covers from start to finish.</p>
+      <p>Peptide reconstitution sounds technical, but the process itself is straightforward. You're adding a specific amount of sterile liquid to the powder, letting it dissolve, and then calculating your dose. The key is doing each step carefully so you don't damage the peptide or introduce contamination.</p>
+      <p>This is not medical advice. If you're working with peptides under a physician's guidance, always follow their specific instructions over anything you read online. What follows is a general educational guide to the reconstitution process.</p>
+
+      <h2>What does "reconstitution" mean?</h2>
+      <p>Reconstitution simply means turning a dry, powdered substance back into a liquid solution so it can be measured and used. In the context of peptides, it means adding bacteriostatic water (or another appropriate solvent) to a vial of lyophilized powder until it fully dissolves.</p>
+      <p><a href="what-are-peptides-beginners-guide.html">Peptides are short chains of amino acids</a> that are inherently fragile in liquid form. They degrade when exposed to heat, light, and bacteria over time. Lyophilization — the process of freeze-drying — removes all the water from the peptide solution, leaving a stable powder that can be stored for months or even years without losing potency.</p>
+      <p>When you're ready to use the peptide, you reconstitute it by carefully adding liquid back. The peptide dissolves into solution and is ready for precise measurement and administration. Think of it like instant coffee in reverse: the manufacturer removed the water to preserve it, and you're adding it back when you're ready.</p>
+      <p>The reason this process matters so much is that peptides are proteins — and proteins are sensitive. Reconstituting too aggressively (shaking, squirting liquid directly onto powder) can cause the peptide to aggregate and lose its biological activity. Done correctly, reconstitution preserves the full potency of what you purchased.</p>
+
+      <h2>What you'll need</h2>
+      <p>Before you begin, gather everything so you can work through the process without interruption. Here's your supplies checklist:</p>
+      <ul>
+        <li><strong>Your peptide vial:</strong> The lyophilized powder, typically in a small glass vial with a rubber stopper and aluminum crimp cap. Check the label for the amount of peptide (e.g., 5mg, 10mg).</li>
+        <li><strong>Bacteriostatic water (BAC water):</strong> This is your primary reconstitution solvent. It comes in multi-dose vials, typically 30mL. Make sure it's pharmaceutical grade and not expired.</li>
+        <li><strong>Insulin syringes:</strong> U-100 insulin syringes (typically 1mL/1cc with 100-unit markings) are the standard for both reconstitution and dosing. Use a fresh syringe for each step — one for adding BAC water and a separate one for drawing your dose.</li>
+        <li><strong>Alcohol swabs:</strong> Individually wrapped 70% isopropyl alcohol prep pads. You'll use these to sterilize vial tops before every needle insertion.</li>
+        <li><strong>Clean, flat workspace:</strong> A countertop or table that you've wiped down. This isn't surgery, but basic cleanliness matters — you're preparing something that may be injected.</li>
+      </ul>
+      <p>A note on sourcing: the quality of your bacteriostatic water and syringes matters. Purchasing from reputable medical supply companies ensures you're working with properly sterilized products. For more on evaluating quality, see our guide on <a href="how-to-source-quality-peptides-safely.html">how to source quality peptides safely</a>.</p>
+
+      <h2>Bacteriostatic water vs. sterile water vs. acetic acid</h2>
+      <p>Not all reconstitution liquids are interchangeable. Understanding which solvent to use — and why — is one of the most important parts of the peptide mixing guide.</p>
+      <p><strong>Bacteriostatic water (BAC water)</strong> is the standard choice for most peptides. It's sterile water that contains 0.9% benzyl alcohol as a preservative. That small amount of benzyl alcohol inhibits bacterial growth, which means a reconstituted vial can be stored in the refrigerator and used over multiple doses across several weeks. For any multi-dose peptide vial, BAC water is what you want.</p>
+      <p><strong>Sterile water</strong> (also called sterile water for injection) is pure water with no preservative. It's appropriate for single-use reconstitution — meaning you mix the peptide, draw the entire contents in one dose, and discard the vial. Because it contains no antimicrobial agent, bacteria can grow in the solution if it's stored after initial puncture. If you're using a multi-dose vial over days or weeks, sterile water is not the right choice.</p>
+      <p><strong>Acetic acid (dilute)</strong> is used only for specific peptides that don't dissolve well in water alone. Some peptides with certain amino acid compositions require a mildly acidic environment to go into solution. GHRP peptides and some very hydrophobic sequences may call for 0.6% acetic acid. Unless the peptide manufacturer or a research protocol explicitly states to use acetic acid, default to bacteriostatic water.</p>
+      <div class="callout">
+        <p><strong>When in doubt, use bacteriostatic water.</strong> It's safe for subcutaneous use, preserves the peptide for multi-dose use, and works with the vast majority of commonly available research peptides. Acetic acid should only be used when specifically required.</p>
+      </div>
+
+      <h2>How to reconstitute peptides: step by step</h2>
+      <p>This is the core peptide reconstitution process. Take your time, especially the first few times you do this. Speed is never the goal — precision is.</p>
+      <ol>
+        <li><strong>Wash your hands thoroughly.</strong> Use soap and warm water for at least 20 seconds. Dry with a clean towel. This is a basic but critical step for contamination prevention.</li>
+        <li><strong>Wipe both vial tops with alcohol swabs.</strong> Clean the rubber stopper on both the peptide vial and the bacteriostatic water vial. Let the alcohol evaporate for a few seconds (it dries quickly). Do this every single time before inserting a needle — no exceptions.</li>
+        <li><strong>Draw your desired amount of BAC water.</strong> Using a clean insulin syringe, draw up the amount of bacteriostatic water you've decided to use. A common amount is 1mL or 2mL, depending on the peptide amount and your desired concentration (more on calculating this below). Pull the plunger slowly to avoid air bubbles.</li>
+        <li><strong>Inject the BAC water slowly against the vial wall.</strong> Insert the needle through the rubber stopper of the peptide vial. Here's the critical part: <strong>aim the needle tip at the inside wall of the glass vial, not at the powder</strong>. Depress the plunger very slowly so the water trickles gently down the wall and pools at the bottom, gradually reaching the powder. This gentle approach prevents the mechanical force of the water stream from damaging the peptide's molecular structure.</li>
+        <li><strong>Swirl gently — never shake.</strong> Once you've added the water, remove the syringe. Pick up the vial and tilt it in slow, circular motions to help the powder dissolve. You can also roll it gently between your palms. <strong>Never shake the vial.</strong> Vigorous agitation causes protein aggregation — the peptide molecules clump together and lose their biological activity. This is one of the most common mistakes people make, and it can render an expensive peptide useless.</li>
+        <li><strong>Wait until the solution is completely clear.</strong> A properly reconstituted peptide solution should be clear and free of visible particles. Most peptides dissolve within a few minutes with gentle swirling. Some may take up to 10-15 minutes. If you still see undissolved powder after 30 minutes of occasional gentle swirling, do not force it — the peptide may require a different solvent, or there may be a quality issue. A cloudy or particulate-filled solution should not be used.</li>
+        <li><strong>Store in the refrigerator immediately.</strong> Once dissolved, place the vial upright in your refrigerator (2-8°C / 36-46°F). The reconstituted peptide is now in a liquid state and much more susceptible to degradation than the dry powder was. Refrigeration slows this process and keeps the bacteriostatic preservative effective.</li>
+      </ol>
+
+      <div class="svg-figure">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" aria-hidden="true">
+          <!-- Background -->
+          <rect x="0" y="0" width="600" height="300" rx="8" fill="#EBF4EC"/>
+
+          <!-- Vial -->
+          <rect x="230" y="60" width="70" height="160" rx="6" fill="#FFFFFF" stroke="#4E8C5F" stroke-width="2"/>
+          <rect x="230" y="60" width="70" height="30" rx="6" fill="#C6DFC8" stroke="#4E8C5F" stroke-width="2"/>
+          <!-- Vial cap -->
+          <rect x="248" y="45" width="34" height="20" rx="3" fill="#7AB88A" stroke="#4E8C5F" stroke-width="1.5"/>
+          <rect x="252" y="38" width="26" height="12" rx="2" fill="#1C3A24"/>
+          <!-- Powder in vial -->
+          <ellipse cx="265" cy="200" rx="28" ry="8" fill="#EDE7DA"/>
+          <rect x="237" y="192" width="56" height="10" fill="#EDE7DA"/>
+          <ellipse cx="265" cy="192" rx="28" ry="6" fill="#F4F0E8"/>
+          <!-- Powder dots -->
+          <circle cx="252" cy="196" r="1.5" fill="#9FB4A1"/>
+          <circle cx="260" cy="199" r="1" fill="#9FB4A1"/>
+          <circle cx="270" cy="195" r="1.5" fill="#9FB4A1"/>
+          <circle cx="278" cy="198" r="1" fill="#9FB4A1"/>
+
+          <!-- Syringe coming from upper left -->
+          <!-- Syringe barrel -->
+          <rect x="80" y="55" width="120" height="18" rx="3" fill="#FFFFFF" stroke="#6B7E6D" stroke-width="1.5" transform="rotate(35, 140, 64)"/>
+          <!-- Syringe plunger -->
+          <line x1="55" y1="30" x2="85" y2="50" stroke="#6B7E6D" stroke-width="2" stroke-linecap="round"/>
+          <rect x="50" y="22" width="14" height="14" rx="2" fill="#7AB88A" stroke="#4E8C5F" stroke-width="1" transform="rotate(35, 57, 29)"/>
+          <!-- Needle -->
+          <line x1="195" y1="96" x2="243" y2="128" stroke="#3D4F40" stroke-width="1.2" stroke-linecap="round"/>
+
+          <!-- Water droplets flowing down vial wall -->
+          <circle cx="243" cy="135" r="3" fill="#7AB88A" opacity="0.8"/>
+          <circle cx="241" cy="148" r="2.5" fill="#7AB88A" opacity="0.7"/>
+          <circle cx="240" cy="160" r="2" fill="#7AB88A" opacity="0.6"/>
+          <circle cx="239" cy="170" r="2.5" fill="#7AB88A" opacity="0.5"/>
+          <circle cx="240" cy="182" r="2" fill="#7AB88A" opacity="0.4"/>
+
+          <!-- Arrow showing "against the wall" -->
+          <path d="M 340 100 C 330 110 310 125 270 125" fill="none" stroke="#4E8C5F" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <polygon points="270,122 262,126 270,130" fill="#4E8C5F"/>
+
+          <!-- Labels -->
+          <text x="350" y="96" font-family="'DM Sans','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="400" fill="#1C3A24">Inject against</text>
+          <text x="350" y="112" font-family="'DM Sans','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="400" fill="#1C3A24">the vial wall</text>
+
+          <text x="350" y="170" font-family="'DM Sans','Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="300" fill="#6B7E6D">Water trickles</text>
+          <text x="350" y="186" font-family="'DM Sans','Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="300" fill="#6B7E6D">down gently</text>
+
+          <text x="350" y="220" font-family="'DM Sans','Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="300" fill="#6B7E6D">Lyophilized</text>
+          <text x="350" y="236" font-family="'DM Sans','Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="300" fill="#6B7E6D">powder</text>
+
+          <!-- Arrow to powder -->
+          <path d="M 348 228 L 300 205" fill="none" stroke="#9FB4A1" stroke-width="1" stroke-dasharray="3,3"/>
+
+          <!-- Small molecule decorations -->
+          <circle cx="520" cy="50" r="5" fill="#C6DFC8" opacity="0.6"/>
+          <circle cx="540" cy="65" r="3" fill="#7AB88A" opacity="0.4"/>
+          <line x1="520" y1="50" x2="540" y2="65" stroke="#C6DFC8" stroke-width="1" opacity="0.4"/>
+          <circle cx="50" cy="260" r="4" fill="#C6DFC8" opacity="0.5"/>
+          <circle cx="70" cy="270" r="3" fill="#7AB88A" opacity="0.3"/>
+          <line x1="50" y1="260" x2="70" y2="270" stroke="#C6DFC8" stroke-width="1" opacity="0.3"/>
+        </svg>
+        <p class="svg-caption">Always direct the stream of bacteriostatic water against the inside wall of the vial — never directly onto the lyophilized powder.</p>
+      </div>
+
+      <p>That's the entire process. If you've followed each step, you now have a properly reconstituted peptide solution ready for precise dosing. The next section covers the math you'll need.</p>
+
+      <h2>The dosing formula: how to reconstitute peptides for accurate measurement</h2>
+      <p>This is the part that trips people up most, but the formula is actually simple once you see it. When you add a known amount of water to a known amount of peptide, you can calculate exactly how much peptide is in each unit on your insulin syringe.</p>
+      <p>Here's the universal formula:</p>
+      <div class="callout">
+        <p><strong>(Amount of BAC water in mL × 1,000) ÷ Peptide amount in mcg = mL per mcg</strong></p>
+        <p>Or, more practically for insulin syringes:</p>
+        <p><strong>Peptide amount in mcg ÷ (Amount of BAC water in mL × 100) = mcg per unit on a U-100 insulin syringe</strong></p>
+      </div>
+      <p>Let's walk through a worked example with <a href="bpc-157-guide.html">BPC-157</a>, one of the most commonly reconstituted peptides.</p>
+      <p><strong>Scenario:</strong> You have a 5mg vial of BPC-157 and you add 2mL of bacteriostatic water.</p>
+      <ul>
+        <li>First, convert milligrams to micrograms: 5mg = 5,000mcg</li>
+        <li>A U-100 insulin syringe has 100 units per 1mL, so 2mL = 200 units total</li>
+        <li>5,000mcg ÷ 200 units = <strong>25mcg per unit</strong></li>
+      </ul>
+      <p>Now you can dose precisely. If your target dose is 250mcg, you simply draw to the 10-unit mark on your syringe (10 units × 25mcg = 250mcg). For a 500mcg dose, draw to 20 units.</p>
+      <p><strong>Another example:</strong> You have a 10mg vial of <a href="tb-500.html">TB-500</a> and add 2mL of BAC water.</p>
+      <ul>
+        <li>10mg = 10,000mcg</li>
+        <li>2mL = 200 units</li>
+        <li>10,000mcg ÷ 200 units = <strong>50mcg per unit</strong></li>
+        <li>For a 2,500mcg (2.5mg) dose: draw to 50 units (the halfway mark)</li>
+      </ul>
+      <p>The amount of BAC water you add is your choice — there's no single "correct" amount. More water means a more dilute solution (smaller dose per unit, which allows finer dosing precision). Less water means a more concentrated solution (larger dose per unit, fewer injections per vial). Most people find that 1-2mL is a practical range for common peptide vial sizes.</p>
+
+      <h2>Understanding insulin syringe measurements</h2>
+      <p>If you're new to insulin syringes, the markings can be confusing at first glance. Here's what you need to know.</p>
+      <p><strong>U-100 syringes</strong> are the standard used for peptide dosing. The "U-100" means the syringe is calibrated for 100 units per 1mL of volume. Most commonly available insulin syringes are 1mL (100-unit) or 0.5mL (50-unit) varieties.</p>
+      <p>On a standard 1mL U-100 syringe:</p>
+      <ul>
+        <li>The total capacity is <strong>100 units = 1mL</strong></li>
+        <li>Major tick marks appear every 10 units</li>
+        <li>Minor tick marks appear every 2 units (on most syringes)</li>
+        <li>The 50-unit mark is the halfway point (0.5mL)</li>
+        <li>Each single unit = 0.01mL</li>
+      </ul>
+
+      <div class="svg-figure">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 240" aria-hidden="true">
+          <!-- Background -->
+          <rect x="0" y="0" width="600" height="240" rx="8" fill="#EBF4EC"/>
+
+          <!-- Syringe barrel -->
+          <rect x="80" y="90" width="400" height="40" rx="4" fill="#FFFFFF" stroke="#6B7E6D" stroke-width="1.5"/>
+
+          <!-- Plunger handle -->
+          <rect x="40" y="96" width="45" height="28" rx="3" fill="#7AB88A" stroke="#4E8C5F" stroke-width="1.5"/>
+          <line x1="85" y1="100" x2="85" y2="120" stroke="#6B7E6D" stroke-width="1"/>
+
+          <!-- Needle -->
+          <line x1="480" y1="110" x2="540" y2="110" stroke="#3D4F40" stroke-width="1.5" stroke-linecap="round"/>
+          <polygon points="540,108 550,110 540,112" fill="#3D4F40"/>
+
+          <!-- Major tick marks and labels (every 10 units) -->
+          <line x1="120" y1="90" x2="120" y2="80" stroke="#1C3A24" stroke-width="1.5"/>
+          <text x="120" y="74" text-anchor="middle" font-family="'DM Sans','Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="400" fill="#1C3A24">0</text>
+
+          <line x1="155" y1="90" x2="155" y2="83" stroke="#6B7E6D" stroke-width="1"/>
+          <text x="155" y="78" text-anchor="middle" font-family="'DM Sans','Helvetica Neue',Arial,sans-serif" font-size="10" font-weight="300" fill="#6B7E6D">10</text>
+
+          <line x1="190" y1="90" x2="190" y2="80" stroke="#1C3A24" stroke-width="1.5"/>
+          <text x="190" y="74" text-anchor="middle" font-family="'DM Sans','Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="400" fill="#1C3A24">20</text>
+
+          <line x1="225" y1="90" x2="225" y2="83" stroke="#6B7E6D" stroke-width="1"/>
+          <text x="225" y="78" text-anchor="middle" font-family="'DM Sans','Helvetica Neue',Arial,sans-serif" font-size="10" font-weight="300" fill="#6B7E6D">30</text>
+
+          <line x1="260" y1="90" x2="260" y2="80" stroke="#1C3A24" stroke-width="1.5"/>
+          <text x="260" y="74" text-anchor="middle" font-family="'DM Sans','Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="400" fill="#1C3A24">40</text>
+
+          <line x1="295" y1="90" x2="295" y2="80" stroke="#4E8C5F" stroke-width="2"/>
+          <text x="295" y="74" text-anchor="middle" font-family="'DM Sans','Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="500" fill="#4E8C5F">50</text>
+
+          <line x1="330" y1="90" x2="330" y2="83" stroke="#6B7E6D" stroke-width="1"/>
+          <text x="330" y="78" text-anchor="middle" font-family="'DM Sans','Helvetica Neue',Arial,sans-serif" font-size="10" font-weight="300" fill="#6B7E6D">60</text>
+
+          <line x1="365" y1="90" x2="365" y2="80" stroke="#1C3A24" stroke-width="1.5"/>
+          <text x="365" y="74" text-anchor="middle" font-family="'DM Sans','Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="400" fill="#1C3A24">70</text>
+
+          <line x1="400" y1="90" x2="400" y2="83" stroke="#6B7E6D" stroke-width="1"/>
+          <text x="400" y="78" text-anchor="middle" font-family="'DM Sans','Helvetica Neue',Arial,sans-serif" font-size="10" font-weight="300" fill="#6B7E6D">80</text>
+
+          <line x1="435" y1="90" x2="435" y2="80" stroke="#1C3A24" stroke-width="1.5"/>
+          <text x="435" y="74" text-anchor="middle" font-family="'DM Sans','Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="400" fill="#1C3A24">90</text>
+
+          <line x1="470" y1="90" x2="470" y2="80" stroke="#1C3A24" stroke-width="1.5"/>
+          <text x="470" y="74" text-anchor="middle" font-family="'DM Sans','Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="400" fill="#1C3A24">100</text>
+
+          <!-- Minor tick marks (every 2 units between majors, simplified) -->
+          <line x1="127" y1="90" x2="127" y2="86" stroke="#9FB4A1" stroke-width="0.8"/>
+          <line x1="134" y1="90" x2="134" y2="86" stroke="#9FB4A1" stroke-width="0.8"/>
+          <line x1="141" y1="90" x2="141" y2="86" stroke="#9FB4A1" stroke-width="0.8"/>
+          <line x1="148" y1="90" x2="148" y2="86" stroke="#9FB4A1" stroke-width="0.8"/>
+
+          <!-- Labels below -->
+          <text x="120" y="148" text-anchor="middle" font-family="'DM Sans','Helvetica Neue',Arial,sans-serif" font-size="10" font-weight="300" fill="#6B7E6D">0 mL</text>
+          <text x="295" y="148" text-anchor="middle" font-family="'DM Sans','Helvetica Neue',Arial,sans-serif" font-size="10" font-weight="400" fill="#4E8C5F">0.5 mL</text>
+          <text x="470" y="148" text-anchor="middle" font-family="'DM Sans','Helvetica Neue',Arial,sans-serif" font-size="10" font-weight="300" fill="#6B7E6D">1.0 mL</text>
+
+          <!-- Annotation: "100 units = 1 mL" -->
+          <line x1="120" y1="160" x2="470" y2="160" stroke="#4E8C5F" stroke-width="1"/>
+          <line x1="120" y1="156" x2="120" y2="164" stroke="#4E8C5F" stroke-width="1"/>
+          <line x1="470" y1="156" x2="470" y2="164" stroke="#4E8C5F" stroke-width="1"/>
+          <text x="295" y="178" text-anchor="middle" font-family="'DM Sans','Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="400" fill="#1C3A24">100 units = 1 mL</text>
+
+          <!-- Title -->
+          <text x="300" y="32" text-anchor="middle" font-family="'DM Sans','Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="500" fill="#1C3A24">U-100 Insulin Syringe</text>
+          <text x="300" y="50" text-anchor="middle" font-family="'DM Sans','Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="300" fill="#6B7E6D">Each unit = 0.01 mL</text>
+
+          <!-- Molecule decorations -->
+          <circle cx="30" cy="30" r="4" fill="#C6DFC8" opacity="0.5"/>
+          <circle cx="45" cy="20" r="3" fill="#7AB88A" opacity="0.3"/>
+          <line x1="30" y1="30" x2="45" y2="20" stroke="#C6DFC8" stroke-width="1" opacity="0.4"/>
+          <circle cx="565" cy="210" r="4" fill="#C6DFC8" opacity="0.5"/>
+          <circle cx="580" cy="220" r="3" fill="#7AB88A" opacity="0.3"/>
+          <line x1="565" y1="210" x2="580" y2="220" stroke="#C6DFC8" stroke-width="1" opacity="0.4"/>
+        </svg>
+        <p class="svg-caption">A standard U-100 insulin syringe: 100 units equals 1 mL. The 50-unit mark is the halfway point.</p>
+      </div>
+
+      <p>If you need very small doses (under 10 units), consider using a 0.5mL (50-unit) syringe instead. These have the same unit calibration but the tick marks are more spread out, making it easier to draw precise small volumes.</p>
+      <p>One important note: <strong>"units" on an insulin syringe are not the same as "international units" (IU) used for some medications.</strong> In the context of peptide reconstitution, a "unit" is simply a volume measurement — one-hundredth of a milliliter. Don't confuse syringe units with IU dosing used for compounds like HCG or insulin.</p>
+
+      <h2>How to store reconstituted peptides</h2>
+      <p>Proper storage after reconstitution is just as important as the mixing process itself. A peptide can survive years as a dry powder but degrade within days if stored incorrectly once it's in solution.</p>
+      <p>Here are the key storage rules:</p>
+      <ul>
+        <li><strong>Refrigerate at 2-8°C (36-46°F):</strong> Place the reconstituted vial upright in your refrigerator immediately after mixing. The door shelf is fine; the main compartment is slightly better because the temperature is more consistent.</li>
+        <li><strong>Use within 28 days:</strong> Most reconstituted peptides (when mixed with bacteriostatic water) remain stable for approximately 28-30 days under proper refrigeration. Some peptides may have shorter stability windows. If you can't use the entire vial within this timeframe, consider adding less BAC water to make a more concentrated solution, resulting in fewer total doses per vial.</li>
+        <li><strong>Keep away from light:</strong> Light accelerates peptide degradation. Store vials in a dark area of the refrigerator or wrap them in aluminum foil. Some suppliers ship vials in amber glass for this reason.</li>
+        <li><strong>Do not freeze reconstituted solution:</strong> Freezing a reconstituted peptide can cause the proteins to denature and aggregate as ice crystals form and disrupt the molecular structure. <strong>Unreconstituted</strong> (dry) peptide powder, however, can be stored in the freezer for extended periods — often a year or more — without significant degradation. This is one of the key advantages of buying lyophilized peptides and only reconstituting what you'll use in the near term.</li>
+        <li><strong>Always sterilize before each use:</strong> Every time you access the vial, wipe the rubber stopper with a fresh alcohol swab before inserting a needle. This simple habit dramatically reduces the risk of bacterial contamination.</li>
+      </ul>
+      <div class="callout">
+        <p><strong>Storage summary:</strong> Unreconstituted powder — freezer for long-term, refrigerator for medium-term. Reconstituted solution — refrigerator only, use within 28 days, keep dark, never freeze.</p>
+      </div>
+
+      <h2>Common mistakes that destroy your peptide</h2>
+      <p>Peptides aren't cheap, and reconstitution mistakes can waste an entire vial. These are the errors to avoid:</p>
+      <p><strong>Shaking the vial.</strong> This is the most common and most damaging mistake. Shaking creates mechanical stress that causes protein aggregation — the peptide molecules unfold and clump together irreversibly. Once aggregated, the peptide loses its biological activity. It may look cloudy or have visible particles, but even sub-visible aggregation can significantly reduce potency. Always swirl gently or roll between your palms.</p>
+      <p><strong>Squirting water directly onto the powder.</strong> Directing a forceful stream of liquid straight onto the lyophilized cake creates the same kind of mechanical stress as shaking. The impact disrupts the peptide structure. Aim the needle at the vial wall and depress the plunger slowly so water trickles down to the powder gradually.</p>
+      <p><strong>Using tap water or non-sterile water.</strong> This should go without saying, but only use pharmaceutical-grade bacteriostatic water or sterile water for injection. Tap water, distilled water from the grocery store, or any non-sterile liquid introduces bacteria and contaminants that can cause infection and degrade the peptide. This is a preparation that may be injected — sterility is non-negotiable.</p>
+      <p><strong>Leaving reconstituted peptides at room temperature.</strong> Peptides in solution degrade significantly faster at room temperature than under refrigeration. Even a few hours at room temperature won't destroy the peptide, but leaving it out overnight or for extended periods will reduce potency. Reconstitute, draw your dose, and return the vial to the refrigerator promptly.</p>
+      <p><strong>Using a contaminated needle.</strong> Never reuse a syringe that has already been used for injection to draw from the vial. After a needle has been used for subcutaneous injection, it's no longer sterile. Use a fresh syringe every time you draw a dose. Syringes are inexpensive — your peptide is not.</p>
+      <p><strong>Not recording your reconstitution details.</strong> Write down the date you reconstituted, the amount of BAC water you added, and the resulting concentration (mcg per unit). Label the vial. If you have multiple peptides, it's easy to lose track. A small piece of tape with the date and concentration saves confusion later.</p>
+
+      <div class="divider"></div>
+
+      <h2>The bottom line</h2>
+      <p>Learning how to reconstitute peptides is one of those skills that seems intimidating until you've done it once. The process itself takes about five minutes: wash hands, sterilize, add water gently against the wall, swirl, refrigerate. The math is a single formula you'll memorize after the second time.</p>
+      <p>The principles behind each step all trace back to one fact: peptides are fragile proteins. Every precaution — the gentle mixing, the sterile technique, the proper storage — exists because protein structure is what gives peptides their biological activity, and that structure can be disrupted by mechanical force, bacteria, heat, and light.</p>
+      <p>Get these basics right, and you'll preserve the full potency and safety of whatever peptide you're working with. Get them wrong, and you're potentially wasting money on a degraded product — or worse, introducing a contamination risk.</p>
+      <p>If you're just starting to learn about peptides, our <a href="what-are-peptides-beginners-guide.html">beginner's guide to peptides</a> covers the foundational science. And if you're evaluating where to purchase peptides in a market that's changed significantly since <a href="peptide-sciences-shut-down.html">major vendor closures</a>, our <a href="how-to-source-quality-peptides-safely.html">sourcing guide</a> walks through what to look for in third-party testing and supplier credibility.</p>
+
+      <div class="divider"></div>
+
+      <div class="references">
+        <h2>References</h2>
+        <ol>
+          <li>Manning MC et al. "Stability of Protein Pharmaceuticals: An Update." <em>Pharmaceutical Research</em>. 2010.</li>
+          <li>Mahler HC et al. "Protein Aggregation: Pathways, Induction Factors and Analysis." <em>Journal of Pharmaceutical Sciences</em>. 2009.</li>
+          <li>Wang W. "Instability, stabilization, and formulation of liquid protein pharmaceuticals." <em>International Journal of Pharmaceutics</em>. 1999.</li>
+          <li>Meyer BK et al. "Antimicrobial preservative use in parenteral products: past and present." <em>Journal of Pharmaceutical Sciences</em>. 2007.</li>
+          <li>Carpenter JF et al. "Rational design of stable lyophilized protein formulations." <em>Pharmaceutical Research</em>. 1997.</li>
+          <li>USP Chapter 797: Pharmaceutical Compounding — Sterile Preparations. <em>United States Pharmacopeia</em>. 2023.</li>
+        </ol>
+      </div>
+    </article>
+  </main>
+
+  <div class="disclaimer-bar">
+    <p><strong>Medical disclaimer:</strong> This article provides educational content only. Nothing here constitutes medical advice, diagnosis, or treatment recommendations. Always consult a qualified healthcare professional before using any peptide or supplement.</p>
+  </div>
+
+  <footer>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Peptide Revealed. For informational purposes only — not medical advice.</p>
+      <nav class="footer-legal">
+        <a href="../privacy-policy.html">Privacy Policy</a>
+        <a href="../terms-of-use.html">Terms of Use</a>
+        <a href="../disclaimer.html">Disclaimer</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 24), { passive: true });
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      navToggle.classList.toggle('active', open);
+      navToggle.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+  </script>
+</body>
+</html>
