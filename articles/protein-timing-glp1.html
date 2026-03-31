@@ -89,6 +89,18 @@
       .disclaimer-bar { padding:24px; } footer { padding:40px 24px 28px; }
       .cta-box { padding:22px 20px; }
     }
+  
+    /* ─── Inline Newsletter CTA ─── */
+    .inline-cta { background:var(--mint-wash); border:1px solid rgba(78,140,95,0.15); border-radius:6px; padding:32px 28px; margin:40px 0; text-align:center; }
+    .inline-cta-heading { font-family:var(--serif); font-size:22px; font-weight:400; color:var(--forest); margin-bottom:8px; }
+    .inline-cta-sub { font-size:14px; font-weight:300; color:var(--ink-soft); margin-bottom:18px; line-height:1.6; }
+    .inline-cta-form { display:flex; gap:8px; max-width:420px; margin:0 auto; }
+    .inline-cta-form input[type="email"] { flex:1; padding:10px 14px; border:1px solid rgba(78,140,95,0.25); border-radius:3px; font-family:var(--sans); font-size:14px; font-weight:300; background:var(--white); color:var(--ink); outline:none; }
+    .inline-cta-form input[type="email"]:focus { border-color:var(--sage); }
+    .inline-cta-form button { padding:10px 20px; background:var(--sage); color:var(--white); border:none; border-radius:3px; font-family:var(--sans); font-size:13px; font-weight:400; letter-spacing:0.04em; cursor:pointer; transition:background 0.25s; white-space:nowrap; }
+    .inline-cta-form button:hover { background:var(--forest); }
+    .inline-cta-note { font-size:11px; color:var(--ink-faint); margin-top:10px; }
+    @media (max-width:600px) { .inline-cta-form { flex-direction:column; } .inline-cta { padding:24px 20px; } }
   </style>
 </head>
 <body>
@@ -160,6 +172,17 @@
       <p>The <a href="glp-1-appetite-cycle.html">GLP-1 appetite cycle</a> creates a predictable problem. In the first 1-3 days after injection, appetite suppression is strongest. Many people skip breakfast entirely, pick at lunch, and manage a modest dinner. On these days, total protein intake often drops to 30-50 grams — and most of it lands in a single meal.</p>
       <p>As the week progresses and drug levels decline, appetite returns. Days 5-7 feel more normal, and people tend to eat larger meals. But by this point, if muscle protein synthesis has been understimulated for several days running, you've missed repeated opportunities to signal your body to preserve lean tissue.</p>
       <p>This matters because <a href="glp-1-peptides.html">GLP-1 medications</a> produce significant weight loss — and roughly 25-40% of that weight can come from lean mass if nutrition isn't optimized. That's muscle, bone density, and metabolically active tissue you don't want to lose. Protein distribution is one of the most practical levers you have to shift that ratio toward fat loss and away from muscle loss.</p>
+
+      
+      <div class="inline-cta">
+        <p class="inline-cta-heading">Stay up to date on peptide research</p>
+        <p class="inline-cta-sub">Get evidence-based peptide insights delivered to your inbox. No hype, no spam.</p>
+        <form class="inline-cta-form" onsubmit="handleCtaSignup(event)" aria-label="Inline newsletter signup">
+          <input type="email" placeholder="Your email address" autocomplete="email" required>
+          <button type="submit">Subscribe Free</button>
+        </form>
+        <p class="inline-cta-note">Free forever. Unsubscribe anytime.</p>
+      </div>
 
       <h2>The protein timing target: 20-30g across 3-4 occasions</h2>
       <p>The practical goal is straightforward: <strong>aim for 20-30 grams of protein at each of 3-4 eating occasions throughout the day</strong>. This doesn't mean three full sit-down meals. On low-appetite days especially, a "meal" might be a high-protein snack you eat in five minutes. What matters is that your muscles receive that protein signal multiple times per day.</p>
@@ -272,6 +295,33 @@
         document.body.style.overflow = '';
       });
     });
+  
+    /* ─── Inline CTA signup handler (ConvertKit form 9267405) ─── */
+    function handleCtaSignup(e) {
+      e.preventDefault();
+      var form = e.currentTarget;
+      var input = form.querySelector('input[type="email"]');
+      var btn = form.querySelector('button');
+      var email = input.value.trim();
+      if (!email) return;
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      var formData = new FormData();
+      formData.append('email_address', email);
+      fetch('https://app.kit.com/forms/9267405/subscriptions', {
+        method: 'POST', body: formData, redirect: 'manual'
+      }).then(function(r) {
+        if (r.ok || r.status === 0 || r.status === 200 || r.status === 302 || r.type === 'opaqueredirect') {
+          btn.textContent = 'Check your email!';
+          btn.style.background = 'var(--forest)';
+          input.value = '';
+          input.disabled = true;
+        } else { btn.textContent = 'Try again'; }
+      }).catch(function() { btn.textContent = 'Try again'; })
+      .finally(function() {
+        setTimeout(function() { btn.textContent = 'Subscribe Free'; btn.style.background = ''; input.disabled = false; btn.disabled = false; }, 4000);
+      });
+    }
   </script>
 </body>
 </html>

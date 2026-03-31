@@ -88,6 +88,18 @@
     .svg-figure { margin:40px 0; text-align:center; }
     .svg-figure svg { max-width:100%; height:auto; }
     .svg-caption { font-size:13px; color:var(--ink-faint); margin-top:12px; font-style:italic; }
+  
+    /* ─── Inline Newsletter CTA ─── */
+    .inline-cta { background:var(--mint-wash); border:1px solid rgba(78,140,95,0.15); border-radius:6px; padding:32px 28px; margin:40px 0; text-align:center; }
+    .inline-cta-heading { font-family:var(--serif); font-size:22px; font-weight:400; color:var(--forest); margin-bottom:8px; }
+    .inline-cta-sub { font-size:14px; font-weight:300; color:var(--ink-soft); margin-bottom:18px; line-height:1.6; }
+    .inline-cta-form { display:flex; gap:8px; max-width:420px; margin:0 auto; }
+    .inline-cta-form input[type="email"] { flex:1; padding:10px 14px; border:1px solid rgba(78,140,95,0.25); border-radius:3px; font-family:var(--sans); font-size:14px; font-weight:300; background:var(--white); color:var(--ink); outline:none; }
+    .inline-cta-form input[type="email"]:focus { border-color:var(--sage); }
+    .inline-cta-form button { padding:10px 20px; background:var(--sage); color:var(--white); border:none; border-radius:3px; font-family:var(--sans); font-size:13px; font-weight:400; letter-spacing:0.04em; cursor:pointer; transition:background 0.25s; white-space:nowrap; }
+    .inline-cta-form button:hover { background:var(--forest); }
+    .inline-cta-note { font-size:11px; color:var(--ink-faint); margin-top:10px; }
+    @media (max-width:600px) { .inline-cta-form { flex-direction:column; } .inline-cta { padding:24px 20px; } }
   </style>
 </head>
 <body>
@@ -207,6 +219,17 @@
           </defs>
         </svg>
         <p class="svg-caption">Telomeres are protective caps at the ends of chromosomes. They shorten with each cell division until the cell can no longer replicate.</p>
+      </div>
+
+      
+      <div class="inline-cta">
+        <p class="inline-cta-heading">Stay up to date on peptide research</p>
+        <p class="inline-cta-sub">Get evidence-based peptide insights delivered to your inbox. No hype, no spam.</p>
+        <form class="inline-cta-form" onsubmit="handleCtaSignup(event)" aria-label="Inline newsletter signup">
+          <input type="email" placeholder="Your email address" autocomplete="email" required>
+          <button type="submit">Subscribe Free</button>
+        </form>
+        <p class="inline-cta-note">Free forever. Unsubscribe anytime.</p>
       </div>
 
       <h2>How epithalon is proposed to work</h2>
@@ -385,6 +408,33 @@
         document.body.style.overflow = '';
       });
     });
+  
+    /* ─── Inline CTA signup handler (ConvertKit form 9267405) ─── */
+    function handleCtaSignup(e) {
+      e.preventDefault();
+      var form = e.currentTarget;
+      var input = form.querySelector('input[type="email"]');
+      var btn = form.querySelector('button');
+      var email = input.value.trim();
+      if (!email) return;
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      var formData = new FormData();
+      formData.append('email_address', email);
+      fetch('https://app.kit.com/forms/9267405/subscriptions', {
+        method: 'POST', body: formData, redirect: 'manual'
+      }).then(function(r) {
+        if (r.ok || r.status === 0 || r.status === 200 || r.status === 302 || r.type === 'opaqueredirect') {
+          btn.textContent = 'Check your email!';
+          btn.style.background = 'var(--forest)';
+          input.value = '';
+          input.disabled = true;
+        } else { btn.textContent = 'Try again'; }
+      }).catch(function() { btn.textContent = 'Try again'; })
+      .finally(function() {
+        setTimeout(function() { btn.textContent = 'Subscribe Free'; btn.style.background = ''; input.disabled = false; btn.disabled = false; }, 4000);
+      });
+    }
   </script>
 </body>
 </html>
