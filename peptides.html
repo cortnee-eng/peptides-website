@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0QX7QDH0J0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0QX7QDH0J0');
+  </script>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peptide Database — 50+ peptides profiled with evidence ratings | Peptide Revealed</title>
+  <meta name="description" content="Browse 50+ peptides organized by category with evidence ratings, mechanisms, and links to in-depth guides. The most comprehensive independent peptide reference online.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Peptide Revealed">
+  <meta property="og:title" content="Peptide Database — 50+ peptides profiled with evidence ratings">
+  <meta property="og:description" content="Browse 50+ peptides organized by category with evidence ratings, mechanisms, and links to in-depth guides.">
+  <meta property="og:url" content="https://peptiderevealed.com/peptides.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Peptide Database — 50+ peptides profiled with evidence ratings">
+  <meta name="twitter:description" content="Browse 50+ peptides organized by category with evidence ratings, mechanisms, and links to in-depth guides.">
+  <link rel="canonical" href="https://peptiderevealed.com/peptides.html">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Peptide Database",
+    "description": "Browse 50+ peptides organized by category with evidence ratings, mechanisms, and links to in-depth guides.",
+    "url": "https://peptiderevealed.com/peptides.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Peptide Revealed",
+      "url": "https://peptiderevealed.com"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How many peptides are used in research and clinical practice?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Over 80 peptides are actively studied in research and clinical settings. Our database profiles 50+ of the most commonly discussed peptides across recovery, anti-aging, cognitive enhancement, weight loss, muscle performance, immune health, sexual health, sleep, and hair/skin categories."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which peptides are FDA-approved?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Several peptides have full regulatory approval: semaglutide (Ozempic/Wegovy) and tirzepatide (Mounjaro/Zepbound) for weight loss and diabetes, PT-141/bremelanotide (Vyleesi) for hypoactive sexual desire, sermorelin for growth hormone deficiency, and tesamorelin for HIV-associated lipodystrophy. Thymosin alpha-1 is approved in multiple countries outside the US."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does evidence level mean for peptides?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Evidence level indicates the strongest tier of published research available for a peptide's most common use case. 'Approved' means regulatory approval exists. 'Human trials' means published clinical data in humans. 'Limited human data' means some human data exists but is insufficient for strong conclusions. 'Animal data' means evidence comes primarily from animal studies. 'Preclinical' means only in-vitro or very early research exists."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the most popular peptides for beginners?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "BPC-157 for recovery, CJC-1295 with ipamorelin for growth hormone support, and GHK-Cu for anti-aging and skin health are among the most commonly discussed starting points. However, most peptides lack extensive human clinical trial data, and a healthcare provider should be consulted before use."
+        }
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --forest:#1C3A24; --sage:#4E8C5F; --fern:#7AB88A; --mint:#C6DFC8;
+      --mint-wash:#EBF4EC; --cream:#F4F0E8; --parchment:#EDE7DA; --white:#FFFFFF;
+      --ink:#161D18; --ink-mid:#3D4F40; --ink-soft:#6B7E6D; --ink-faint:#9FB4A1;
+      --serif:'Cormorant Garamond',Georgia,serif; --sans:'DM Sans','Helvetica Neue',Arial,sans-serif;
+      --ease-out:cubic-bezier(0.22,1,0.36,1);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family:var(--sans); font-weight:300; color:var(--ink); background:var(--cream); line-height:1.65; overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+
+    /* ─── NAV ─── */
+    .nav { position:fixed; inset:0 0 auto 0; z-index:200; display:flex; align-items:center; justify-content:space-between; padding:7px 52px; background:rgba(244,240,232,0.88); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-bottom:1px solid rgba(78,140,95,0.1); transition:box-shadow 0.4s var(--ease-out); }
+    .nav.scrolled { box-shadow:0 1px 32px rgba(28,58,36,0.09); }
+    .nav-logo { text-decoration:none; display:block; line-height:0; }
+    .nav-links { display:flex; align-items:center; gap:40px; list-style:none; }
+    .nav-links a { font-family:var(--sans); font-size:12px; font-weight:400; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-soft); text-decoration:none; transition:color 0.2s; }
+    .nav-links a:hover { color:var(--sage); }
+    .nav-btn { font-size:12px !important; font-weight:400 !important; letter-spacing:0.08em !important; color:var(--white) !important; background:var(--sage); padding:10px 24px; border-radius:2px; transition:background 0.25s !important; }
+    .nav-btn:hover { background:var(--forest); color:var(--white) !important; }
+    .nav-toggle { display:none; background:none; border:none; cursor:pointer; padding:8px; z-index:210; }
+    .nav-toggle span { display:block; width:24px; height:2px; background:var(--forest); margin:5px 0; border-radius:2px; transition:transform 0.3s var(--ease-out), opacity 0.3s var(--ease-out); }
+    .nav-toggle.active span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+    .nav-toggle.active span:nth-child(2) { opacity:0; }
+    .nav-toggle.active span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+
+    /* ─── PAGE HEADER ─── */
+    .page-header { padding:140px 52px 60px; background:var(--white); border-bottom:1px solid rgba(28,58,36,0.08); }
+    .page-header-inner { max-width:1200px; margin:0 auto; }
+    .page-eyebrow { font-size:11px; font-weight:400; letter-spacing:0.22em; text-transform:uppercase; color:var(--sage); margin-bottom:18px; display:flex; align-items:center; gap:14px; }
+    .page-eyebrow::before { content:''; display:block; width:28px; height:1px; background:var(--sage); flex-shrink:0; }
+    .page-title { font-family:var(--serif); font-size:clamp(38px,5vw,64px); font-weight:400; line-height:1.06; color:var(--forest); letter-spacing:-0.02em; margin-bottom:16px; }
+    .page-title em { font-style:italic; color:var(--sage); }
+    .page-subtitle { font-size:17px; font-weight:300; color:var(--ink-soft); line-height:1.7; max-width:620px; }
+
+    /* ─── STATS ROW ─── */
+    .stats-row { display:flex; gap:40px; margin-top:28px; padding-top:24px; border-top:1px solid rgba(28,58,36,0.07); }
+    .stat-item { text-align:left; }
+    .stat-num { font-family:var(--serif); font-size:32px; font-weight:400; color:var(--forest); line-height:1; }
+    .stat-label { font-size:11px; font-weight:400; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-faint); margin-top:4px; }
+
+    /* ─── SEARCH & FILTERS ─── */
+    .controls-bar { padding:24px 52px; background:var(--cream); border-bottom:1px solid rgba(28,58,36,0.07); position:sticky; top:56px; z-index:100; }
+    .controls-inner { max-width:1200px; margin:0 auto; display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
+    .search-box { flex:1; min-width:220px; position:relative; }
+    .search-box input { width:100%; font-family:var(--sans); font-size:14px; font-weight:300; color:var(--ink); background:var(--white); border:1px solid rgba(78,140,95,0.2); border-radius:4px; padding:11px 14px 11px 40px; outline:none; transition:border-color 0.2s; }
+    .search-box input:focus { border-color:var(--sage); }
+    .search-box input::placeholder { color:var(--ink-faint); }
+    .search-icon { position:absolute; left:14px; top:50%; transform:translateY(-50%); color:var(--ink-faint); pointer-events:none; }
+    .filter-pills { display:flex; gap:8px; flex-wrap:wrap; }
+    .filter-pill { font-family:var(--sans); font-size:11px; font-weight:400; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-soft); background:transparent; border:1px solid rgba(78,140,95,0.25); padding:8px 16px; border-radius:2px; cursor:pointer; transition:all 0.2s; white-space:nowrap; }
+    .filter-pill:hover, .filter-pill.active { color:var(--forest); background:var(--mint-wash); border-color:var(--sage); }
+
+    /* ─── EVIDENCE FILTER ─── */
+    .evidence-pills { display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; }
+    .evidence-pill { font-family:var(--sans); font-size:10px; font-weight:500; letter-spacing:0.06em; padding:6px 12px; border-radius:20px; cursor:pointer; transition:all 0.2s; border:1px solid transparent; }
+    .evidence-pill.ev-approved { color:#1a6b3c; background:rgba(26,107,60,0.08); border-color:rgba(26,107,60,0.2); }
+    .evidence-pill.ev-approved:hover, .evidence-pill.ev-approved.active { background:rgba(26,107,60,0.18); }
+    .evidence-pill.ev-human { color:#2d6a9f; background:rgba(45,106,159,0.08); border-color:rgba(45,106,159,0.2); }
+    .evidence-pill.ev-human:hover, .evidence-pill.ev-human.active { background:rgba(45,106,159,0.18); }
+    .evidence-pill.ev-limited { color:#7a6a2e; background:rgba(122,106,46,0.08); border-color:rgba(122,106,46,0.2); }
+    .evidence-pill.ev-limited:hover, .evidence-pill.ev-limited.active { background:rgba(122,106,46,0.18); }
+    .evidence-pill.ev-animal { color:#8a5a3a; background:rgba(138,90,58,0.08); border-color:rgba(138,90,58,0.2); }
+    .evidence-pill.ev-animal:hover, .evidence-pill.ev-animal.active { background:rgba(138,90,58,0.18); }
+    .evidence-pill.ev-preclinical { color:var(--ink-soft); background:rgba(107,126,109,0.08); border-color:rgba(107,126,109,0.2); }
+    .evidence-pill.ev-preclinical:hover, .evidence-pill.ev-preclinical.active { background:rgba(107,126,109,0.18); }
+
+    /* ─── DATABASE GRID ─── */
+    .db-section { padding:48px 52px 100px; max-width:1200px; margin:0 auto; }
+    .db-count { font-size:13px; font-weight:300; color:var(--ink-faint); margin-bottom:24px; }
+    .db-count strong { font-weight:500; color:var(--ink-soft); }
+
+    .db-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(340px, 1fr)); gap:20px; }
+
+    .peptide-card { background:var(--white); border:1px solid rgba(28,58,36,0.08); border-radius:6px; padding:28px 24px; transition:box-shadow 0.3s var(--ease-out), transform 0.3s var(--ease-out); display:flex; flex-direction:column; }
+    .peptide-card:hover { box-shadow:0 4px 24px rgba(28,58,36,0.08); transform:translateY(-2px); }
+    .peptide-card.has-article { border-left:3px solid var(--sage); }
+
+    .card-top { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; margin-bottom:12px; }
+    .card-name { font-family:var(--serif); font-size:22px; font-weight:500; color:var(--forest); line-height:1.2; }
+    .card-badge { font-size:9px; font-weight:500; letter-spacing:0.06em; text-transform:uppercase; padding:4px 10px; border-radius:20px; white-space:nowrap; flex-shrink:0; margin-top:4px; }
+    .badge-approved { color:#1a6b3c; background:rgba(26,107,60,0.1); }
+    .badge-human { color:#2d6a9f; background:rgba(45,106,159,0.1); }
+    .badge-limited { color:#7a6a2e; background:rgba(122,106,46,0.1); }
+    .badge-animal { color:#8a5a3a; background:rgba(138,90,58,0.1); }
+    .badge-preclinical { color:var(--ink-soft); background:rgba(107,126,109,0.1); }
+
+    .card-category { font-size:10px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--sage); margin-bottom:10px; }
+    .card-mechanism { font-size:14px; font-weight:300; line-height:1.7; color:var(--ink-mid); flex:1; }
+    .card-footer { margin-top:16px; padding-top:14px; border-top:1px solid rgba(28,58,36,0.06); display:flex; align-items:center; justify-content:space-between; }
+    .card-link { font-size:11px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:var(--sage); text-decoration:none; display:flex; align-items:center; gap:6px; transition:color 0.2s; }
+    .card-link:hover { color:var(--forest); }
+    .card-coming { font-size:11px; font-weight:300; font-style:italic; color:var(--ink-faint); }
+    .card-tools { display:flex; gap:12px; }
+    .card-tool-link { font-size:10px; font-weight:400; letter-spacing:0.06em; text-transform:uppercase; color:var(--ink-faint); text-decoration:none; transition:color 0.2s; }
+    .card-tool-link:hover { color:var(--sage); }
+
+    /* ─── NO RESULTS ─── */
+    .no-results { text-align:center; padding:60px 20px; display:none; }
+    .no-results h3 { font-family:var(--serif); font-size:24px; color:var(--forest); margin-bottom:8px; }
+    .no-results p { font-size:14px; color:var(--ink-soft); }
+
+    /* ─── DISCLAIMER ─── */
+    .disclaimer-bar { background:var(--parchment); border-top:1px solid rgba(28,58,36,0.08); padding:28px 52px; text-align:center; }
+    .disclaimer-bar p { font-size:12px; color:var(--ink-soft); line-height:1.8; max-width:720px; margin:0 auto; }
+
+    /* ─── FOOTER ─── */
+    footer { background:var(--forest); padding:48px 52px 36px; }
+    .footer-bottom { display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; }
+    .footer-copy { font-size:12px; font-weight:300; color:rgba(255,255,255,0.3); }
+    .footer-legal { display:flex; gap:28px; }
+    .footer-legal a { font-size:12px; font-weight:300; color:rgba(255,255,255,0.3); text-decoration:none; transition:color 0.2s; }
+    .footer-legal a:hover { color:rgba(255,255,255,0.65); }
+
+    @media (max-width:768px) {
+      .nav { padding:7px 20px; }
+      .nav-toggle { display:block; }
+      .nav-links { display:none; position:fixed; inset:0; flex-direction:column; align-items:center; justify-content:center; gap:32px; background:rgba(244,240,232,0.97); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); z-index:205; padding:80px 20px 40px; }
+      .nav-links.open { display:flex; }
+      .nav-links a { font-size:14px; letter-spacing:0.12em; }
+      .page-header { padding:100px 24px 44px; }
+      .stats-row { gap:24px; }
+      .stat-num { font-size:24px; }
+      .controls-bar { padding:16px 24px; top:48px; }
+      .controls-inner { flex-direction:column; align-items:stretch; }
+      .db-section { padding:32px 24px 72px; }
+      .db-grid { grid-template-columns:1fr; }
+      .disclaimer-bar { padding:24px; }
+      footer { padding:40px 24px 28px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav" id="mainNav">
+    <a href="index.html" class="nav-logo" aria-label="Peptide Revealed — Home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" height="34" aria-hidden="true">
+        <g transform="translate(10,8) scale(1.28)">
+          <line x1="38" y1="38" x2="16" y2="18" stroke="#4E8C5F" stroke-width="2" stroke-linecap="round"/>
+          <line x1="42" y1="36" x2="62" y2="16" stroke="#4E8C5F" stroke-width="2" stroke-linecap="round"/>
+          <line x1="44" y1="40" x2="66" y2="44" stroke="#7AB88A" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="40" y1="44" x2="32" y2="64" stroke="#7AB88A" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="36" y1="42" x2="14" y2="58" stroke="#C6DFC8" stroke-width="1.2" stroke-linecap="round"/>
+          <circle cx="16" cy="18" r="6" fill="#4E8C5F"/><circle cx="62" cy="16" r="5" fill="#4E8C5F"/>
+          <circle cx="66" cy="44" r="4" fill="#7AB88A"/><circle cx="32" cy="64" r="4" fill="#7AB88A"/>
+          <circle cx="40" cy="40" r="8" fill="#1C3A24"/><circle cx="40" cy="40" r="4.5" fill="#4E8C5F"/>
+        </g>
+        <text x="118" y="62" font-family="Georgia,serif" font-size="44" font-weight="400" fill="#1C3A24" letter-spacing="-0.5">Peptide</text>
+        <text x="120" y="90" font-family="'Helvetica Neue',Arial,sans-serif" font-size="16" font-weight="300" fill="#4E8C5F" letter-spacing="5">REVEALED</text>
+      </svg>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#covers">Topics</a></li>
+      <li><a href="articles.html">Articles</a></li>
+      <li><a href="peptides.html" style="color:var(--sage)">Peptides</a></li>
+      <li><a href="meal-planner.html">Meal Planner</a></li>
+      <li><a href="reconstitution-calculator.html">Calculator</a></li>
+      <li><a href="stack-builder.html">Stack Builder</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#newsletter" class="nav-btn">Subscribe Free</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <div class="page-header-inner">
+      <div class="page-eyebrow">Peptide Database</div>
+      <h1 class="page-title">Every peptide,<br><em>evidence-rated.</em></h1>
+      <p class="page-subtitle">Browse 50+ peptides organized by category and evidence level. Each card shows what the peptide does, how strong the research is, and links to our in-depth guide when available.</p>
+      <div class="stats-row">
+        <div class="stat-item">
+          <div class="stat-num" id="totalCount">50</div>
+          <div class="stat-label">Peptides profiled</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">9</div>
+          <div class="stat-label">Categories</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" id="articleCount">15</div>
+          <div class="stat-label">In-depth guides</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">5</div>
+          <div class="stat-label">Evidence tiers</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="controls-bar">
+    <div class="controls-inner">
+      <div class="search-box">
+        <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="searchInput" placeholder="Search peptides by name or mechanism..." autocomplete="off">
+      </div>
+      <div class="filter-pills" id="categoryFilters">
+        <button class="filter-pill active" data-cat="all">All</button>
+        <button class="filter-pill" data-cat="Recovery/Healing">Recovery</button>
+        <button class="filter-pill" data-cat="Anti-Aging/Longevity">Anti-Aging</button>
+        <button class="filter-pill" data-cat="Cognitive">Cognitive</button>
+        <button class="filter-pill" data-cat="Weight Loss/Metabolism">Weight Loss</button>
+        <button class="filter-pill" data-cat="Muscle/Performance">Muscle</button>
+        <button class="filter-pill" data-cat="Immune/Wellness">Immune</button>
+        <button class="filter-pill" data-cat="Sexual Health">Sexual Health</button>
+        <button class="filter-pill" data-cat="Sleep/Stress">Sleep</button>
+        <button class="filter-pill" data-cat="Hair/Skin">Hair &amp; Skin</button>
+      </div>
+      <div class="evidence-pills" id="evidenceFilters">
+        <button class="evidence-pill ev-approved" data-ev="Approved">Approved</button>
+        <button class="evidence-pill ev-human" data-ev="Human trials">Human trials</button>
+        <button class="evidence-pill ev-limited" data-ev="Limited human data">Limited human</button>
+        <button class="evidence-pill ev-animal" data-ev="Animal data">Animal data</button>
+        <button class="evidence-pill ev-preclinical" data-ev="Preclinical">Preclinical</button>
+      </div>
+    </div>
+  </div>
+
+  <main class="db-section">
+    <p class="db-count" id="dbCount">Showing <strong>50</strong> peptides</p>
+    <div class="db-grid" id="dbGrid"></div>
+    <div class="no-results" id="noResults">
+      <h3>No peptides found</h3>
+      <p>Try adjusting your search or filters.</p>
+    </div>
+  </main>
+
+  <div class="disclaimer-bar">
+    <p><strong>Medical disclaimer:</strong> This database is for educational purposes only and does not constitute medical advice. Peptide use should be discussed with a qualified healthcare provider. Evidence ratings reflect published research, not endorsements. Many peptides listed are not FDA-approved for human use.</p>
+  </div>
+
+  <footer>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 Peptide Revealed. All rights reserved. For informational purposes only &mdash; not medical advice.</p>
+      <nav class="footer-legal" aria-label="Legal links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-use.html">Terms of Use</a>
+        <a href="disclaimer.html">Disclaimer</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    /* ─── NAV ─── */
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 24); }, { passive: true });
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      navToggle.classList.toggle('active', open);
+      navToggle.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => { navLinks.classList.remove('open'); navToggle.classList.remove('active'); navToggle.setAttribute('aria-expanded','false'); document.body.style.overflow=''; });
+    });
+
+    /* ─── PEPTIDE DATA ─── */
+    const peptides = [
+      { name:"BPC-157", category:"Recovery/Healing", mechanism:"Promotes tissue repair by upregulating growth factors and angiogenesis in tendons, muscles, and gut.", evidence:"Animal data", articleUrl:"articles/bpc-157-guide.html" },
+      { name:"TB-500 (Thymosin Beta-4)", category:"Recovery/Healing", mechanism:"Regulates actin to accelerate cell migration, reduce inflammation, and promote tissue regeneration.", evidence:"Limited human data", articleUrl:"articles/tb-500.html" },
+      { name:"GHK-Cu", category:"Anti-Aging/Longevity", mechanism:"Copper-binding tripeptide that activates wound healing, collagen synthesis, and antioxidant gene expression.", evidence:"Human trials", articleUrl:"articles/ghk-cu-copper-peptide.html" },
+      { name:"CJC-1295", category:"Muscle/Performance", mechanism:"GHRH analogue that stimulates sustained growth hormone release from the pituitary gland.", evidence:"Human trials", articleUrl:"articles/cjc-1295-ipamorelin.html" },
+      { name:"Ipamorelin", category:"Muscle/Performance", mechanism:"Selective ghrelin receptor agonist that pulses growth hormone release with minimal cortisol elevation.", evidence:"Human trials", articleUrl:"articles/cjc-1295-ipamorelin.html" },
+      { name:"Epithalon", category:"Anti-Aging/Longevity", mechanism:"Tetrapeptide that activates telomerase, lengthens telomeres, and regulates pineal melatonin secretion.", evidence:"Limited human data", articleUrl:"articles/epithalon-longevity-peptide.html" },
+      { name:"Selank", category:"Cognitive", mechanism:"Synthetic anxiolytic heptapeptide that modulates GABA receptors and upregulates BDNF expression.", evidence:"Human trials", articleUrl:"articles/selank-vs-semax.html" },
+      { name:"Semax", category:"Cognitive", mechanism:"ACTH-derived heptapeptide that boosts BDNF, NGF, and dopaminergic signaling for neuroprotection.", evidence:"Human trials", articleUrl:"articles/selank-vs-semax.html" },
+      { name:"Semaglutide", category:"Weight Loss/Metabolism", mechanism:"GLP-1 receptor agonist that suppresses appetite and slows gastric emptying for sustained weight reduction.", evidence:"Approved", articleUrl:"articles/glp-1-peptides.html" },
+      { name:"AOD-9604", category:"Weight Loss/Metabolism", mechanism:"C-terminal fragment of HGH that stimulates fat metabolism without insulin-sensitizing or growth effects.", evidence:"Human trials", articleUrl:"articles/aod-9604-fat-loss-peptide.html" },
+      { name:"DSIP", category:"Sleep/Stress", mechanism:"Delta sleep-inducing peptide that modulates slow-wave sleep architecture and reduces stress-axis activity.", evidence:"Limited human data", articleUrl:"articles/dsip-sleep-peptide.html" },
+      { name:"KPV", category:"Immune/Wellness", mechanism:"C-terminal MSH tripeptide that inhibits NF-\u03BAB signaling to potently suppress gut and skin inflammation.", evidence:"Animal data", articleUrl:"articles/kpv-anti-inflammatory-peptide.html" },
+      { name:"PT-141 (Bremelanotide)", category:"Sexual Health", mechanism:"Melanocortin receptor agonist that activates central pathways driving sexual arousal in men and women.", evidence:"Approved", articleUrl:"articles/pt-141-bremelanotide.html" },
+      { name:"Thymosin Alpha-1", category:"Immune/Wellness", mechanism:"Thymic peptide that matures T-cells and enhances innate immunity. Approved in multiple countries for infections.", evidence:"Approved", articleUrl:"articles/thymosin-alpha-1-immune-peptide.html" },
+      { name:"Sermorelin", category:"Muscle/Performance", mechanism:"Truncated GHRH analogue that stimulates pituitary GH secretion. FDA-approved for childhood GH deficiency.", evidence:"Approved", articleUrl:"articles/ipamorelin-vs-sermorelin.html" },
+      { name:"Tirzepatide", category:"Weight Loss/Metabolism", mechanism:"Dual GIP/GLP-1 receptor agonist producing superior weight loss and glycaemic control versus GLP-1 alone.", evidence:"Approved", articleUrl:null },
+      { name:"Liraglutide", category:"Weight Loss/Metabolism", mechanism:"Once-daily GLP-1 agonist approved for obesity and type 2 diabetes through appetite and insulin regulation.", evidence:"Approved", articleUrl:null },
+      { name:"Tesamorelin", category:"Weight Loss/Metabolism", mechanism:"GHRH analogue FDA-approved to reduce visceral adiposity in HIV-associated lipodystrophy patients.", evidence:"Approved", articleUrl:null },
+      { name:"Retatrutide", category:"Weight Loss/Metabolism", mechanism:"Triple GIP/GLP-1/glucagon receptor agonist showing exceptional weight loss in phase 2 clinical trials.", evidence:"Human trials", articleUrl:null },
+      { name:"Hexarelin", category:"Muscle/Performance", mechanism:"Synthetic GH secretagogue that stimulates potent GH release and shows cardioprotective properties.", evidence:"Human trials", articleUrl:null },
+      { name:"GHRP-6", category:"Muscle/Performance", mechanism:"Ghrelin mimetic that drives strong GH pulses and significantly increases appetite via hypothalamic pathways.", evidence:"Human trials", articleUrl:null },
+      { name:"GHRP-2", category:"Muscle/Performance", mechanism:"Second-generation ghrelin receptor agonist with potent GH-releasing activity and minimal appetite stimulation.", evidence:"Human trials", articleUrl:null },
+      { name:"MK-677 (Ibutamoren)", category:"Muscle/Performance", mechanism:"Oral non-peptide ghrelin mimetic that chronically elevates GH and IGF-1 for muscle and bone support.", evidence:"Human trials", articleUrl:null },
+      { name:"Follistatin 344", category:"Muscle/Performance", mechanism:"Myostatin antagonist that inhibits muscle-growth brakes, potentially enabling significant hypertrophy.", evidence:"Limited human data", articleUrl:null },
+      { name:"IGF-1 LR3", category:"Muscle/Performance", mechanism:"Long-acting IGF-1 analogue that drives satellite cell proliferation and systemic anabolic signaling.", evidence:"Limited human data", articleUrl:null },
+      { name:"MGF (Mechano Growth Factor)", category:"Muscle/Performance", mechanism:"Locally spliced IGF-1 isoform released by mechanical stress to activate muscle stem cell repair.", evidence:"Animal data", articleUrl:null },
+      { name:"5-Amino-1MQ", category:"Weight Loss/Metabolism", mechanism:"NNMT inhibitor that activates cellular metabolism, reduces adipogenesis, and promotes fat mobilization.", evidence:"Animal data", articleUrl:null },
+      { name:"Humanin", category:"Anti-Aging/Longevity", mechanism:"Mitochondria-derived peptide that protects against apoptosis, insulin resistance, and neurodegeneration.", evidence:"Limited human data", articleUrl:null },
+      { name:"MOTS-c", category:"Anti-Aging/Longevity", mechanism:"Mitochondrial peptide that regulates AMPK to improve metabolic flexibility and stress resilience.", evidence:"Limited human data", articleUrl:null },
+      { name:"SS-31 (Elamipretide)", category:"Anti-Aging/Longevity", mechanism:"Mitochondria-targeting tetrapeptide that reduces oxidative stress. In trials for heart failure.", evidence:"Human trials", articleUrl:null },
+      { name:"Dihexa", category:"Cognitive", mechanism:"HGF/MET activator that enhances synaptogenesis and shows potent cognitive restoration in rodent models.", evidence:"Animal data", articleUrl:null },
+      { name:"Noopept", category:"Cognitive", mechanism:"Dipeptide analogue of piracetam that elevates NGF/BDNF and enhances memory consolidation and retrieval.", evidence:"Human trials", articleUrl:null },
+      { name:"Cerebrolysin", category:"Cognitive", mechanism:"Porcine brain-derived peptide mixture mimicking neurotrophins. Trialled for stroke and Alzheimer\u2019s disease.", evidence:"Human trials", articleUrl:null },
+      { name:"Pinealon", category:"Cognitive", mechanism:"Tripeptide from pineal gland tissue that supports neuroprotection and circadian gene regulation.", evidence:"Limited human data", articleUrl:null },
+      { name:"Cortagen", category:"Cognitive", mechanism:"Cortex-derived tetrapeptide that supports neuronal survival and synaptic plasticity under oxidative stress.", evidence:"Limited human data", articleUrl:null },
+      { name:"Oxytocin", category:"Sexual Health", mechanism:"Hypothalamic nonapeptide mediating bonding, trust, sexual arousal, and orgasm intensity via brain receptors.", evidence:"Approved", articleUrl:null },
+      { name:"Kisspeptin", category:"Sexual Health", mechanism:"Neuropeptide that triggers GnRH pulses to regulate LH/FSH and has direct pro-sexual CNS effects.", evidence:"Human trials", articleUrl:null },
+      { name:"Melanotan II", category:"Sexual Health", mechanism:"Non-selective melanocortin agonist inducing tanning, libido enhancement, and spontaneous erections.", evidence:"Limited human data", articleUrl:null },
+      { name:"VIP (Vasoactive Intestinal Peptide)", category:"Immune/Wellness", mechanism:"Neuropeptide with potent immunomodulatory and vasodilatory actions. Studied for CIRS and long COVID.", evidence:"Human trials", articleUrl:null },
+      { name:"LL-37", category:"Immune/Wellness", mechanism:"Cathelicidin antimicrobial peptide that disrupts bacterial membranes and modulates innate immune responses.", evidence:"Limited human data", articleUrl:null },
+      { name:"Zinc-Thymulin", category:"Immune/Wellness", mechanism:"Thymic hormone requiring zinc cofactor to promote T-cell maturation and restore age-related immune decline.", evidence:"Human trials", articleUrl:null },
+      { name:"PE-22-28", category:"Sleep/Stress", mechanism:"Spadin analogue that blocks TREK-1 K+ channels and rapidly produces antidepressant effects in rodents.", evidence:"Animal data", articleUrl:null },
+      { name:"Orexin-A", category:"Sleep/Stress", mechanism:"Hypothalamic wakefulness peptide dysregulated in narcolepsy. Agonists and antagonists in clinical trials.", evidence:"Human trials", articleUrl:null },
+      { name:"GHK-Cu (Hair)", category:"Hair/Skin", mechanism:"Copper peptide that extends anagen phase, boosts follicle size, and upregulates hair-growth gene networks.", evidence:"Human trials", articleUrl:"articles/ghk-cu-hair-loss.html" },
+      { name:"PTD-DBM", category:"Hair/Skin", mechanism:"Cell-penetrating peptide that activates Wnt/\u03B2-catenin signalling to reactivate dormant hair follicles.", evidence:"Limited human data", articleUrl:null },
+      { name:"AHK-Cu", category:"Hair/Skin", mechanism:"Tripeptide-copper complex that stimulates follicle stem cells and reduces scalp DHT-driven miniaturisation.", evidence:"Animal data", articleUrl:null },
+      { name:"Matrixyl (Palmitoyl Pentapeptide-4)", category:"Hair/Skin", mechanism:"Collagen-stimulating peptide that reduces wrinkle depth and improves skin firmness in controlled trials.", evidence:"Human trials", articleUrl:null },
+      { name:"Thymosin Beta-4 (Full-length)", category:"Recovery/Healing", mechanism:"Full-length protein promoting wound healing, corneal repair, and cardiac tissue regeneration after injury.", evidence:"Human trials", articleUrl:null },
+      { name:"Pentadecapeptide BPC (oral)", category:"Recovery/Healing", mechanism:"Oral-stable BPC-157 variant studied for gut healing, ulcer repair, and systemic anti-inflammatory effects.", evidence:"Animal data", articleUrl:null },
+      { name:"PYY (Peptide YY)", category:"Weight Loss/Metabolism", mechanism:"Gut-derived peptide that signals satiety to the hypothalamus and slows gastric emptying after meals.", evidence:"Human trials", articleUrl:null },
+    ];
+
+    /* ─── RENDER ─── */
+    const grid = document.getElementById('dbGrid');
+    const countEl = document.getElementById('dbCount');
+    const noResults = document.getElementById('noResults');
+    const searchInput = document.getElementById('searchInput');
+
+    const badgeClass = { 'Approved':'badge-approved', 'Human trials':'badge-human', 'Limited human data':'badge-limited', 'Animal data':'badge-animal', 'Preclinical':'badge-preclinical' };
+
+    let activeCategory = 'all';
+    let activeEvidence = null;
+
+    function renderCards() {
+      const query = searchInput.value.toLowerCase().trim();
+      const filtered = peptides.filter(p => {
+        if (activeCategory !== 'all' && p.category !== activeCategory) return false;
+        if (activeEvidence && p.evidence !== activeEvidence) return false;
+        if (query && !p.name.toLowerCase().includes(query) && !p.mechanism.toLowerCase().includes(query) && !p.category.toLowerCase().includes(query)) return false;
+        return true;
+      });
+
+      grid.innerHTML = filtered.map(p => {
+        const hasArticle = !!p.articleUrl;
+        return `
+          <div class="peptide-card ${hasArticle ? 'has-article' : ''}">
+            <div class="card-top">
+              <div class="card-name">${p.name}</div>
+              <span class="card-badge ${badgeClass[p.evidence] || ''}">${p.evidence}</span>
+            </div>
+            <div class="card-category">${p.category}</div>
+            <div class="card-mechanism">${p.mechanism}</div>
+            <div class="card-footer">
+              ${hasArticle
+                ? `<a href="${p.articleUrl}" class="card-link">Read full guide <span aria-hidden="true">&rarr;</span></a>`
+                : `<span class="card-coming">Guide coming soon</span>`
+              }
+              <div class="card-tools">
+                <a href="stack-builder.html" class="card-tool-link">Stack</a>
+                <a href="reconstitution-calculator.html" class="card-tool-link">Calc</a>
+              </div>
+            </div>
+          </div>`;
+      }).join('');
+
+      countEl.innerHTML = `Showing <strong>${filtered.length}</strong> of ${peptides.length} peptides`;
+      noResults.style.display = filtered.length === 0 ? 'block' : 'none';
+      grid.style.display = filtered.length === 0 ? 'none' : '';
+    }
+
+    /* ─── CATEGORY FILTERS ─── */
+    document.querySelectorAll('.filter-pill').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-pill').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeCategory = btn.dataset.cat;
+        renderCards();
+      });
+    });
+
+    /* ─── EVIDENCE FILTERS ─── */
+    document.querySelectorAll('.evidence-pill').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (btn.classList.contains('active')) {
+          btn.classList.remove('active');
+          activeEvidence = null;
+        } else {
+          document.querySelectorAll('.evidence-pill').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          activeEvidence = btn.dataset.ev;
+        }
+        renderCards();
+      });
+    });
+
+    /* ─── SEARCH ─── */
+    searchInput.addEventListener('input', renderCards);
+
+    /* ─── INIT ─── */
+    document.getElementById('totalCount').textContent = peptides.length;
+    document.getElementById('articleCount').textContent = peptides.filter(p => p.articleUrl).length;
+    renderCards();
+  </script>
+</body>
+</html>
