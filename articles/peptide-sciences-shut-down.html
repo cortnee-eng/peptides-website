@@ -96,7 +96,65 @@
     .inline-cta-form button:hover { background:var(--forest); }
     .inline-cta-note { font-size:11px; color:var(--ink-faint); margin-top:10px; }
     @media (max-width:600px) { .inline-cta-form { flex-direction:column; } .inline-cta { padding:24px 20px; } }
+
+    /* ─── Update badge ─── */
+    .update-badge { font-size:11px; background:var(--mint-wash); color:var(--sage); border:1px solid rgba(78,140,95,0.2); padding:3px 10px; border-radius:20px; }
+
+    /* ─── Table of Contents ─── */
+    .toc { background:var(--white); border:1px solid rgba(78,140,95,0.12); border-radius:6px; padding:24px 28px; margin:36px 0; }
+    .toc-title { font-family:var(--sans); font-size:11px; font-weight:500; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:14px; }
+    .toc ol { margin:0 0 0 20px; }
+    .toc li { font-size:14px; font-weight:300; line-height:1.9; color:var(--ink-mid); margin-bottom:2px; }
+    .toc a { color:var(--sage); text-decoration:none; }
+    .toc a:hover { text-decoration:underline; }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Peptide Sciences shut down: what happened and what to do now",
+        "description": "Peptide Sciences closed in March 2026. Here's what happened, why it matters, and how to find a trustworthy peptide sciences alternative.",
+        "author": { "@type": "Organization", "name": "Peptide Revealed", "url": "https://peptiderevealed.com" },
+        "publisher": { "@type": "Organization", "name": "Peptide Revealed", "url": "https://peptiderevealed.com" },
+        "datePublished": "2026-03-24",
+        "dateModified": "2026-04-01",
+        "mainEntityOfPage": "https://peptiderevealed.com/articles/peptide-sciences-shut-down.html",
+        "url": "https://peptiderevealed.com/articles/peptide-sciences-shut-down.html"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What happened to Peptide Sciences?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Peptide Sciences ceased operations in early March 2026. The company's website went offline, pending orders were cancelled, and no official statement was released. The shutdown occurred against a backdrop of intensifying FDA regulatory pressure on the research peptide industry, combined with payment processing challenges and growing legal liability concerns."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where can I buy peptides in 2026 after Peptide Sciences closed?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Options include evaluating remaining research peptide vendors using third-party COAs, verifiable business presence, and community reputation — or working with a licensed healthcare provider who can prescribe peptides through a compounding pharmacy, which offers pharmaceutical-grade quality and legal clarity."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I evaluate a peptide sciences alternative?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Look for third-party Certificates of Analysis (COAs) from independent labs showing 98%+ HPLC purity, a verifiable business presence with real address and identifiable ownership, multiple payment options, long-standing community reputation, responsive customer service, and proper cold-chain shipping practices."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <nav class="nav" id="mainNav">
@@ -148,6 +206,8 @@
         <span class="byline-sep">&middot;</span>
         <span>March 24, 2026</span>
         <span class="byline-sep">&middot;</span>
+        <span class="update-badge">Updated Apr 1, 2026</span>
+        <span class="byline-sep">&middot;</span>
         <span>11 min read</span>
       </div>
     </div>
@@ -159,7 +219,23 @@
 
       <p>This article breaks down what happened, why it matters, and — most importantly — how to navigate a peptide market that just lost its biggest player.</p>
 
-      <h2>What happened to Peptide Sciences?</h2>
+      <nav class="toc" aria-label="Table of contents">
+        <p class="toc-title">In this article</p>
+        <ol>
+          <li><a href="#what-happened">What happened to Peptide Sciences?</a></li>
+          <li><a href="#why-it-matters">Why the shutdown matters</a></li>
+          <li><a href="#where-to-buy">Where to buy peptides in 2026</a></li>
+          <li><a href="#evaluate-alternative">How to evaluate a peptide sciences alternative</a></li>
+          <li><a href="#compounding">The compounding pharmacy alternative</a></li>
+          <li><a href="#international">What about international vendors?</a></li>
+          <li><a href="#red-flags">Red flags in the post-Peptide Sciences market</a></li>
+          <li><a href="#protect-yourself">How to protect yourself during the transition</a></li>
+          <li><a href="#bigger-picture">The bigger picture</a></li>
+          <li><a href="#bottom-line">The bottom line</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="what-happened">What happened to Peptide Sciences?</h2>
       <p>Peptide Sciences ceased operations in early March 2026. The company's website went offline, pending orders were cancelled, and no official statement was released explaining the closure.</p>
       <p>While the exact reasons remain unconfirmed, the shutdown occurred against a backdrop of <a href="are-peptides-legal.html">intensifying regulatory pressure</a> on the research peptide industry. The FDA has been increasing enforcement actions against companies selling peptides for human use under the "research use only" label — a legal gray area that has sustained the market for over a decade.</p>
       <p>Several factors likely contributed:</p>
@@ -170,7 +246,52 @@
       </ul>
       <p>Peptide Sciences was not a small operation. They offered one of the broadest catalogs in the industry — including popular <a href="best-peptides-for-injury-recovery.html">recovery peptides like BPC-157 and TB-500</a> — maintained a reputation for consistent quality, and had built significant trust through years of third-party testing. Their departure creates a genuine vacuum.</p>
 
-      <h2>Why the Peptide Sciences shutdown matters</h2>
+      <!-- SVG: Timeline of events -->
+      <svg viewBox="0 0 700 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Timeline showing key events leading to the Peptide Sciences shutdown: FDA warning letters in 2025, payment processor pressure in late 2025, and closure in March 2026" style="width:100%; margin:36px 0; border-radius:6px;">
+        <rect width="700" height="340" rx="6" fill="#1C3A24"/>
+        <text x="350" y="36" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="600" letter-spacing="3" fill="#FFFFFF">TIMELINE: THE PEPTIDE SCIENCES SHUTDOWN</text>
+        <!-- Main timeline line -->
+        <line x1="80" y1="100" x2="620" y2="100" stroke="#4E8C5F" stroke-width="2"/>
+        <!-- Node 1: 2024 -->
+        <circle cx="120" cy="100" r="10" fill="#4E8C5F"/><circle cx="120" cy="100" r="5" fill="#C6DFC8"/>
+        <text x="120" y="80" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="14" fill="#FFFFFF" font-weight="500">2024</text>
+        <text x="120" y="130" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="12" fill="#C6DFC8">FDA signals</text>
+        <text x="120" y="148" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="12" fill="#C6DFC8">harder line on</text>
+        <text x="120" y="166" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="12" fill="#C6DFC8">peptide vendors</text>
+        <!-- Node 2: Early 2025 -->
+        <circle cx="260" cy="100" r="10" fill="#4E8C5F"/><circle cx="260" cy="100" r="5" fill="#C6DFC8"/>
+        <text x="260" y="80" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="14" fill="#FFFFFF" font-weight="500">Early 2025</text>
+        <text x="260" y="130" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="12" fill="#C6DFC8">Multiple FDA</text>
+        <text x="260" y="148" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="12" fill="#C6DFC8">warning letters</text>
+        <text x="260" y="166" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="12" fill="#C6DFC8">to vendors</text>
+        <!-- Node 3: Late 2025 -->
+        <circle cx="400" cy="100" r="10" fill="#7AB88A"/><circle cx="400" cy="100" r="5" fill="#C6DFC8"/>
+        <text x="400" y="80" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="14" fill="#FFFFFF" font-weight="500">Late 2025</text>
+        <text x="400" y="130" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="12" fill="#C6DFC8">Payment processors</text>
+        <text x="400" y="148" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="12" fill="#C6DFC8">drop peptide</text>
+        <text x="400" y="166" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="12" fill="#C6DFC8">vendors</text>
+        <!-- Node 4: March 2026 — highlighted -->
+        <circle cx="560" cy="100" r="16" fill="#7AB88A" opacity="0.3"/><circle cx="560" cy="100" r="10" fill="#C6DFC8"/><circle cx="560" cy="100" r="5" fill="#FFFFFF"/>
+        <text x="560" y="80" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="14" fill="#FFFFFF" font-weight="600">Mar 2026</text>
+        <text x="560" y="130" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="13" fill="#FFFFFF" font-weight="500">Peptide Sciences</text>
+        <text x="560" y="148" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="13" fill="#FFFFFF" font-weight="500">shuts down</text>
+        <!-- Connecting decorative lines -->
+        <line x1="120" y1="180" x2="120" y2="210" stroke="#4E8C5F" stroke-width="1" stroke-dasharray="3,3"/>
+        <line x1="260" y1="180" x2="260" y2="210" stroke="#4E8C5F" stroke-width="1" stroke-dasharray="3,3"/>
+        <line x1="400" y1="180" x2="400" y2="210" stroke="#7AB88A" stroke-width="1" stroke-dasharray="3,3"/>
+        <line x1="560" y1="162" x2="560" y2="210" stroke="#C6DFC8" stroke-width="1" stroke-dasharray="3,3"/>
+        <!-- Bottom summary bar -->
+        <rect x="60" y="220" width="580" height="50" rx="4" fill="rgba(78,140,95,0.15)" stroke="#4E8C5F" stroke-width="1"/>
+        <text x="350" y="240" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="12" fill="#C6DFC8" font-weight="400">Contributing factors: FDA enforcement escalation · payment processing pressure · legal liability</text>
+        <text x="350" y="258" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="12" fill="#C6DFC8" font-weight="400">Peptide Sciences operated for 10+ years before regulatory conditions became untenable</text>
+        <!-- Decorative molecule nodes -->
+        <circle cx="45" cy="300" r="4" fill="#4E8C5F" opacity="0.5"/><circle cx="655" cy="300" r="3" fill="#7AB88A" opacity="0.4"/>
+        <circle cx="350" cy="310" r="5" fill="#4E8C5F" opacity="0.3"/>
+        <line x1="48" y1="300" x2="347" y2="310" stroke="#4E8C5F" stroke-width="0.6" opacity="0.3"/>
+        <line x1="353" y1="310" x2="652" y2="300" stroke="#7AB88A" stroke-width="0.6" opacity="0.3"/>
+      </svg>
+
+      <h2 id="why-it-matters">Why the Peptide Sciences shutdown matters</h2>
       <p>This isn't just one vendor closing. Peptide Sciences' closure signals a structural shift in how research peptides are sold in the United States.</p>
       <p><strong>Market consolidation:</strong> When the largest player exits, remaining vendors absorb demand they may not be equipped to handle. Quality control can slip when companies scale too fast.</p>
       <p><strong>New entrants with unproven track records:</strong> Wherever there's a supply vacuum and strong demand, new vendors appear quickly. Some will be legitimate. Others will not. The risk of encountering low-quality or counterfeit products increases during market transitions like this.</p>
@@ -188,12 +309,12 @@
         <p class="inline-cta-note">Free forever. Unsubscribe anytime.</p>
       </div>
 
-      <h2>Where to buy peptides in 2026</h2>
+      <h2 id="where-to-buy">Where to buy peptides in 2026</h2>
       <p>Let's be direct: we are not going to recommend specific vendors. The peptide vendor landscape is changing too quickly, and any specific recommendation could become outdated — or worse, misleading — within weeks.</p>
       <p>What we can do is give you a rigorous framework for evaluating any vendor yourself. This matters more now than ever, because the market disruption caused by Peptide Sciences closing has created exactly the conditions where questionable vendors thrive.</p>
       <p>Here's what to look for when evaluating a peptide sciences alternative:</p>
 
-      <h2>How to evaluate a peptide sciences alternative</h2>
+      <h2 id="evaluate-alternative">How to evaluate a peptide sciences alternative</h2>
       <p><strong>Third-party Certificates of Analysis (COAs):</strong> This is non-negotiable. Any vendor you consider must provide COAs from independent, third-party laboratories — not in-house testing. The COA should include HPLC purity data (look for 98%+ for injectable-grade peptides), mass spectrometry confirmation, the lab name, batch number, and date of analysis. For a deeper breakdown, see our <a href="how-to-source-quality-peptides-safely.html">complete guide to sourcing peptides safely</a>.</p>
       <p><strong>Verifiable business presence:</strong> The vendor should have a real business address, identifiable ownership or management, and a track record you can verify. Anonymous operations — especially those that appeared after Peptide Sciences closed — deserve extra scrutiny.</p>
       <p><strong>Multiple payment options:</strong> Legitimate businesses maintain relationships with payment processors. If a vendor only accepts cryptocurrency or wire transfers, that's a signal that traditional financial institutions have declined to work with them.</p>
@@ -201,7 +322,63 @@
       <p><strong>Responsive customer service:</strong> Before placing an order, contact the vendor's support team with a question about their testing protocols. How quickly and substantively they respond tells you a lot.</p>
       <p><strong>Shipping and handling practices:</strong> Peptides are temperature-sensitive. Vendors should ship with appropriate cold packaging and offer expedited shipping options, particularly during warmer months. Once your order arrives, follow proper <a href="peptide-storage-handling-guide.html">peptide storage and handling practices</a> to preserve potency.</p>
 
-      <h2>The compounding pharmacy alternative</h2>
+      <!-- SVG: Vendor Evaluation Checklist -->
+      <svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Visual checklist showing six criteria for evaluating a peptide vendor: third-party COAs, verifiable business, multiple payment options, community reputation, responsive support, and proper shipping" style="width:100%; margin:36px 0; border-radius:6px;">
+        <rect width="700" height="380" rx="6" fill="#1C3A24"/>
+        <text x="350" y="36" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="600" letter-spacing="3" fill="#FFFFFF">VENDOR EVALUATION CHECKLIST</text>
+        <!-- Row 1 -->
+        <!-- Item 1: COAs -->
+        <rect x="40" y="60" width="195" height="130" rx="4" fill="rgba(78,140,95,0.15)" stroke="#4E8C5F" stroke-width="1"/>
+        <circle cx="137" cy="100" r="22" fill="#4E8C5F" opacity="0.3"/><circle cx="137" cy="100" r="12" fill="#4E8C5F"/>
+        <text x="132" y="105" font-family="'Helvetica Neue',Arial,sans-serif" font-size="16" fill="#FFFFFF" font-weight="600">✓</text>
+        <text x="137" y="140" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="14" fill="#FFFFFF" font-weight="500">Third-Party COAs</text>
+        <text x="137" y="160" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="11" fill="#C6DFC8">98%+ HPLC purity</text>
+        <text x="137" y="176" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="11" fill="#C6DFC8">Independent lab, batch-specific</text>
+        <!-- Item 2: Business -->
+        <rect x="252" y="60" width="195" height="130" rx="4" fill="rgba(78,140,95,0.15)" stroke="#4E8C5F" stroke-width="1"/>
+        <circle cx="349" cy="100" r="22" fill="#4E8C5F" opacity="0.3"/><circle cx="349" cy="100" r="12" fill="#4E8C5F"/>
+        <rect x="342" y="92" width="14" height="16" rx="2" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+        <line x1="342" y1="97" x2="356" y2="97" stroke="#FFFFFF" stroke-width="1"/>
+        <text x="349" y="140" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="14" fill="#FFFFFF" font-weight="500">Real Business</text>
+        <text x="349" y="160" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="11" fill="#C6DFC8">Verifiable address</text>
+        <text x="349" y="176" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="11" fill="#C6DFC8">Identifiable ownership</text>
+        <!-- Item 3: Payment -->
+        <rect x="464" y="60" width="195" height="130" rx="4" fill="rgba(78,140,95,0.15)" stroke="#4E8C5F" stroke-width="1"/>
+        <circle cx="561" cy="100" r="22" fill="#4E8C5F" opacity="0.3"/><circle cx="561" cy="100" r="12" fill="#4E8C5F"/>
+        <text x="555" y="105" font-family="'Helvetica Neue',Arial,sans-serif" font-size="14" fill="#FFFFFF" font-weight="600">$</text>
+        <text x="561" y="140" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="14" fill="#FFFFFF" font-weight="500">Multiple Payments</text>
+        <text x="561" y="160" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="11" fill="#C6DFC8">Credit cards accepted</text>
+        <text x="561" y="176" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="11" fill="#C6DFC8">Not crypto-only</text>
+        <!-- Row 2 -->
+        <!-- Item 4: Reputation -->
+        <rect x="40" y="210" width="195" height="130" rx="4" fill="rgba(78,140,95,0.15)" stroke="#7AB88A" stroke-width="1"/>
+        <circle cx="137" cy="250" r="22" fill="#7AB88A" opacity="0.3"/><circle cx="137" cy="250" r="12" fill="#7AB88A"/>
+        <circle cx="131" cy="248" r="4" fill="#C6DFC8"/><circle cx="143" cy="248" r="4" fill="#C6DFC8"/>
+        <line x1="131" y1="254" x2="143" y2="254" stroke="#C6DFC8" stroke-width="1.5"/>
+        <text x="137" y="290" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="14" fill="#FFFFFF" font-weight="500">Community Rep</text>
+        <text x="137" y="310" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="11" fill="#C6DFC8">Long-standing reviews</text>
+        <text x="137" y="326" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="11" fill="#C6DFC8">Multiple sources</text>
+        <!-- Item 5: Support -->
+        <rect x="252" y="210" width="195" height="130" rx="4" fill="rgba(78,140,95,0.15)" stroke="#7AB88A" stroke-width="1"/>
+        <circle cx="349" cy="250" r="22" fill="#7AB88A" opacity="0.3"/><circle cx="349" cy="250" r="12" fill="#7AB88A"/>
+        <path d="M341,248 L349,256 L357,244" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="349" y="290" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="14" fill="#FFFFFF" font-weight="500">Responsive Support</text>
+        <text x="349" y="310" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="11" fill="#C6DFC8">Test before buying</text>
+        <text x="349" y="326" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="11" fill="#C6DFC8">Ask about testing protocols</text>
+        <!-- Item 6: Shipping -->
+        <rect x="464" y="210" width="195" height="130" rx="4" fill="rgba(78,140,95,0.15)" stroke="#7AB88A" stroke-width="1"/>
+        <circle cx="561" cy="250" r="22" fill="#7AB88A" opacity="0.3"/><circle cx="561" cy="250" r="12" fill="#7AB88A"/>
+        <path d="M553,254 L569,254 L565,246 L557,246 Z" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+        <line x1="553" y1="254" x2="553" y2="248" stroke="#FFFFFF" stroke-width="1.5"/>
+        <text x="561" y="290" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="14" fill="#FFFFFF" font-weight="500">Cold-Chain Ship</text>
+        <text x="561" y="310" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="11" fill="#C6DFC8">Temperature-controlled</text>
+        <text x="561" y="326" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="11" fill="#C6DFC8">Expedited options</text>
+        <!-- Connecting decorative nodes -->
+        <circle cx="235" cy="125" r="3" fill="#4E8C5F" opacity="0.5"/><circle cx="447" cy="125" r="3" fill="#4E8C5F" opacity="0.5"/>
+        <circle cx="235" cy="275" r="3" fill="#7AB88A" opacity="0.5"/><circle cx="447" cy="275" r="3" fill="#7AB88A" opacity="0.5"/>
+      </svg>
+
+      <h2 id="compounding">The compounding pharmacy alternative</h2>
       <p>One option that more people are exploring in 2026 is working with a licensed healthcare provider who can prescribe peptides through a compounding pharmacy. This route offers several advantages:</p>
       <ul>
         <li><strong>Pharmaceutical-grade quality:</strong> Compounding pharmacies are regulated by state boards of pharmacy and, in some cases, the FDA under section 503B. Quality standards are significantly higher than the research peptide market.</li>
@@ -210,7 +387,7 @@
       </ul>
       <p>The downsides are real: compounding pharmacies typically carry a narrower selection of peptides, costs can be higher, and you need a prescription. Not every peptide that was available through research vendors is available through compounding pharmacies. But for popular compounds like <a href="bpc-157-guide.html">BPC-157</a>, <a href="tb-500.html">TB-500</a>, and certain growth hormone secretagogues, this is becoming the most reliable path.</p>
 
-      <h2>What about international vendors?</h2>
+      <h2 id="international">What about international vendors?</h2>
       <p>Some researchers are looking overseas for alternatives. International vendors have always been part of the peptide landscape, but they come with distinct considerations:</p>
       <p><strong>Customs and import risk:</strong> Importing peptides for personal use occupies a legal gray area. Customs may seize shipments, and the legal consequences vary by country and quantity.</p>
       <p><strong>Longer shipping times:</strong> International shipping means longer transit times, which matters for temperature-sensitive compounds. Peptide degradation during extended shipping is a real concern, particularly for orders crossing tropical or equatorial routes.</p>
@@ -218,7 +395,7 @@
       <p><strong>No recourse if something goes wrong:</strong> Returns, refunds, and disputes are significantly harder to resolve across international borders.</p>
       <p>This doesn't mean international vendors are inherently worse — some have been operating for years with strong reputations. But the due diligence bar is higher.</p>
 
-      <h2>Red flags in the post-Peptide Sciences market</h2>
+      <h2 id="red-flags">Red flags in the post-Peptide Sciences market</h2>
       <p>The current market disruption has created ideal conditions for bad actors. Watch for these warning signs:</p>
       <ul>
         <li><strong>Brand-new vendors with no history</strong> that appeared immediately after Peptide Sciences closed. Legitimate vendors don't materialize overnight.</li>
@@ -228,7 +405,7 @@
         <li><strong>Vendors that cannot or will not provide batch-specific COAs.</strong> Generic COAs, undated COAs, or COAs "available upon request" that never arrive are disqualifying.</li>
       </ul>
 
-      <h2>How to protect yourself during the transition</h2>
+      <h2 id="protect-yourself">How to protect yourself during the transition</h2>
       <p>Whether you've already found a new vendor or are still evaluating options, these practices will help you navigate the current uncertainty:</p>
       <p><strong>Start with a small test order.</strong> Before committing to a large purchase, place a minimal order and assess the product quality, shipping speed, customer service responsiveness, and packaging.</p>
       <p><strong>Verify COAs independently.</strong> If a COA lists a third-party lab, contact that lab directly to confirm they performed the testing. This takes five minutes and eliminates fabricated documentation.</p>
@@ -236,7 +413,7 @@
       <p><strong>Consider independent testing.</strong> Services like Janoshik Analytical and other independent testing labs will test peptide samples you send them. If you're spending significant money, the cost of independent verification is worth it.</p>
       <p><strong>Talk to a healthcare provider.</strong> If you're using peptides for health purposes — and most people are, despite the "research use only" labels — a physician familiar with peptide therapy can help you access pharmaceutical-grade compounds legally and safely.</p>
 
-      <h2>The bigger picture: where to buy peptides in 2026 and beyond</h2>
+      <h2 id="bigger-picture">The bigger picture: where to buy peptides in 2026 and beyond</h2>
       <p>The Peptide Sciences shutdown is part of a broader trend. The research peptide market as it existed from roughly 2010 to 2025 — a <a href="are-peptides-legal.html">loosely regulated space</a> where vendors sold injectable compounds under research disclaimers — is contracting.</p>
       <p>Several forces are driving this:</p>
       <ul>
@@ -250,7 +427,7 @@
 
       <div class="divider"></div>
 
-      <h2>The bottom line</h2>
+      <h2 id="bottom-line">The bottom line</h2>
       <p>Peptide Sciences shutting down is a significant market event, but it's not the end of peptide research or access. The key takeaways:</p>
       <ul>
         <li>The closure was likely driven by regulatory pressure, not quality issues</li>
@@ -265,13 +442,13 @@
       <div class="references">
         <h2>References</h2>
         <ol>
-          <li>Lau JL, Dunn MK. Therapeutic peptides: Historical perspectives, current development trends, and future directions. <em>Bioorganic &amp; Medicinal Chemistry</em>. 2018;26(10):2700-2707.</li>
-          <li>US Food and Drug Administration. Compounding and the FDA: Questions and answers. FDA.gov. Updated 2024.</li>
-          <li>Muttenthaler M, King GF, Adams DJ, Alewood PF. Trends in peptide drug discovery. <em>Nature Reviews Drug Discovery</em>. 2021;20(4):309-325.</li>
-          <li>US Food and Drug Administration. Warning letters to compounding pharmacies. FDA Inspections, Compliance, Enforcement, and Criminal Investigations. 2025.</li>
-          <li>National Association of Boards of Pharmacy. Compounding pharmacy standards and regulations. NABP.pharmacy. 2025.</li>
-          <li>Fosgerau K, Hoffmann T. Peptide therapeutics: current status and future directions. <em>Drug Discovery Today</em>. 2015;20(1):122-128.</li>
-          <li>US Drug Enforcement Administration. Scheduling actions and controlled substance schedules. DEA.gov. Updated 2025.</li>
+          <li>Lau JL, Dunn MK. "<a href="https://pubmed.ncbi.nlm.nih.gov/29174811/" target="_blank" rel="noopener">Therapeutic peptides: Historical perspectives, current development trends, and future directions.</a>" <em>Bioorganic &amp; Medicinal Chemistry</em>. 2018;26(10):2700-2707.</li>
+          <li>US Food and Drug Administration. "<a href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers" target="_blank" rel="noopener">Compounding and the FDA: Questions and answers.</a>" FDA.gov. Updated 2024.</li>
+          <li>Muttenthaler M, King GF, Adams DJ, Alewood PF. "<a href="https://pubmed.ncbi.nlm.nih.gov/33536635/" target="_blank" rel="noopener">Trends in peptide drug discovery.</a>" <em>Nature Reviews Drug Discovery</em>. 2021;20(4):309-325.</li>
+          <li>US Food and Drug Administration. "<a href="https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters" target="_blank" rel="noopener">Warning letters to compounding pharmacies.</a>" FDA Inspections, Compliance, Enforcement, and Criminal Investigations. 2025.</li>
+          <li>National Association of Boards of Pharmacy. "<a href="https://nabp.pharmacy/initiatives/compounding/" target="_blank" rel="noopener">Compounding pharmacy standards and regulations.</a>" NABP.pharmacy. 2025.</li>
+          <li>Fosgerau K, Hoffmann T. "<a href="https://pubmed.ncbi.nlm.nih.gov/25450771/" target="_blank" rel="noopener">Peptide therapeutics: current status and future directions.</a>" <em>Drug Discovery Today</em>. 2015;20(1):122-128.</li>
+          <li>US Drug Enforcement Administration. "<a href="https://www.deadiversion.usdoj.gov/schedules/" target="_blank" rel="noopener">Scheduling actions and controlled substance schedules.</a>" DEA.gov. Updated 2025.</li>
         </ol>
       </div>
     </article>
