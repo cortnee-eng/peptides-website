@@ -4,6 +4,10 @@ V2/
 # Environment variables
 .env
 
+# Google OAuth credentials
+credentials_gsc.json
+token_gsc.json
+
 # Temporary files
 .tmp/
 
