@@ -735,18 +735,44 @@
           <label class="preset-label" for="presetSelect">Common presets</label>
           <select class="preset-select" id="presetSelect">
             <option value="">Choose a peptide (optional)</option>
-            <option value="5|2|250">BPC-157 — 5 mg vial, 2 mL BAC, 250 mcg dose</option>
-            <option value="5|2|500">BPC-157 — 5 mg vial, 2 mL BAC, 500 mcg dose</option>
-            <option value="5|2|750">TB-500 — 5 mg vial, 2 mL BAC, 750 mcg dose</option>
-            <option value="5|2|2500">TB-500 — 5 mg vial, 2 mL BAC, 2.5 mg dose</option>
-            <option value="10|2|100">GHK-Cu — 10 mg vial, 2 mL BAC, 100 mcg dose</option>
-            <option value="10|2|500">GHK-Cu — 10 mg vial, 2 mL BAC, 500 mcg dose</option>
-            <option value="10|3|300">Epithalon — 10 mg vial, 3 mL BAC, 300 mcg dose</option>
-            <option value="2|2|100">CJC-1295 — 2 mg vial, 2 mL BAC, 100 mcg dose</option>
-            <option value="5|2|100">Ipamorelin — 5 mg vial, 2 mL BAC, 100 mcg dose</option>
-            <option value="5|2|200">Ipamorelin — 5 mg vial, 2 mL BAC, 200 mcg dose</option>
-            <option value="5|1|250">Semaglutide — 5 mg vial, 1 mL BAC, 250 mcg dose</option>
-            <option value="5|2|250">Semaglutide — 5 mg vial, 2 mL BAC, 250 mcg dose</option>
+            <optgroup label="Recovery &amp; Healing">
+              <option value="5|2|250">BPC-157 — 5 mg vial, 2 mL BAC, 250 mcg dose</option>
+              <option value="5|2|500">BPC-157 — 5 mg vial, 2 mL BAC, 500 mcg dose</option>
+              <option value="5|2|750">TB-500 — 5 mg vial, 2 mL BAC, 750 mcg dose</option>
+              <option value="5|2|2500">TB-500 — 5 mg vial, 2 mL BAC, 2.5 mg dose</option>
+              <option value="5|2|500">KPV — 5 mg vial, 2 mL BAC, 500 mcg dose</option>
+            </optgroup>
+            <optgroup label="Growth Hormone">
+              <option value="2|2|100">CJC-1295 — 2 mg vial, 2 mL BAC, 100 mcg dose</option>
+              <option value="5|2|100">Ipamorelin — 5 mg vial, 2 mL BAC, 100 mcg dose</option>
+              <option value="5|2|200">Ipamorelin — 5 mg vial, 2 mL BAC, 200 mcg dose</option>
+              <option value="2|2|100">Sermorelin — 2 mg vial, 2 mL BAC, 100 mcg dose</option>
+              <option value="2|2|200">Sermorelin — 2 mg vial, 2 mL BAC, 200 mcg dose</option>
+            </optgroup>
+            <optgroup label="Anti-Aging &amp; Longevity">
+              <option value="10|2|100">GHK-Cu — 10 mg vial, 2 mL BAC, 100 mcg dose</option>
+              <option value="10|2|500">GHK-Cu — 10 mg vial, 2 mL BAC, 500 mcg dose</option>
+              <option value="10|3|300">Epithalon — 10 mg vial, 3 mL BAC, 300 mcg dose</option>
+            </optgroup>
+            <optgroup label="Weight Loss">
+              <option value="5|1|250">Semaglutide — 5 mg vial, 1 mL BAC, 250 mcg dose</option>
+              <option value="5|2|250">Semaglutide — 5 mg vial, 2 mL BAC, 250 mcg dose</option>
+              <option value="5|2|300">AOD-9604 — 5 mg vial, 2 mL BAC, 300 mcg dose</option>
+            </optgroup>
+            <optgroup label="Cognitive">
+              <option value="5|2|300">Selank — 5 mg vial, 2 mL BAC, 300 mcg dose</option>
+              <option value="5|2|600">Semax — 5 mg vial, 2 mL BAC, 600 mcg dose</option>
+            </optgroup>
+            <optgroup label="Immune &amp; Wellness">
+              <option value="5|2|750">Thymosin Alpha-1 — 5 mg vial, 2 mL BAC, 750 mcg dose</option>
+            </optgroup>
+            <optgroup label="Sexual Health">
+              <option value="2|1|500">PT-141 — 2 mg vial, 1 mL BAC, 500 mcg dose</option>
+              <option value="2|1|1000">PT-141 — 2 mg vial, 1 mL BAC, 1 mg dose</option>
+            </optgroup>
+            <optgroup label="Sleep">
+              <option value="5|2|100">DSIP — 5 mg vial, 2 mL BAC, 100 mcg dose</option>
+            </optgroup>
           </select>
         </div>
 
@@ -777,6 +803,23 @@
         </div>
 
         <div class="optional-divider"><span>Optional</span></div>
+
+        <div class="input-group">
+          <div class="input-label">
+            <span>Dosing frequency</span>
+            <span class="input-hint">how often you dose</span>
+          </div>
+          <select class="input-field" id="doseFrequency" style="appearance:auto; cursor:pointer;">
+            <option value="">Select (optional)</option>
+            <option value="2">Twice daily (2x/day)</option>
+            <option value="1">Once daily (1x/day)</option>
+            <option value="0.714">5 days on / 2 off</option>
+            <option value="0.5">Every other day (EOD)</option>
+            <option value="0.4286">3x per week</option>
+            <option value="0.2857">2x per week</option>
+            <option value="0.1429">Once per week</option>
+          </select>
+        </div>
 
         <div class="input-group">
           <div class="input-label">
@@ -848,9 +891,17 @@
               <dt>Doses per vial</dt>
               <dd id="detailDoses">—</dd>
             </div>
+            <div class="detail-row" id="daysRow" style="display:none;">
+              <dt>Vial lasts</dt>
+              <dd id="detailDays">—</dd>
+            </div>
             <div class="detail-row" id="costRow" style="display:none;">
               <dt>Cost per dose</dt>
               <dd id="detailCost">—</dd>
+            </div>
+            <div class="detail-row" id="costPerDayRow" style="display:none;">
+              <dt>Cost per day</dt>
+              <dd id="detailCostPerDay">—</dd>
             </div>
           </dl>
 
@@ -1003,6 +1054,62 @@
             <td>250 mcg</td>
             <td>10 units</td>
           </tr>
+          <tr>
+            <td><a href="articles/ipamorelin-vs-sermorelin.html">Sermorelin</a></td>
+            <td>2 mg</td>
+            <td>2 mL</td>
+            <td>200 mcg</td>
+            <td>20 units</td>
+          </tr>
+          <tr>
+            <td><a href="articles/aod-9604-fat-loss-peptide.html">AOD-9604</a></td>
+            <td>5 mg</td>
+            <td>2 mL</td>
+            <td>300 mcg</td>
+            <td>6 units</td>
+          </tr>
+          <tr>
+            <td><a href="articles/selank-vs-semax.html">Selank</a></td>
+            <td>5 mg</td>
+            <td>2 mL</td>
+            <td>300 mcg</td>
+            <td>6 units</td>
+          </tr>
+          <tr>
+            <td><a href="articles/selank-vs-semax.html">Semax</a></td>
+            <td>5 mg</td>
+            <td>2 mL</td>
+            <td>600 mcg</td>
+            <td>12 units</td>
+          </tr>
+          <tr>
+            <td><a href="articles/kpv-anti-inflammatory-peptide.html">KPV</a></td>
+            <td>5 mg</td>
+            <td>2 mL</td>
+            <td>500 mcg</td>
+            <td>10 units</td>
+          </tr>
+          <tr>
+            <td><a href="articles/thymosin-alpha-1-immune-peptide.html">Thymosin Alpha-1</a></td>
+            <td>5 mg</td>
+            <td>2 mL</td>
+            <td>750 mcg</td>
+            <td>15 units</td>
+          </tr>
+          <tr>
+            <td><a href="articles/pt-141-bremelanotide.html">PT-141</a></td>
+            <td>2 mg</td>
+            <td>1 mL</td>
+            <td>500 mcg</td>
+            <td>25 units</td>
+          </tr>
+          <tr>
+            <td><a href="articles/dsip-sleep-peptide.html">DSIP</a></td>
+            <td>5 mg</td>
+            <td>2 mL</td>
+            <td>100 mcg</td>
+            <td>2 units</td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -1070,17 +1177,30 @@
     const vialCostInput = document.getElementById('vialCost');
     const costRow = document.getElementById('costRow');
     const detailCost = document.getElementById('detailCost');
+    const doseFrequency = document.getElementById('doseFrequency');
+    const daysRow = document.getElementById('daysRow');
+    const detailDays = document.getElementById('detailDays');
+    const costPerDayRow = document.getElementById('costPerDayRow');
+    const detailCostPerDay = document.getElementById('detailCostPerDay');
     const presetLink = document.getElementById('presetLink');
     const presetLinkAnchor = document.getElementById('presetLinkAnchor');
 
     const presetArticles = {
       'BPC-157': { href: 'articles/bpc-157-guide.html', label: 'Read our full BPC-157 guide' },
       'TB-500': { href: 'articles/tb-500.html', label: 'Read our full TB-500 guide' },
+      'KPV': { href: 'articles/kpv-anti-inflammatory-peptide.html', label: 'Read our KPV guide' },
       'GHK-Cu': { href: 'articles/ghk-cu-copper-peptide.html', label: 'Read our full GHK-Cu guide' },
       'Epithalon': { href: 'articles/epithalon-longevity-peptide.html', label: 'Read our full Epithalon guide' },
       'CJC-1295': { href: 'articles/cjc-1295-ipamorelin.html', label: 'Read our CJC-1295 & Ipamorelin guide' },
       'Ipamorelin': { href: 'articles/cjc-1295-ipamorelin.html', label: 'Read our CJC-1295 & Ipamorelin guide' },
-      'Semaglutide': { href: 'articles/glp-1-peptides.html', label: 'Read our GLP-1 peptides guide' }
+      'Sermorelin': { href: 'articles/ipamorelin-vs-sermorelin.html', label: 'Read our Ipamorelin vs Sermorelin guide' },
+      'Semaglutide': { href: 'articles/glp-1-peptides.html', label: 'Read our GLP-1 peptides guide' },
+      'AOD-9604': { href: 'articles/aod-9604-fat-loss-peptide.html', label: 'Read our AOD-9604 guide' },
+      'Selank': { href: 'articles/selank-vs-semax.html', label: 'Read our Selank vs Semax guide' },
+      'Semax': { href: 'articles/selank-vs-semax.html', label: 'Read our Selank vs Semax guide' },
+      'Thymosin Alpha-1': { href: 'articles/thymosin-alpha-1-immune-peptide.html', label: 'Read our Thymosin Alpha-1 guide' },
+      'PT-141': { href: 'articles/pt-141-bremelanotide.html', label: 'Read our PT-141 guide' },
+      'DSIP': { href: 'articles/dsip-sleep-peptide.html', label: 'Read our DSIP guide' }
     };
 
     presetSelect.addEventListener('change', () => {
@@ -1115,6 +1235,7 @@
     });
 
     vialCostInput.addEventListener('input', calculate);
+    doseFrequency.addEventListener('change', calculate);
 
     function calculate() {
       const vialMg = parseFloat(vialInput.value);
@@ -1151,14 +1272,42 @@
       document.getElementById('detailVolume').textContent = formatVolume(volumeMl) + ' mL';
       document.getElementById('detailDoses').textContent = totalDoses + (totalDoses === 1 ? ' dose' : ' doses');
 
+      // Days vial will last
+      const freq = parseFloat(doseFrequency.value);
+      if (freq > 0 && totalDoses > 0) {
+        const days = Math.floor(totalDoses / freq);
+        const weeks = Math.floor(days / 7);
+        const remainDays = days % 7;
+        let daysText = days + (days === 1 ? ' day' : ' days');
+        if (weeks >= 1) {
+          daysText += ' (~' + weeks + (weeks === 1 ? ' week' : ' weeks');
+          if (remainDays > 0) daysText += ', ' + remainDays + 'd';
+          daysText += ')';
+        }
+        detailDays.textContent = daysText;
+        daysRow.style.display = 'flex';
+      } else {
+        daysRow.style.display = 'none';
+      }
+
       // Cost per dose
       const vialCost = parseFloat(vialCostInput.value);
       if (vialCost > 0 && totalDoses > 0) {
         const costPerDose = vialCost / totalDoses;
         detailCost.textContent = '$' + costPerDose.toFixed(2);
         costRow.style.display = 'flex';
+
+        // Cost per day
+        if (freq > 0) {
+          const costPerDay = costPerDose * freq;
+          detailCostPerDay.textContent = '$' + costPerDay.toFixed(2) + '/day';
+          costPerDayRow.style.display = 'flex';
+        } else {
+          costPerDayRow.style.display = 'none';
+        }
       } else {
         costRow.style.display = 'none';
+        costPerDayRow.style.display = 'none';
       }
 
       // Syringe visualization
