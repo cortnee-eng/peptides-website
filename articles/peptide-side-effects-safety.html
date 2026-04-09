@@ -42,6 +42,13 @@
     .nav-links a:hover { color:var(--sage); }
     .nav-btn { font-size:12px !important; font-weight:400 !important; letter-spacing:0.08em !important; color:var(--white) !important; background:var(--sage); padding:10px 24px; border-radius:2px; transition:background 0.25s !important; }
     .nav-btn:hover { background:var(--forest); color:var(--white) !important; }
+    .nav-dropdown { position:relative; }
+    .nav-dropdown-toggle::after { content:'▾'; margin-left:4px; font-size:10px; opacity:0.5; }
+    .nav-dropdown-menu { display:none; position:absolute; top:calc(100% + 12px); left:50%; transform:translateX(-50%); background:var(--white); border:1px solid rgba(28,58,36,0.08); border-radius:4px; box-shadow:0 4px 24px rgba(28,58,36,0.1); padding:10px 0; min-width:230px; list-style:none; z-index:300; }
+    .nav-dropdown:hover .nav-dropdown-menu { display:block; }
+    .nav-dropdown-menu li { padding:0; }
+    .nav-dropdown-menu a { display:block; padding:9px 22px; font-size:13px !important; font-weight:400 !important; text-transform:none !important; letter-spacing:0 !important; color:var(--ink-mid) !important; transition:background 0.15s, color 0.15s; }
+    .nav-dropdown-menu a:hover { background:var(--mint-wash); color:var(--forest) !important; }
     .nav-toggle { display:none; background:none; border:none; cursor:pointer; padding:8px; z-index:210; }
     .nav-toggle span { display:block; width:24px; height:2px; background:var(--forest); margin:5px 0; border-radius:2px; transition:transform 0.3s var(--ease-out), opacity 0.3s var(--ease-out); }
     .nav-toggle.active span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
@@ -87,6 +94,11 @@
       .article-header { padding:110px 24px 44px; }
       .article-body-wrap { padding:44px 24px 72px; }
       .disclaimer-bar { padding:24px; } footer { padding:40px 24px 28px; }
+    
+      .nav-dropdown-menu { display:block; position:static; transform:none; background:none; border:none; box-shadow:none; padding:8px 0 0; min-width:0; }
+      .nav-dropdown-toggle::after { display:none; }
+      .nav-dropdown-menu a { color:var(--ink-soft) !important; padding:6px 0; text-align:center; font-size:14px !important; letter-spacing:0.12em !important; text-transform:uppercase !important; }
+      .nav-dropdown-menu a:hover { background:none; color:var(--sage) !important; }
     }
   
     /* ─── Inline Newsletter CTA ─── */
@@ -149,9 +161,16 @@
       <li><a href="../index.html#covers">Topics</a></li>
       <li><a href="../articles.html">Articles</a></li>
       <li><a href="../peptides.html">Peptides</a></li>
-      <li><a href="../meal-planner.html">Meal Planner</a></li>
-      <li><a href="../reconstitution-calculator.html">Calculator</a></li>
-      <li><a href="../stack-builder.html">Stack Builder</a></li>
+      <li class="nav-dropdown">
+        <a href="#" class="nav-dropdown-toggle">Tools</a>
+        <ul class="nav-dropdown-menu">
+          <li><a href="../reconstitution-calculator.html">Reconstitution Calculator</a></li>
+          <li><a href="../half-life-calculator.html">Half-Life Calculator</a></li>
+          <li><a href="../dosing-converter.html">Dosing Converter</a></li>
+          <li><a href="../stack-builder.html">Stack Builder</a></li>
+          <li><a href="../meal-planner.html">GLP-1 Meal Planner</a></li>
+        </ul>
+      </li>
       <li><a href="../about.html">About</a></li>
       <li><a href="../index.html#newsletter" class="nav-btn">Subscribe Free</a></li>
     </ul>
