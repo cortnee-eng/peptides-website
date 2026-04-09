@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0QX7QDH0J0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0QX7QDH0J0');
+  </script>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peptide Half-Life Calculator — Dosing Schedule & Steady State | Peptide Revealed</title>
+  <meta name="description" content="Free peptide half-life calculator. Select a peptide to see its pharmacokinetic curve, recommended dosing frequency, 7-day schedule, and time to steady state.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Peptide Revealed">
+  <meta property="og:title" content="Peptide Half-Life Calculator — Dosing Schedule & Steady State">
+  <meta property="og:description" content="Free peptide half-life calculator. Select a peptide to see its pharmacokinetic curve, recommended dosing frequency, 7-day schedule, and time to steady state.">
+  <meta property="og:url" content="https://peptiderevealed.com/half-life-calculator.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Peptide Half-Life Calculator — Dosing Schedule & Steady State">
+  <meta name="twitter:description" content="Free peptide half-life calculator. Select a peptide to see its pharmacokinetic curve, recommended dosing frequency, 7-day schedule, and time to steady state.">
+  <link rel="canonical" href="https://peptiderevealed.com/half-life-calculator.html">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Peptide Half-Life & Dosing Schedule Calculator",
+    "description": "Calculate peptide half-lives, view pharmacokinetic decay curves, and generate 7-day dosing schedules with steady-state estimates.",
+    "url": "https://peptiderevealed.com/half-life-calculator.html",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "All",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Peptide Revealed",
+      "url": "https://peptiderevealed.com"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is peptide half-life and why does it matter for dosing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A peptide's half-life is the time it takes for its plasma concentration to drop by 50%. It determines how often you need to dose to maintain effective levels. Short half-life peptides (like Sermorelin at 10-20 minutes) require daily dosing, while long half-life peptides (like Semaglutide at ~7 days) only need weekly injections."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take for a peptide to reach steady state?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Steady state is reached after approximately 5 half-lives of consistent dosing. For example, Semaglutide with a 7-day half-life reaches steady state in about 5 weeks. BPC-157 with a 4-hour half-life reaches steady state within about 20 hours of regular dosing. At steady state, the amount entering the body equals the amount being eliminated."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often should I inject peptides?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dosing frequency depends on the peptide's half-life and pharmacokinetics. Short half-life peptides like BPC-157 (~4 hours) are typically dosed 1-2 times daily. Medium half-life peptides like Ipamorelin (~2 hours) are dosed 1-3 times daily. Long-acting peptides like CJC-1295 with DAC (~8 days) or Semaglutide (~7 days) are dosed once weekly. Always follow your healthcare provider's guidance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a pharmacokinetic decay curve?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A pharmacokinetic decay curve shows how a peptide's concentration in the blood changes over time after injection. It typically shows a rapid rise to peak concentration followed by exponential decay. The curve helps visualize why certain peptides need more frequent dosing — the faster the decay, the more often you need to dose to maintain therapeutic levels."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://peptiderevealed.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://peptiderevealed.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "Half-Life Calculator", "item": "https://peptiderevealed.com/half-life-calculator.html" }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --forest:#1C3A24; --sage:#4E8C5F; --fern:#7AB88A; --mint:#C6DFC8;
+      --mint-wash:#EBF4EC; --cream:#F4F0E8; --parchment:#EDE7DA; --white:#FFFFFF;
+      --ink:#161D18; --ink-mid:#3D4F40; --ink-soft:#6B7E6D; --ink-faint:#9FB4A1;
+      --serif:'Cormorant Garamond',Georgia,serif; --sans:'DM Sans','Helvetica Neue',Arial,sans-serif;
+      --ease-out:cubic-bezier(0.22,1,0.36,1);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family:var(--sans); font-weight:300; color:var(--ink); background:var(--cream); line-height:1.65; overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+
+    /* ─── NAV ─── */
+    .nav { position:fixed; inset:0 0 auto 0; z-index:200; display:flex; align-items:center; justify-content:space-between; padding:7px 52px; background:rgba(244,240,232,0.88); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-bottom:1px solid rgba(78,140,95,0.1); transition:box-shadow 0.4s var(--ease-out); }
+    .nav.scrolled { box-shadow:0 1px 32px rgba(28,58,36,0.09); }
+    .nav-logo { text-decoration:none; display:block; line-height:0; }
+    .nav-links { display:flex; align-items:center; gap:40px; list-style:none; }
+    .nav-links a { font-family:var(--sans); font-size:12px; font-weight:400; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-soft); text-decoration:none; transition:color 0.2s; }
+    .nav-links a:hover { color:var(--sage); }
+    .nav-btn { font-size:12px !important; font-weight:400 !important; letter-spacing:0.08em !important; color:var(--white) !important; background:var(--sage); padding:10px 24px; border-radius:2px; transition:background 0.25s !important; }
+    .nav-btn:hover { background:var(--forest); color:var(--white) !important; }
+    .nav-toggle { display:none; background:none; border:none; cursor:pointer; padding:8px; z-index:210; }
+    .nav-toggle span { display:block; width:24px; height:2px; background:var(--forest); margin:5px 0; border-radius:2px; transition:transform 0.3s var(--ease-out), opacity 0.3s var(--ease-out); }
+    .nav-toggle.active span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+    .nav-toggle.active span:nth-child(2) { opacity:0; }
+    .nav-toggle.active span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+
+    /* ─── BREADCRUMB ─── */
+    .breadcrumb { display:flex; align-items:center; gap:8px; font-size:12px; color:var(--ink-faint); margin-bottom:24px; }
+    .breadcrumb a { color:var(--ink-faint); text-decoration:none; transition:color 0.2s; }
+    .breadcrumb a:hover { color:var(--sage); }
+    .breadcrumb-sep { opacity:0.5; }
+
+    /* ─── HERO ─── */
+    .tool-hero {
+      padding:130px 52px 56px;
+      background:var(--white);
+      border-bottom:1px solid rgba(28,58,36,0.08);
+      position:relative;
+      overflow:hidden;
+    }
+    .tool-hero::before {
+      content:'';
+      position:absolute;
+      top:-60px; right:-120px;
+      width:500px; height:500px;
+      background:radial-gradient(circle, rgba(78,140,95,0.06) 0%, transparent 70%);
+      pointer-events:none;
+    }
+    .tool-hero-inner {
+      max-width:760px;
+      margin:0 auto;
+      position:relative;
+    }
+    .tool-badge {
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      font-size:10px;
+      font-weight:500;
+      letter-spacing:0.12em;
+      text-transform:uppercase;
+      color:var(--sage);
+      background:rgba(78,140,95,0.1);
+      padding:5px 14px;
+      border-radius:20px;
+      margin-bottom:20px;
+    }
+    .tool-badge svg { flex-shrink:0; }
+    .tool-hero h1 {
+      font-family:var(--serif);
+      font-size:clamp(32px,5vw,54px);
+      font-weight:400;
+      line-height:1.08;
+      color:var(--forest);
+      letter-spacing:-0.02em;
+      margin-bottom:18px;
+    }
+    .tool-hero p {
+      font-size:18px;
+      font-weight:300;
+      line-height:1.7;
+      color:var(--ink-soft);
+      max-width:600px;
+    }
+
+    /* ─── CALCULATOR ─── */
+    .calc-section {
+      max-width:960px;
+      margin:0 auto;
+      padding:56px 52px 80px;
+    }
+    .calc-layout {
+      display:grid;
+      grid-template-columns:320px 1fr;
+      gap:48px;
+      align-items:start;
+    }
+
+    /* Inputs panel */
+    .calc-inputs {
+      background:var(--white);
+      border:1px solid rgba(28,58,36,0.08);
+      border-radius:6px;
+      padding:36px 32px;
+    }
+    .preset-row {
+      margin-bottom:28px;
+    }
+    .preset-label {
+      display:block;
+      font-size:11px;
+      font-weight:500;
+      letter-spacing:0.12em;
+      text-transform:uppercase;
+      color:var(--ink-faint);
+      margin-bottom:8px;
+    }
+    .preset-select {
+      width:100%;
+      font-family:var(--sans);
+      font-size:14px;
+      font-weight:300;
+      color:var(--ink);
+      background:var(--cream);
+      border:1px solid rgba(28,58,36,0.12);
+      border-radius:4px;
+      padding:11px 14px;
+      appearance:none;
+      -webkit-appearance:none;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B7E6D' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat:no-repeat;
+      background-position:right 14px center;
+      cursor:pointer;
+      transition:border-color 0.2s;
+    }
+    .preset-select:focus {
+      outline:none;
+      border-color:var(--sage);
+    }
+
+    /* Results panel */
+    .calc-results {
+      position:sticky;
+      top:100px;
+    }
+
+    /* Summary cards row */
+    .summary-cards {
+      display:grid;
+      grid-template-columns:1fr 1fr 1fr;
+      gap:16px;
+      margin-bottom:28px;
+    }
+    .summary-card {
+      background:var(--forest);
+      border-radius:6px;
+      padding:20px 18px;
+      color:var(--white);
+      position:relative;
+      overflow:hidden;
+    }
+    .summary-card::before {
+      content:'';
+      position:absolute;
+      top:-20px; right:-20px;
+      width:80px; height:80px;
+      background:radial-gradient(circle, rgba(122,184,138,0.15) 0%, transparent 70%);
+      pointer-events:none;
+    }
+    .summary-card-label {
+      font-size:10px;
+      font-weight:500;
+      letter-spacing:0.12em;
+      text-transform:uppercase;
+      color:rgba(255,255,255,0.6);
+      margin-bottom:6px;
+    }
+    .summary-card-value {
+      font-family:var(--serif);
+      font-size:28px;
+      font-weight:400;
+      line-height:1.1;
+      color:var(--white);
+      letter-spacing:-0.02em;
+    }
+    .summary-card-sub {
+      font-size:12px;
+      font-weight:300;
+      color:rgba(255,255,255,0.55);
+      margin-top:4px;
+    }
+
+    /* PK Graph */
+    .pk-graph-card {
+      background:var(--white);
+      border:1px solid rgba(28,58,36,0.08);
+      border-radius:6px;
+      padding:28px 24px;
+      margin-bottom:28px;
+    }
+    .pk-graph-card h3 {
+      font-family:var(--serif);
+      font-size:20px;
+      font-weight:400;
+      color:var(--forest);
+      margin-bottom:16px;
+    }
+    .pk-svg {
+      width:100%;
+      height:auto;
+    }
+
+    /* Timeline */
+    .timeline-card {
+      background:var(--white);
+      border:1px solid rgba(28,58,36,0.08);
+      border-radius:6px;
+      padding:28px 24px;
+    }
+    .timeline-card h3 {
+      font-family:var(--serif);
+      font-size:20px;
+      font-weight:400;
+      color:var(--forest);
+      margin-bottom:6px;
+    }
+    .timeline-card-sub {
+      font-size:13px;
+      font-weight:300;
+      color:var(--ink-faint);
+      margin-bottom:20px;
+    }
+    .timeline-row {
+      display:flex;
+      align-items:center;
+      gap:12px;
+      padding:10px 0;
+      border-bottom:1px solid rgba(28,58,36,0.05);
+    }
+    .timeline-row:last-child { border-bottom:none; }
+    .timeline-day {
+      font-size:12px;
+      font-weight:500;
+      letter-spacing:0.06em;
+      text-transform:uppercase;
+      color:var(--ink-mid);
+      min-width:48px;
+      flex-shrink:0;
+    }
+    .timeline-doses {
+      display:flex;
+      gap:6px;
+      flex-wrap:wrap;
+      flex:1;
+    }
+    .timeline-pill {
+      font-size:11px;
+      font-weight:400;
+      color:var(--forest);
+      background:var(--mint-wash);
+      padding:4px 10px;
+      border-radius:12px;
+      white-space:nowrap;
+    }
+    .timeline-pill.rest {
+      color:var(--ink-faint);
+      background:rgba(28,58,36,0.04);
+      font-style:italic;
+    }
+
+    /* Empty state */
+    .empty-state {
+      text-align:center;
+      padding:80px 24px;
+    }
+    .empty-state-icon {
+      margin-bottom:20px;
+    }
+    .empty-state h3 {
+      font-family:var(--serif);
+      font-size:24px;
+      font-weight:400;
+      color:var(--forest);
+      margin-bottom:8px;
+    }
+    .empty-state p {
+      font-size:15px;
+      font-weight:300;
+      color:var(--ink-faint);
+      max-width:360px;
+      margin:0 auto;
+    }
+
+    /* Notes */
+    .peptide-notes {
+      margin-top:16px;
+      padding:14px 16px;
+      background:rgba(78,140,95,0.06);
+      border-radius:4px;
+      font-size:13px;
+      font-weight:300;
+      color:var(--ink-mid);
+      line-height:1.7;
+    }
+    .peptide-notes strong { font-weight:500; color:var(--ink); }
+    .peptide-notes a { color:var(--sage); text-decoration:underline; text-underline-offset:3px; }
+
+    /* ─── HOW IT WORKS ─── */
+    .how-section {
+      max-width:760px;
+      margin:0 auto;
+      padding:0 52px 72px;
+    }
+    .how-title {
+      font-family:var(--serif);
+      font-size:30px;
+      font-weight:400;
+      color:var(--forest);
+      letter-spacing:-0.015em;
+      margin-bottom:12px;
+    }
+    .how-text {
+      font-size:16px;
+      font-weight:300;
+      line-height:1.85;
+      color:var(--ink-mid);
+      margin-bottom:20px;
+    }
+    .how-text a {
+      color:var(--sage);
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+    .how-text strong { font-weight:500; color:var(--ink); }
+    .how-text ul { margin:0 0 20px 24px; }
+    .how-text li { font-size:16px; font-weight:300; line-height:1.85; color:var(--ink-mid); margin-bottom:6px; }
+    .divider { width:48px; height:1px; background:linear-gradient(to right,var(--sage),transparent); margin:48px 0; }
+
+    /* ─── REFERENCE TABLE ─── */
+    .examples-section {
+      max-width:760px;
+      margin:0 auto;
+      padding:0 52px 72px;
+    }
+    .ref-table {
+      width:100%;
+      border-collapse:collapse;
+      margin:28px 0;
+      font-size:14px;
+    }
+    .ref-table th {
+      font-size:11px;
+      font-weight:500;
+      letter-spacing:0.1em;
+      text-transform:uppercase;
+      color:var(--ink-faint);
+      text-align:left;
+      padding:10px 12px;
+      border-bottom:2px solid rgba(28,58,36,0.12);
+      white-space:nowrap;
+    }
+    .ref-table td {
+      font-size:14px;
+      font-weight:300;
+      color:var(--ink-mid);
+      padding:11px 12px;
+      border-bottom:1px solid rgba(28,58,36,0.06);
+    }
+    .ref-table td:first-child {
+      font-weight:400;
+      color:var(--forest);
+    }
+    .ref-table td a {
+      color:var(--sage);
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+    .ref-table tbody tr:hover {
+      background:rgba(78,140,95,0.04);
+    }
+    .ref-table tbody tr { cursor:pointer; }
+
+    /* ─── NEWSLETTER CTA ─── */
+    .tool-cta {
+      max-width:760px;
+      margin:0 auto;
+      padding:0 52px 72px;
+    }
+    .cta-box {
+      background:var(--forest);
+      border-radius:6px;
+      padding:40px 36px;
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+    .cta-box::before {
+      content:'';
+      position:absolute;
+      bottom:-60px; left:-60px;
+      width:280px; height:280px;
+      background:radial-gradient(circle, rgba(122,184,138,0.12) 0%, transparent 70%);
+      pointer-events:none;
+    }
+    .cta-box h3 {
+      font-family:var(--serif);
+      font-size:26px;
+      font-weight:400;
+      color:var(--white);
+      margin-bottom:8px;
+      position:relative;
+    }
+    .cta-box p {
+      font-size:14px;
+      font-weight:300;
+      color:rgba(255,255,255,0.7);
+      margin-bottom:22px;
+      position:relative;
+    }
+    .cta-form {
+      display:flex;
+      gap:10px;
+      max-width:420px;
+      margin:0 auto;
+      position:relative;
+    }
+    .cta-input {
+      flex:1;
+      font-family:var(--sans);
+      font-size:14px;
+      font-weight:300;
+      color:var(--ink);
+      background:var(--white);
+      border:none;
+      border-radius:4px;
+      padding:12px 16px;
+    }
+    .cta-input::placeholder { color:var(--ink-faint); }
+    .cta-input:focus { outline:2px solid var(--fern); outline-offset:1px; }
+    .cta-submit {
+      font-family:var(--sans);
+      font-size:13px;
+      font-weight:400;
+      letter-spacing:0.05em;
+      color:var(--forest);
+      background:var(--mint);
+      border:none;
+      border-radius:4px;
+      padding:12px 22px;
+      cursor:pointer;
+      transition:background 0.2s;
+      white-space:nowrap;
+    }
+    .cta-submit:hover { background:var(--fern); }
+
+    /* ─── DISCLAIMER / FOOTER ─── */
+    .disclaimer-bar { background:var(--parchment); border-top:1px solid rgba(28,58,36,0.08); padding:28px 52px; text-align:center; }
+    .disclaimer-bar p { font-size:12px; color:var(--ink-soft); line-height:1.8; max-width:720px; margin:0 auto; }
+    footer { background:var(--forest); padding:48px 52px 36px; }
+    .footer-bottom { display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; }
+    .footer-copy { font-size:12px; font-weight:300; color:rgba(255,255,255,0.3); }
+    .footer-legal { display:flex; gap:28px; }
+    .footer-legal a { font-size:12px; font-weight:300; color:rgba(255,255,255,0.3); text-decoration:none; transition:color 0.2s; }
+    .footer-legal a:hover { color:rgba(255,255,255,0.65); }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width:680px) {
+      .nav { padding:7px 20px; }
+      .nav-toggle { display:block; }
+      .nav-links { display:none; position:absolute; top:0; left:0; width:100vw; height:100vh; flex-direction:column; align-items:center; justify-content:center; gap:32px; background:rgba(244,240,232,0.97); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); z-index:205; padding:80px 20px 40px; }
+      .nav-links.open { display:flex; }
+      .nav-links a { font-size:14px; letter-spacing:0.12em; }
+      .tool-hero { padding:110px 24px 40px; }
+      .calc-section { padding:40px 24px 64px; }
+      .calc-layout { grid-template-columns:1fr; gap:32px; }
+      .calc-results { position:static; }
+      .calc-inputs { padding:28px 22px; }
+      .summary-cards { grid-template-columns:1fr; gap:12px; }
+      .pk-graph-card { padding:20px 16px; }
+      .timeline-card { padding:20px 16px; }
+      .how-section { padding:0 24px 56px; }
+      .examples-section { padding:0 24px 56px; }
+      .ref-table { font-size:13px; }
+      .ref-table th, .ref-table td { padding:9px 8px; }
+      .table-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+      .tool-cta { padding:0 24px 56px; }
+      .cta-box { padding:32px 22px; }
+      .cta-form { flex-direction:column; }
+      .disclaimer-bar { padding:24px; }
+      footer { padding:40px 24px 28px; }
+    }
+    @media (min-width:681px) and (max-width:860px) {
+      .calc-layout { grid-template-columns:1fr; gap:32px; }
+      .calc-results { position:static; }
+      .summary-cards { grid-template-columns:1fr 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav" id="mainNav">
+    <a href="index.html" class="nav-logo" aria-label="Peptide Revealed — Home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" height="34" aria-hidden="true">
+        <g transform="translate(10,8) scale(1.28)">
+          <line x1="38" y1="38" x2="16" y2="18" stroke="#4E8C5F" stroke-width="2" stroke-linecap="round"/>
+          <line x1="42" y1="36" x2="62" y2="16" stroke="#4E8C5F" stroke-width="2" stroke-linecap="round"/>
+          <line x1="44" y1="40" x2="66" y2="44" stroke="#7AB88A" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="40" y1="44" x2="32" y2="64" stroke="#7AB88A" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="36" y1="42" x2="14" y2="58" stroke="#C6DFC8" stroke-width="1.2" stroke-linecap="round"/>
+          <circle cx="16" cy="18" r="6" fill="#4E8C5F"/><circle cx="62" cy="16" r="5" fill="#4E8C5F"/>
+          <circle cx="66" cy="44" r="4" fill="#7AB88A"/><circle cx="32" cy="64" r="4" fill="#7AB88A"/>
+          <circle cx="40" cy="40" r="8" fill="#1C3A24"/><circle cx="40" cy="40" r="4.5" fill="#4E8C5F"/>
+        </g>
+        <text x="118" y="62" font-family="Georgia,serif" font-size="44" font-weight="400" fill="#1C3A24" letter-spacing="-0.5">Peptide</text>
+        <text x="120" y="90" font-family="'Helvetica Neue',Arial,sans-serif" font-size="16" font-weight="300" fill="#4E8C5F" letter-spacing="5">REVEALED</text>
+      </svg>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#covers">Topics</a></li>
+      <li><a href="articles.html">Articles</a></li>
+      <li><a href="peptides.html">Peptides</a></li>
+      <li><a href="meal-planner.html">Meal Planner</a></li>
+      <li><a href="reconstitution-calculator.html">Calculator</a></li>
+      <li><a href="stack-builder.html">Stack Builder</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#newsletter" class="nav-btn">Subscribe Free</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <div class="tool-hero">
+    <div class="tool-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">&rsaquo;</span>
+        <span>Tools</span>
+        <span class="breadcrumb-sep">&rsaquo;</span>
+        <span>Half-Life Calculator</span>
+      </div>
+      <div class="tool-badge">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.2"/>
+          <polyline points="7,3.5 7,7 9.5,8.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+        Free Tool
+      </div>
+      <h1>Peptide Half-Life &amp; Dosing Schedule Calculator</h1>
+      <p>Select a peptide to see its half-life, pharmacokinetic decay curve, recommended dosing frequency, and a visual 7-day dosing schedule. Understand how often to dose and when steady state is reached.</p>
+    </div>
+  </div>
+
+  <!-- Calculator -->
+  <section class="calc-section">
+    <div class="calc-layout">
+
+      <!-- Inputs -->
+      <div class="calc-inputs">
+        <div class="preset-row">
+          <label class="preset-label" for="peptideSelect">Select a peptide</label>
+          <select class="preset-select" id="peptideSelect">
+            <option value="">Choose a peptide</option>
+            <optgroup label="Recovery &amp; Healing">
+              <option value="bpc157">BPC-157 (subcutaneous)</option>
+              <option value="tb500">TB-500</option>
+              <option value="kpv">KPV</option>
+            </optgroup>
+            <optgroup label="Growth Hormone Secretagogues">
+              <option value="ipamorelin">Ipamorelin</option>
+              <option value="cjc1295nodac">CJC-1295 (no DAC)</option>
+              <option value="cjc1295dac">CJC-1295 (with DAC)</option>
+              <option value="sermorelin">Sermorelin</option>
+            </optgroup>
+            <optgroup label="Weight Loss">
+              <option value="semaglutide">Semaglutide</option>
+              <option value="tirzepatide">Tirzepatide</option>
+              <option value="retatrutide">Retatrutide</option>
+              <option value="aod9604">AOD-9604</option>
+            </optgroup>
+            <optgroup label="Anti-Aging &amp; Longevity">
+              <option value="ghkcu">GHK-Cu (subcutaneous)</option>
+              <option value="epithalon">Epithalon</option>
+              <option value="motsc">MOTS-c</option>
+            </optgroup>
+            <optgroup label="Cognitive">
+              <option value="selank">Selank (nasal)</option>
+              <option value="semax">Semax (nasal)</option>
+            </optgroup>
+            <optgroup label="Immune &amp; Wellness">
+              <option value="ta1">Thymosin Alpha-1</option>
+            </optgroup>
+            <optgroup label="Sleep">
+              <option value="dsip">DSIP</option>
+            </optgroup>
+            <optgroup label="Sexual Health">
+              <option value="pt141">PT-141</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div id="peptideNotes" class="peptide-notes" style="display:none;"></div>
+      </div>
+
+      <!-- Results -->
+      <div class="calc-results">
+        <div id="emptyState" class="empty-state">
+          <div class="empty-state-icon">
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+              <circle cx="32" cy="32" r="28" stroke="var(--mint)" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <circle cx="32" cy="32" r="4" fill="var(--sage)" opacity="0.4"/>
+              <line x1="32" y1="16" x2="32" y2="32" stroke="var(--sage)" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+              <line x1="32" y1="32" x2="42" y2="38" stroke="var(--fern)" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+            </svg>
+          </div>
+          <h3>Select a peptide to begin</h3>
+          <p>Choose from the dropdown to see half-life data, a pharmacokinetic decay curve, and a 7-day dosing schedule.</p>
+        </div>
+
+        <div id="resultsPanel" style="display:none;">
+          <!-- Summary cards -->
+          <div class="summary-cards">
+            <div class="summary-card">
+              <div class="summary-card-label">Half-Life</div>
+              <div class="summary-card-value" id="halfLifeValue">--</div>
+              <div class="summary-card-sub" id="halfLifeSub"></div>
+            </div>
+            <div class="summary-card">
+              <div class="summary-card-label">Dose Frequency</div>
+              <div class="summary-card-value" id="freqValue">--</div>
+              <div class="summary-card-sub" id="freqSub"></div>
+            </div>
+            <div class="summary-card">
+              <div class="summary-card-label">Steady State</div>
+              <div class="summary-card-value" id="steadyValue">--</div>
+              <div class="summary-card-sub" id="steadySub">~5 half-lives</div>
+            </div>
+          </div>
+
+          <!-- PK Graph -->
+          <div class="pk-graph-card">
+            <h3>Pharmacokinetic Decay Curve</h3>
+            <div id="pkGraphContainer"></div>
+          </div>
+
+          <!-- Timeline -->
+          <div class="timeline-card">
+            <h3>7-Day Dosing Schedule</h3>
+            <div class="timeline-card-sub" id="timelineSub"></div>
+            <div id="timelineContainer"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="how-section">
+    <h2 class="how-title">Understanding peptide half-life</h2>
+    <p class="how-text">A peptide's <strong>half-life</strong> is the time it takes for its concentration in the blood to drop by exactly 50%. After two half-lives, 25% remains. After three, 12.5%. After five half-lives, less than 3.2% of the original dose is still circulating &mdash; which is why pharmacologists consider five half-lives the point at which a drug is essentially cleared.</p>
+
+    <p class="how-text">Half-life determines <strong>dosing frequency</strong>. Short half-life peptides like Sermorelin (10&ndash;20 minutes) or GHK-Cu (approximately 10 minutes subcutaneously) need to be dosed daily to maintain meaningful levels. Long half-life peptides like Semaglutide (approximately 7 days) or CJC-1295 with DAC (approximately 8 days) can be injected once weekly because they persist in circulation far longer.</p>
+
+    <div class="divider"></div>
+
+    <h2 class="how-title">What is steady state?</h2>
+    <p class="how-text"><strong>Steady state</strong> occurs when the amount of peptide entering the body equals the amount being eliminated, resulting in a consistent average concentration. It takes roughly <strong>5 half-lives</strong> of consistent dosing to reach steady state. For a weekly semaglutide injection with a 7-day half-life, that means about 5 weeks. For BPC-157 dosed twice daily with a 4-hour half-life, steady state arrives within about 20 hours.</p>
+
+    <p class="how-text">Understanding steady state matters because many peptides don't produce their full effects until this equilibrium is reached. This is why <a href="articles/what-is-peptide-cycling.html">peptide cycling protocols</a> typically recommend consistent dosing for several weeks before evaluating results.</p>
+
+    <div class="divider"></div>
+
+    <h2 class="how-title">Important caveats</h2>
+    <ul class="how-text">
+      <li><strong>Half-life is not duration of action.</strong> Some peptides like TB-500 have very short plasma half-lives (~3 hours) but exhibit prolonged biological effects due to depot effects and tissue binding. The dosing frequency reflects this &mdash; not just the half-life alone.</li>
+      <li><strong>Route of administration matters.</strong> Nasal peptides like Selank and Semax have much longer effective half-lives (approximately 20 minutes) than their intravenous half-lives (approximately 3 minutes) because mucosal absorption extends the delivery window.</li>
+      <li><strong>Individual variation exists.</strong> Body composition, metabolism, injection site, and other medications can all influence how quickly a peptide is cleared. The values in this calculator represent published research averages.</li>
+      <li><strong>This is an educational tool, not medical advice.</strong> Always consult a healthcare professional for personalized dosing guidance. See our <a href="articles/peptide-side-effects-safety.html">peptide safety guide</a> for more on risk awareness.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2 class="how-title">Related tools &amp; guides</h2>
+    <p class="how-text">Once you know how often to dose, you'll need to know how much to draw. Use our <a href="reconstitution-calculator.html">peptide reconstitution calculator</a> to convert milligram doses into insulin syringe units. If you're combining multiple peptides, our <a href="articles/peptide-stacking-guide.html">peptide stacking guide</a> covers timing, compatibility, and sequencing strategies.</p>
+  </section>
+
+  <!-- Reference table -->
+  <section class="examples-section">
+    <h2 class="how-title">Complete peptide half-life reference</h2>
+    <p class="how-text">Click any row to load the peptide in the calculator above. Half-life values are sourced from published pharmacokinetic studies where available.</p>
+
+    <div class="table-scroll">
+      <table class="ref-table" id="refTable">
+        <thead>
+          <tr>
+            <th>Peptide</th>
+            <th>Half-Life</th>
+            <th>Typical Frequency</th>
+            <th>Steady State</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-peptide="bpc157">
+            <td>BPC-157 (subQ)</td>
+            <td>~4 hours</td>
+            <td>2x daily</td>
+            <td>~20 hours</td>
+          </tr>
+          <tr data-peptide="tb500">
+            <td>TB-500</td>
+            <td>~3 hours</td>
+            <td>2x weekly (loading)</td>
+            <td>~2 weeks</td>
+          </tr>
+          <tr data-peptide="ghkcu">
+            <td>GHK-Cu (subQ)</td>
+            <td>~10 minutes</td>
+            <td>1-2x daily</td>
+            <td>~50 minutes</td>
+          </tr>
+          <tr data-peptide="ipamorelin">
+            <td>Ipamorelin</td>
+            <td>~2 hours</td>
+            <td>1-3x daily</td>
+            <td>~10 hours</td>
+          </tr>
+          <tr data-peptide="cjc1295nodac">
+            <td>CJC-1295 (no DAC)</td>
+            <td>~30 minutes</td>
+            <td>1-3x daily</td>
+            <td>~2.5 hours</td>
+          </tr>
+          <tr data-peptide="cjc1295dac">
+            <td>CJC-1295 (with DAC)</td>
+            <td>~8 days</td>
+            <td>1-2x weekly</td>
+            <td>~6 weeks</td>
+          </tr>
+          <tr data-peptide="sermorelin">
+            <td>Sermorelin</td>
+            <td>~15 minutes</td>
+            <td>1x daily (bedtime)</td>
+            <td>~75 minutes</td>
+          </tr>
+          <tr data-peptide="dsip">
+            <td>DSIP</td>
+            <td>~7 minutes</td>
+            <td>1x daily (bedtime)</td>
+            <td>~35 minutes</td>
+          </tr>
+          <tr data-peptide="selank">
+            <td>Selank (nasal)</td>
+            <td>~20 minutes</td>
+            <td>2-3x daily</td>
+            <td>~100 minutes</td>
+          </tr>
+          <tr data-peptide="semax">
+            <td>Semax (nasal)</td>
+            <td>~20 minutes</td>
+            <td>2-3x daily</td>
+            <td>~100 minutes</td>
+          </tr>
+          <tr data-peptide="aod9604">
+            <td>AOD-9604</td>
+            <td>~22 minutes</td>
+            <td>1x daily</td>
+            <td>~2 hours</td>
+          </tr>
+          <tr data-peptide="pt141">
+            <td>PT-141</td>
+            <td>~2 hours</td>
+            <td>As needed (min 24h gap)</td>
+            <td>N/A (as-needed)</td>
+          </tr>
+          <tr data-peptide="tirzepatide">
+            <td>Tirzepatide</td>
+            <td>~5 days</td>
+            <td>1x weekly</td>
+            <td>~4 weeks</td>
+          </tr>
+          <tr data-peptide="semaglutide">
+            <td>Semaglutide</td>
+            <td>~7 days</td>
+            <td>1x weekly</td>
+            <td>~5 weeks</td>
+          </tr>
+          <tr data-peptide="retatrutide">
+            <td>Retatrutide</td>
+            <td>~6 days</td>
+            <td>1x weekly</td>
+            <td>~4.5 weeks</td>
+          </tr>
+          <tr data-peptide="epithalon">
+            <td>Epithalon</td>
+            <td>~30 minutes</td>
+            <td>1x daily (10-day cycles)</td>
+            <td>~2.5 hours</td>
+          </tr>
+          <tr data-peptide="kpv">
+            <td>KPV</td>
+            <td>~1.5 hours</td>
+            <td>1-2x daily</td>
+            <td>~7.5 hours</td>
+          </tr>
+          <tr data-peptide="ta1">
+            <td>Thymosin Alpha-1</td>
+            <td>~2 hours</td>
+            <td>2x weekly</td>
+            <td>~2 weeks</td>
+          </tr>
+          <tr data-peptide="motsc">
+            <td>MOTS-c</td>
+            <td>~3 hours</td>
+            <td>3-5x weekly</td>
+            <td>~1 week</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Newsletter CTA -->
+  <section class="tool-cta">
+    <div class="cta-box">
+      <h3>Get peptide dosing insights in your inbox</h3>
+      <p>Weekly peptide research, pharmacokinetic updates, and practical dosing guidance &mdash; written for people who actually use peptides.</p>
+      <form class="cta-form" onsubmit="handleSignup(event)" aria-label="Newsletter signup">
+        <input type="email" class="cta-input" placeholder="Your email address" required aria-label="Email address" autocomplete="email">
+        <button type="submit" class="cta-submit">Subscribe Free</button>
+      </form>
+    </div>
+  </section>
+
+  <div class="disclaimer-bar">
+    <p><strong>Medical disclaimer:</strong> This calculator is an educational tool only. It does not constitute medical advice. Half-life values represent published averages and may vary between individuals. Always consult a qualified healthcare professional before using any peptide or injectable substance.</p>
+  </div>
+  <footer>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 Peptide Revealed. For informational purposes only &mdash; not medical advice.</p>
+      <nav class="footer-legal">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-use.html">Terms of Use</a>
+        <a href="disclaimer.html">Disclaimer</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    /* ─── Nav scroll + mobile toggle ─── */
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 24), { passive: true });
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      navToggle.classList.toggle('active', open);
+      navToggle.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+
+    /* ─── Newsletter placeholder ─── */
+    function handleSignup(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('.cta-submit');
+      btn.textContent = 'Subscribed!';
+      btn.style.background = 'var(--fern)';
+      setTimeout(() => { btn.textContent = 'Subscribe Free'; btn.style.background = ''; }, 3000);
+    }
+
+    /* ─── Peptide Data ─── */
+    const peptideData = {
+      bpc157: {
+        name: 'BPC-157 (subcutaneous)',
+        halfLifeHours: 4,
+        halfLifeLabel: '~4 hours',
+        frequency: '2x daily',
+        frequencyShort: '2x/day',
+        dosesPerDay: 2,
+        schedule: 'daily',
+        steadyState: '~20 hours',
+        notes: 'BPC-157 has a relatively short half-life, which is why twice-daily dosing is standard. Split doses (morning and evening) maintain more consistent plasma levels. <a href="articles/bpc-157-guide.html">Read our full BPC-157 guide</a>.',
+        timeUnit: 'hours',
+        graphDuration: 24,
+        doseTimesDaily: [0, 12]
+      },
+      tb500: {
+        name: 'TB-500',
+        halfLifeHours: 3,
+        halfLifeLabel: '~3 hours',
+        frequency: '2x weekly (loading), 1x weekly (maintenance)',
+        frequencyShort: '2x/wk',
+        dosesPerDay: 0.2857,
+        schedule: 'weekly2',
+        steadyState: '~2 weeks',
+        notes: 'Despite its short plasma half-life (~3 hours), TB-500 exhibits prolonged biological activity due to tissue-binding depot effects. This is why weekly dosing is effective despite rapid clearance from blood. <a href="articles/tb-500.html">Read our full TB-500 guide</a>.',
+        timeUnit: 'hours',
+        graphDuration: 24,
+        doseTimesDaily: []
+      },
+      ghkcu: {
+        name: 'GHK-Cu (subcutaneous)',
+        halfLifeHours: 0.167,
+        halfLifeLabel: '~10 min',
+        frequency: '1-2x daily',
+        frequencyShort: '1-2x/day',
+        dosesPerDay: 1.5,
+        schedule: 'daily2',
+        steadyState: '~50 min',
+        notes: 'GHK-Cu has an extremely short plasma half-life (~10 minutes) but triggers downstream gene expression changes that persist much longer. Topical GHK-Cu has different pharmacokinetics. <a href="articles/ghk-cu-copper-peptide.html">Read our full GHK-Cu guide</a>.',
+        timeUnit: 'minutes',
+        graphDuration: 60,
+        doseTimesDaily: [0, 12]
+      },
+      ipamorelin: {
+        name: 'Ipamorelin',
+        halfLifeHours: 2,
+        halfLifeLabel: '~2 hours',
+        frequency: '1-3x daily',
+        frequencyShort: '1-3x/day',
+        dosesPerDay: 2,
+        schedule: 'daily',
+        steadyState: '~10 hours',
+        notes: 'Ipamorelin is a selective GH secretagogue typically dosed 2-3 times daily. Often combined with CJC-1295 (no DAC) for synergistic GH release. Best taken on an empty stomach. <a href="articles/cjc-1295-ipamorelin.html">Read our CJC-1295 & Ipamorelin guide</a>.',
+        timeUnit: 'hours',
+        graphDuration: 12,
+        doseTimesDaily: [0, 8]
+      },
+      cjc1295nodac: {
+        name: 'CJC-1295 (no DAC)',
+        halfLifeHours: 0.5,
+        halfLifeLabel: '~30 min',
+        frequency: '1-3x daily (with GHRP)',
+        frequencyShort: '1-3x/day',
+        dosesPerDay: 2,
+        schedule: 'daily',
+        steadyState: '~2.5 hours',
+        notes: 'Without the Drug Affinity Complex (DAC), CJC-1295 clears quickly. It is almost always paired with a GHRP like Ipamorelin for pulsatile GH release. <a href="articles/cjc-1295-ipamorelin.html">Read our CJC-1295 & Ipamorelin guide</a>.',
+        timeUnit: 'minutes',
+        graphDuration: 180,
+        doseTimesDaily: [0, 8]
+      },
+      cjc1295dac: {
+        name: 'CJC-1295 (with DAC)',
+        halfLifeHours: 192,
+        halfLifeLabel: '~8 days',
+        frequency: '1-2x weekly',
+        frequencyShort: '1-2x/wk',
+        dosesPerDay: 0.1429,
+        schedule: 'weekly1',
+        steadyState: '~6 weeks',
+        notes: 'The DAC (Drug Affinity Complex) binds to albumin in the blood, dramatically extending the half-life from 30 minutes to ~8 days. This allows weekly dosing but produces a sustained (not pulsatile) GH elevation.',
+        timeUnit: 'days',
+        graphDuration: 21,
+        doseTimesDaily: []
+      },
+      sermorelin: {
+        name: 'Sermorelin',
+        halfLifeHours: 0.25,
+        halfLifeLabel: '~15 min',
+        frequency: '1x daily (before bed)',
+        frequencyShort: '1x/day',
+        dosesPerDay: 1,
+        schedule: 'daily1',
+        steadyState: '~75 min',
+        notes: 'Sermorelin has a very short half-life and is best dosed once daily before bed to align with natural GH pulsatility during sleep.',
+        timeUnit: 'minutes',
+        graphDuration: 90,
+        doseTimesDaily: [0]
+      },
+      dsip: {
+        name: 'DSIP',
+        halfLifeHours: 0.117,
+        halfLifeLabel: '~7 min',
+        frequency: '1x daily (before bed)',
+        frequencyShort: '1x/day',
+        dosesPerDay: 1,
+        schedule: 'daily1',
+        steadyState: '~35 min',
+        notes: 'Delta sleep-inducing peptide has one of the shortest half-lives of any research peptide (~7 minutes). Its sleep-promoting effects outlast its plasma presence, suggesting downstream signaling mechanisms.',
+        timeUnit: 'minutes',
+        graphDuration: 45,
+        doseTimesDaily: [0]
+      },
+      selank: {
+        name: 'Selank (nasal)',
+        halfLifeHours: 0.333,
+        halfLifeLabel: '~20 min',
+        frequency: '2-3x daily',
+        frequencyShort: '2-3x/day',
+        dosesPerDay: 2.5,
+        schedule: 'daily',
+        steadyState: '~100 min',
+        notes: 'Nasal administration extends Selank\'s effective half-life to ~20 minutes (vs ~3 minutes IV). Anxiolytic effects may persist longer than plasma levels suggest. <a href="articles/selank-vs-semax.html">Read our Selank vs Semax comparison</a>.',
+        timeUnit: 'minutes',
+        graphDuration: 120,
+        doseTimesDaily: [0, 8, 16]
+      },
+      semax: {
+        name: 'Semax (nasal)',
+        halfLifeHours: 0.333,
+        halfLifeLabel: '~20 min',
+        frequency: '2-3x daily',
+        frequencyShort: '2-3x/day',
+        dosesPerDay: 2.5,
+        schedule: 'daily',
+        steadyState: '~100 min',
+        notes: 'Like Selank, nasal Semax has a ~20-minute half-life (vs ~3 minutes IV). Cognitive and neuroprotective effects extend beyond plasma clearance. <a href="articles/selank-vs-semax.html">Read our Selank vs Semax comparison</a>.',
+        timeUnit: 'minutes',
+        graphDuration: 120,
+        doseTimesDaily: [0, 8, 16]
+      },
+      aod9604: {
+        name: 'AOD-9604',
+        halfLifeHours: 0.367,
+        halfLifeLabel: '~22 min',
+        frequency: '1x daily',
+        frequencyShort: '1x/day',
+        dosesPerDay: 1,
+        schedule: 'daily1',
+        steadyState: '~2 hours',
+        notes: 'AOD-9604 is a modified fragment of human growth hormone (hGH 177-191). Despite its short half-life, once-daily dosing is typical. Best taken fasted in the morning.',
+        timeUnit: 'minutes',
+        graphDuration: 120,
+        doseTimesDaily: [0]
+      },
+      pt141: {
+        name: 'PT-141 (Bremelanotide)',
+        halfLifeHours: 2,
+        halfLifeLabel: '~2 hours',
+        frequency: 'As needed (min 24h between)',
+        frequencyShort: 'PRN',
+        dosesPerDay: 0,
+        schedule: 'prn',
+        steadyState: 'N/A',
+        notes: 'PT-141 is dosed as needed rather than on a fixed schedule. A minimum 24-hour gap between doses is recommended. Effects typically begin 30-60 minutes after injection and last several hours.',
+        timeUnit: 'hours',
+        graphDuration: 12,
+        doseTimesDaily: [0]
+      },
+      tirzepatide: {
+        name: 'Tirzepatide',
+        halfLifeHours: 120,
+        halfLifeLabel: '~5 days',
+        frequency: '1x weekly',
+        frequencyShort: '1x/wk',
+        dosesPerDay: 0.1429,
+        schedule: 'weekly1',
+        steadyState: '~4 weeks',
+        notes: 'Tirzepatide is a dual GIP/GLP-1 receptor agonist with a long half-life enabling weekly dosing. Dose titration over several weeks is standard. <a href="articles/glp-1-peptides.html">Read our GLP-1 peptides guide</a>.',
+        timeUnit: 'days',
+        graphDuration: 14,
+        doseTimesDaily: []
+      },
+      semaglutide: {
+        name: 'Semaglutide',
+        halfLifeHours: 168,
+        halfLifeLabel: '~7 days',
+        frequency: '1x weekly',
+        frequencyShort: '1x/wk',
+        dosesPerDay: 0.1429,
+        schedule: 'weekly1',
+        steadyState: '~5 weeks',
+        notes: 'Semaglutide\'s albumin binding and enzymatic resistance give it the longest half-life of any GLP-1 agonist, allowing convenient weekly dosing. <a href="articles/glp-1-peptides.html">Read our GLP-1 peptides guide</a>.',
+        timeUnit: 'days',
+        graphDuration: 21,
+        doseTimesDaily: []
+      },
+      retatrutide: {
+        name: 'Retatrutide',
+        halfLifeHours: 144,
+        halfLifeLabel: '~6 days',
+        frequency: '1x weekly',
+        frequencyShort: '1x/wk',
+        dosesPerDay: 0.1429,
+        schedule: 'weekly1',
+        steadyState: '~4.5 weeks',
+        notes: 'Retatrutide is a triple agonist (GLP-1/GIP/glucagon receptors) with a long half-life enabling weekly injection. Currently in clinical trials. <a href="articles/retatrutide-triple-agonist-weight-loss.html">Read our Retatrutide guide</a>.',
+        timeUnit: 'days',
+        graphDuration: 21,
+        doseTimesDaily: []
+      },
+      epithalon: {
+        name: 'Epithalon',
+        halfLifeHours: 0.5,
+        halfLifeLabel: '~30 min',
+        frequency: '1x daily (10-day cycles)',
+        frequencyShort: '1x/day',
+        dosesPerDay: 1,
+        schedule: 'daily1_cycle',
+        steadyState: '~2.5 hours',
+        notes: 'Epithalon is typically used in 10-day cycles rather than continuously. Its telomerase-activating effects persist beyond the dosing period. <a href="articles/epithalon-longevity-peptide.html">Read our Epithalon guide</a>.',
+        timeUnit: 'minutes',
+        graphDuration: 180,
+        doseTimesDaily: [0]
+      },
+      kpv: {
+        name: 'KPV',
+        halfLifeHours: 1.5,
+        halfLifeLabel: '~1.5 hours',
+        frequency: '1-2x daily',
+        frequencyShort: '1-2x/day',
+        dosesPerDay: 1.5,
+        schedule: 'daily2',
+        steadyState: '~7.5 hours',
+        notes: 'KPV is an anti-inflammatory tripeptide derived from alpha-MSH. Twice-daily dosing provides more consistent anti-inflammatory coverage.',
+        timeUnit: 'hours',
+        graphDuration: 12,
+        doseTimesDaily: [0, 12]
+      },
+      ta1: {
+        name: 'Thymosin Alpha-1',
+        halfLifeHours: 2,
+        halfLifeLabel: '~2 hours',
+        frequency: '2x weekly',
+        frequencyShort: '2x/wk',
+        dosesPerDay: 0.2857,
+        schedule: 'weekly2',
+        steadyState: '~2 weeks',
+        notes: 'Despite its relatively short plasma half-life, Thymosin Alpha-1 has sustained immunomodulatory effects that allow twice-weekly dosing. FDA-approved in many countries for hepatitis B.',
+        timeUnit: 'hours',
+        graphDuration: 12,
+        doseTimesDaily: []
+      },
+      motsc: {
+        name: 'MOTS-c',
+        halfLifeHours: 3,
+        halfLifeLabel: '~3 hours',
+        frequency: '3-5x weekly',
+        frequencyShort: '3-5x/wk',
+        dosesPerDay: 0.571,
+        schedule: 'weekly4',
+        steadyState: '~1 week',
+        notes: 'MOTS-c is a mitochondrial-derived peptide that regulates metabolic homeostasis. Dosing 3-5 times per week balances its short half-life with its sustained metabolic effects. <a href="articles/mots-c-mitochondrial-peptide.html">Read our MOTS-c guide</a>.',
+        timeUnit: 'hours',
+        graphDuration: 18,
+        doseTimesDaily: [0]
+      }
+    };
+
+    /* ─── Elements ─── */
+    const peptideSelect = document.getElementById('peptideSelect');
+    const emptyState = document.getElementById('emptyState');
+    const resultsPanel = document.getElementById('resultsPanel');
+    const peptideNotes = document.getElementById('peptideNotes');
+
+    /* ─── Table row click ─── */
+    document.querySelectorAll('#refTable tbody tr[data-peptide]').forEach(row => {
+      row.addEventListener('click', () => {
+        const id = row.getAttribute('data-peptide');
+        peptideSelect.value = id;
+        peptideSelect.dispatchEvent(new Event('change'));
+        window.scrollTo({ top: document.querySelector('.calc-section').offsetTop - 80, behavior: 'smooth' });
+      });
+    });
+
+    /* ─── Main handler ─── */
+    peptideSelect.addEventListener('change', () => {
+      const id = peptideSelect.value;
+      if (!id) {
+        emptyState.style.display = 'block';
+        resultsPanel.style.display = 'none';
+        peptideNotes.style.display = 'none';
+        return;
+      }
+
+      const d = peptideData[id];
+      if (!d) return;
+
+      emptyState.style.display = 'none';
+      resultsPanel.style.display = 'block';
+
+      // Summary cards
+      document.getElementById('halfLifeValue').textContent = d.halfLifeLabel;
+      document.getElementById('halfLifeSub').textContent = d.timeUnit === 'days' ? 'plasma clearance' : 'plasma clearance';
+      document.getElementById('freqValue').textContent = d.frequencyShort;
+      document.getElementById('freqSub').textContent = d.frequency;
+      document.getElementById('steadyValue').textContent = d.steadyState;
+      document.getElementById('steadySub').textContent = '~5 half-lives';
+
+      // Notes
+      if (d.notes) {
+        peptideNotes.innerHTML = d.notes;
+        peptideNotes.style.display = 'block';
+      } else {
+        peptideNotes.style.display = 'none';
+      }
+
+      // Timeline sub
+      document.getElementById('timelineSub').textContent = d.frequency;
+
+      // Draw PK graph
+      drawPKGraph(d);
+
+      // Draw timeline
+      drawTimeline(d);
+    });
+
+    /* ─── PK Graph Drawing ─── */
+    function drawPKGraph(d) {
+      const container = document.getElementById('pkGraphContainer');
+      const W = 520, H = 220;
+      const pad = { top: 20, right: 20, bottom: 44, left: 50 };
+      const gw = W - pad.left - pad.right;
+      const gh = H - pad.top - pad.bottom;
+
+      // Determine time axis
+      const duration = d.graphDuration;
+      let timeLabel = d.timeUnit;
+      let halfLifeInUnits = d.halfLifeHours;
+      if (d.timeUnit === 'minutes') {
+        halfLifeInUnits = d.halfLifeHours * 60;
+      } else if (d.timeUnit === 'days') {
+        halfLifeInUnits = d.halfLifeHours / 24;
+      }
+
+      // Build multi-dose curve if applicable
+      const numDoses = d.schedule === 'prn' ? 1 : (d.doseTimesDaily.length > 0 ? 3 : 2);
+      let doseTimesInUnits = [];
+
+      if (d.doseTimesDaily.length > 0) {
+        // Convert hour-based dose times to the graph's time unit
+        for (let i = 0; i < numDoses; i++) {
+          const t = d.doseTimesDaily[i % d.doseTimesDaily.length];
+          let tConverted;
+          if (d.timeUnit === 'minutes') tConverted = t * 60;
+          else if (d.timeUnit === 'days') tConverted = t / 24;
+          else tConverted = t;
+          if (tConverted <= duration * 0.7) doseTimesInUnits.push(tConverted);
+        }
+      } else {
+        // Weekly peptides: single dose at t=0
+        doseTimesInUnits = [0];
+      }
+
+      if (doseTimesInUnits.length === 0) doseTimesInUnits = [0];
+
+      // Calculate combined concentration at each point
+      const points = 200;
+      let maxConc = 0;
+      const concData = [];
+      for (let i = 0; i <= points; i++) {
+        const t = (i / points) * duration;
+        let conc = 0;
+        for (const doseT of doseTimesInUnits) {
+          if (t >= doseT) {
+            const elapsed = t - doseT;
+            conc += 100 * Math.pow(0.5, elapsed / halfLifeInUnits);
+          }
+        }
+        concData.push({ t, conc });
+        if (conc > maxConc) maxConc = conc;
+      }
+
+      // Normalize to percentage
+      const scale = maxConc > 0 ? 100 / maxConc : 1;
+
+      // Build SVG path
+      let pathD = '';
+      let areaD = '';
+      for (let i = 0; i <= points; i++) {
+        const x = pad.left + (concData[i].t / duration) * gw;
+        const y = pad.top + gh - (concData[i].conc * scale / 100) * gh;
+        if (i === 0) {
+          pathD += `M ${x.toFixed(1)} ${y.toFixed(1)}`;
+          areaD += `M ${x.toFixed(1)} ${(pad.top + gh).toFixed(1)} L ${x.toFixed(1)} ${y.toFixed(1)}`;
+        } else {
+          pathD += ` L ${x.toFixed(1)} ${y.toFixed(1)}`;
+          areaD += ` L ${x.toFixed(1)} ${y.toFixed(1)}`;
+        }
+      }
+      areaD += ` L ${(pad.left + gw).toFixed(1)} ${(pad.top + gh).toFixed(1)} Z`;
+
+      // X-axis ticks
+      const numTicks = 5;
+      let xTicks = '';
+      for (let i = 0; i <= numTicks; i++) {
+        const val = (duration / numTicks) * i;
+        const x = pad.left + (i / numTicks) * gw;
+        xTicks += `<line x1="${x}" y1="${pad.top + gh}" x2="${x}" y2="${pad.top + gh + 6}" stroke="var(--ink-faint)" stroke-width="0.7" opacity="0.5"/>`;
+        let label = '';
+        if (d.timeUnit === 'days') label = val.toFixed(val % 1 === 0 ? 0 : 1) + 'd';
+        else if (d.timeUnit === 'minutes') label = Math.round(val) + 'm';
+        else label = val.toFixed(val % 1 === 0 ? 0 : 1) + 'h';
+        xTicks += `<text x="${x}" y="${pad.top + gh + 22}" text-anchor="middle" font-family="var(--sans)" font-size="10" fill="var(--ink-faint)" font-weight="300">${label}</text>`;
+        // Grid line
+        if (i > 0) xTicks += `<line x1="${x}" y1="${pad.top}" x2="${x}" y2="${pad.top + gh}" stroke="var(--ink-faint)" stroke-width="0.3" opacity="0.2"/>`;
+      }
+
+      // Y-axis ticks
+      let yTicks = '';
+      for (let i = 0; i <= 4; i++) {
+        const val = (100 / 4) * i;
+        const y = pad.top + gh - (i / 4) * gh;
+        yTicks += `<line x1="${pad.left - 4}" y1="${y}" x2="${pad.left}" y2="${y}" stroke="var(--ink-faint)" stroke-width="0.7" opacity="0.5"/>`;
+        yTicks += `<text x="${pad.left - 8}" y="${y + 3.5}" text-anchor="end" font-family="var(--sans)" font-size="10" fill="var(--ink-faint)" font-weight="300">${Math.round(val)}%</text>`;
+        if (i > 0 && i < 4) yTicks += `<line x1="${pad.left}" y1="${y}" x2="${pad.left + gw}" y2="${y}" stroke="var(--ink-faint)" stroke-width="0.3" opacity="0.2"/>`;
+      }
+
+      // 50% dashed line
+      const y50 = pad.top + gh - 0.5 * gh;
+      const halfLifeX = pad.left + (halfLifeInUnits / duration) * gw;
+      let halfLifeMarker = '';
+      if (halfLifeInUnits <= duration && doseTimesInUnits[0] === 0) {
+        halfLifeMarker = `
+          <line x1="${pad.left}" y1="${y50}" x2="${pad.left + gw}" y2="${y50}" stroke="var(--sage)" stroke-width="1" stroke-dasharray="5 3" opacity="0.4"/>
+          <line x1="${halfLifeX}" y1="${pad.top}" x2="${halfLifeX}" y2="${pad.top + gh}" stroke="var(--sage)" stroke-width="1" stroke-dasharray="5 3" opacity="0.3"/>
+          <circle cx="${halfLifeX}" cy="${y50}" r="3.5" fill="var(--sage)" opacity="0.7"/>
+          <text x="${halfLifeX}" y="${pad.top - 6}" text-anchor="middle" font-family="var(--sans)" font-size="9" fill="var(--sage)" font-weight="500">t\u00BD = ${d.halfLifeLabel.replace('~','')}</text>
+        `;
+      }
+
+      // Dose markers
+      let doseMarkers = '';
+      for (const dt of doseTimesInUnits) {
+        const dx = pad.left + (dt / duration) * gw;
+        doseMarkers += `<line x1="${dx}" y1="${pad.top}" x2="${dx}" y2="${pad.top + gh}" stroke="var(--fern)" stroke-width="1.2" stroke-dasharray="3 2" opacity="0.5"/>`;
+        doseMarkers += `<circle cx="${dx}" cy="${pad.top + 2}" r="2.5" fill="var(--fern)" opacity="0.7"/>`;
+      }
+
+      // Axis labels
+      const xAxisLabel = `<text x="${pad.left + gw / 2}" y="${H - 4}" text-anchor="middle" font-family="var(--sans)" font-size="11" fill="var(--ink-faint)" font-weight="400" letter-spacing="0.04em">Time (${timeLabel})</text>`;
+      const yAxisLabel = `<text x="12" y="${pad.top + gh / 2}" text-anchor="middle" font-family="var(--sans)" font-size="11" fill="var(--ink-faint)" font-weight="400" letter-spacing="0.04em" transform="rotate(-90, 12, ${pad.top + gh / 2})">Concentration</text>`;
+
+      container.innerHTML = `
+        <svg class="pk-svg" viewBox="0 0 ${W} ${H}" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Pharmacokinetic decay curve for ${d.name}">
+          <!-- Axes -->
+          <line x1="${pad.left}" y1="${pad.top}" x2="${pad.left}" y2="${pad.top + gh}" stroke="var(--ink-faint)" stroke-width="0.8" opacity="0.4"/>
+          <line x1="${pad.left}" y1="${pad.top + gh}" x2="${pad.left + gw}" y2="${pad.top + gh}" stroke="var(--ink-faint)" stroke-width="0.8" opacity="0.4"/>
+          ${xTicks}
+          ${yTicks}
+          ${xAxisLabel}
+          ${yAxisLabel}
+          ${halfLifeMarker}
+          ${doseMarkers}
+          <!-- Area fill -->
+          <path d="${areaD}" fill="url(#areaGrad)" opacity="0.3"/>
+          <!-- Curve -->
+          <path d="${pathD}" stroke="var(--sage)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <defs>
+            <linearGradient id="areaGrad" x1="0" y1="${pad.top}" x2="0" y2="${pad.top + gh}">
+              <stop offset="0%" stop-color="var(--sage)" stop-opacity="0.4"/>
+              <stop offset="100%" stop-color="var(--sage)" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      `;
+    }
+
+    /* ─── Timeline Drawing ─── */
+    function drawTimeline(d) {
+      const container = document.getElementById('timelineContainer');
+      const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+      let html = '';
+
+      if (d.schedule === 'prn') {
+        // As-needed
+        for (let i = 0; i < 7; i++) {
+          html += `<div class="timeline-row">
+            <div class="timeline-day">${days[i]}</div>
+            <div class="timeline-doses">
+              <span class="timeline-pill rest">As needed</span>
+            </div>
+          </div>`;
+        }
+      } else if (d.schedule === 'weekly1') {
+        // Once weekly
+        for (let i = 0; i < 7; i++) {
+          if (i === 0) {
+            html += `<div class="timeline-row">
+              <div class="timeline-day">${days[i]}</div>
+              <div class="timeline-doses">
+                <span class="timeline-pill">Dose (same day each week)</span>
+              </div>
+            </div>`;
+          } else {
+            html += `<div class="timeline-row">
+              <div class="timeline-day">${days[i]}</div>
+              <div class="timeline-doses">
+                <span class="timeline-pill rest">Rest day</span>
+              </div>
+            </div>`;
+          }
+        }
+      } else if (d.schedule === 'weekly2') {
+        // Twice weekly
+        for (let i = 0; i < 7; i++) {
+          if (i === 0 || i === 3) {
+            html += `<div class="timeline-row">
+              <div class="timeline-day">${days[i]}</div>
+              <div class="timeline-doses">
+                <span class="timeline-pill">Dose</span>
+              </div>
+            </div>`;
+          } else {
+            html += `<div class="timeline-row">
+              <div class="timeline-day">${days[i]}</div>
+              <div class="timeline-doses">
+                <span class="timeline-pill rest">Rest day</span>
+              </div>
+            </div>`;
+          }
+        }
+      } else if (d.schedule === 'weekly4') {
+        // 3-5x weekly (show 4x: Mon, Tue, Thu, Fri)
+        const doseDays = [0, 1, 3, 4];
+        for (let i = 0; i < 7; i++) {
+          if (doseDays.includes(i)) {
+            html += `<div class="timeline-row">
+              <div class="timeline-day">${days[i]}</div>
+              <div class="timeline-doses">
+                <span class="timeline-pill">Dose</span>
+              </div>
+            </div>`;
+          } else {
+            html += `<div class="timeline-row">
+              <div class="timeline-day">${days[i]}</div>
+              <div class="timeline-doses">
+                <span class="timeline-pill rest">Rest day</span>
+              </div>
+            </div>`;
+          }
+        }
+      } else if (d.schedule === 'daily1' || d.schedule === 'daily1_cycle') {
+        // Once daily
+        for (let i = 0; i < 7; i++) {
+          let pills = '<span class="timeline-pill">1 dose</span>';
+          if (d.schedule === 'daily1_cycle') {
+            pills += ' <span style="font-size:11px; color:var(--ink-faint); margin-left:4px;">(10-day cycle)</span>';
+          }
+          html += `<div class="timeline-row">
+            <div class="timeline-day">${days[i]}</div>
+            <div class="timeline-doses">${pills}</div>
+          </div>`;
+        }
+      } else if (d.schedule === 'daily2') {
+        // 1-2x daily
+        for (let i = 0; i < 7; i++) {
+          html += `<div class="timeline-row">
+            <div class="timeline-day">${days[i]}</div>
+            <div class="timeline-doses">
+              <span class="timeline-pill">AM dose</span>
+              <span class="timeline-pill">PM dose</span>
+            </div>
+          </div>`;
+        }
+      } else {
+        // Default daily (2-3x)
+        const numDoses = d.doseTimesDaily.length || 2;
+        const labels = numDoses >= 3 ? ['Morning', 'Midday', 'Evening'] : ['Morning', 'Evening'];
+        for (let i = 0; i < 7; i++) {
+          let pills = labels.map(l => `<span class="timeline-pill">${l}</span>`).join('');
+          html += `<div class="timeline-row">
+            <div class="timeline-day">${days[i]}</div>
+            <div class="timeline-doses">${pills}</div>
+          </div>`;
+        }
+      }
+
+      container.innerHTML = html;
+    }
+  </script>
+</body>
+</html>

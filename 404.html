@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0QX7QDH0J0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0QX7QDH0J0');
+  </script>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found — Peptide Revealed</title>
+  <meta name="description" content="The page you're looking for doesn't exist. Browse our evidence-based peptide research library.">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --forest: #1C3A24;
+      --sage: #4E8C5F;
+      --fern: #7AB88A;
+      --mint: #C6DFC8;
+      --mint-wash: #EBF4EC;
+      --cream: #F4F0E8;
+      --parchment: #EDE7DA;
+      --white: #FFFFFF;
+      --ink: #161D18;
+      --ink-mid: #3D4F40;
+      --ink-soft: #6B7E6D;
+      --ink-faint: #9FB4A1;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      font-weight: 300;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.65;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ─── NAV ─── */
+    .nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 7px 52px;
+      background: rgba(244, 240, 232, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(78, 140, 95, 0.1);
+      transition: box-shadow 0.4s var(--ease-out);
+    }
+    .nav.scrolled { box-shadow: 0 1px 32px rgba(28, 58, 36, 0.09); }
+    .nav-logo { text-decoration: none; display: block; line-height: 0; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--sage); }
+    .nav-btn {
+      font-size: 12px !important;
+      font-weight: 400 !important;
+      letter-spacing: 0.08em !important;
+      color: var(--white) !important;
+      background: var(--sage);
+      padding: 10px 24px;
+      border-radius: 2px;
+      transition: background 0.25s !important;
+    }
+    .nav-btn:hover { background: var(--forest); color: var(--white) !important; }
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 210;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--forest);
+      margin: 5px 0;
+      border-radius: 2px;
+      transition: transform 0.3s var(--ease-out), opacity 0.3s var(--ease-out);
+    }
+    .nav-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.active span:nth-child(2) { opacity: 0; }
+    .nav-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    @media (max-width: 768px) {
+      .nav { padding: 7px 20px; }
+      .nav-toggle { display: block; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        background: rgba(244, 240, 232, 0.97);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        z-index: 205;
+        padding: 80px 20px 40px;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { font-size: 14px; }
+    }
+
+    /* ─── 404 CONTENT ─── */
+    .error-wrap {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 140px 52px 80px;
+      text-align: center;
+    }
+    .error-inner { max-width: 520px; }
+    .error-code {
+      font-family: var(--serif);
+      font-size: 120px;
+      font-weight: 300;
+      color: var(--ink-faint);
+      line-height: 1;
+      opacity: 0.35;
+      margin-bottom: 8px;
+    }
+    .error-heading {
+      font-family: var(--serif);
+      font-size: 36px;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 16px;
+      line-height: 1.25;
+    }
+    .error-text {
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--ink-mid);
+      margin-bottom: 40px;
+      line-height: 1.75;
+    }
+    .error-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+    }
+    .error-links a {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--sage);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .error-links a:hover { color: var(--forest); }
+    .error-links .primary-link {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--sage);
+      padding: 12px 32px;
+      border-radius: 2px;
+      transition: background 0.25s;
+      margin-bottom: 8px;
+    }
+    .error-links .primary-link:hover { background: var(--forest); color: var(--white); }
+
+    /* ─── SVG ILLUSTRATION ─── */
+    .error-svg { margin-bottom: 32px; }
+    .error-svg circle, .error-svg line {
+      animation: fadeNodes 3s ease-in-out infinite alternate;
+    }
+    @keyframes fadeNodes {
+      0% { opacity: 0.5; }
+      100% { opacity: 1; }
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--forest);
+      padding: 80px 52px 44px;
+      position: relative;
+      overflow: hidden;
+    }
+    .footer-watermark {
+      position: absolute;
+      bottom: -60px;
+      left: -60px;
+      opacity: 0.045;
+      pointer-events: none;
+    }
+    .footer-inner { position: relative; z-index: 1; }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2.2fr 1fr 1fr;
+      gap: 64px;
+      margin-bottom: 72px;
+    }
+    .footer-brand-desc {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.85;
+      color: rgba(255, 255, 255, 0.48);
+      max-width: 260px;
+      margin-top: 22px;
+    }
+    .footer-col-head {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(198, 223, 200, 0.5);
+      margin-bottom: 22px;
+    }
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .footer-links a {
+      font-size: 14px;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.52);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--mint); }
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 36px;
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
+      gap: 24px;
+    }
+    .footer-copy {
+      font-size: 12px;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.3);
+    }
+    .footer-legal { display: flex; gap: 28px; }
+    .footer-legal a {
+      font-size: 12px;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.3);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-legal a:hover { color: rgba(255, 255, 255, 0.65); }
+
+    @media (max-width: 960px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+    }
+    @media (max-width: 600px) {
+      .error-wrap { padding: 120px 24px 60px; }
+      .error-code { font-size: 80px; }
+      .error-heading { font-size: 28px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 36px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      footer { padding: 64px 24px 36px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" id="mainNav" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="Peptide Revealed — Home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" height="56" aria-hidden="true">
+        <g transform="translate(10, 8) scale(1.28)">
+          <line x1="38" y1="38" x2="16" y2="18" stroke="#4E8C5F" stroke-width="2" stroke-linecap="round"/>
+          <line x1="42" y1="36" x2="62" y2="16" stroke="#4E8C5F" stroke-width="2" stroke-linecap="round"/>
+          <line x1="44" y1="40" x2="66" y2="44" stroke="#7AB88A" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="40" y1="44" x2="32" y2="64" stroke="#7AB88A" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="36" y1="42" x2="14" y2="58" stroke="#C6DFC8" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="16" y1="18" x2="6" y2="10" stroke="#C6DFC8" stroke-width="1" stroke-linecap="round"/>
+          <line x1="16" y1="18" x2="18" y2="6" stroke="#C6DFC8" stroke-width="1" stroke-linecap="round"/>
+          <line x1="62" y1="16" x2="72" y2="8" stroke="#C6DFC8" stroke-width="1" stroke-linecap="round"/>
+          <circle cx="16" cy="18" r="6" fill="#4E8C5F"/>
+          <circle cx="62" cy="16" r="5" fill="#4E8C5F"/>
+          <circle cx="66" cy="44" r="4" fill="#7AB88A"/>
+          <circle cx="32" cy="64" r="4" fill="#7AB88A"/>
+          <circle cx="14" cy="58" r="3" fill="#C6DFC8"/>
+          <circle cx="6"  cy="10" r="2" fill="#C6DFC8"/>
+          <circle cx="18" cy="6"  r="2" fill="#C6DFC8"/>
+          <circle cx="72" cy="8"  r="2" fill="#C6DFC8"/>
+          <circle cx="40" cy="40" r="8"   fill="#1C3A24"/>
+          <circle cx="40" cy="40" r="4.5" fill="#4E8C5F"/>
+        </g>
+        <text x="118" y="62" font-family="Georgia,'Times New Roman',serif" font-size="44" font-weight="400" fill="#1C3A24" letter-spacing="-0.5">Peptide</text>
+        <text x="120" y="90" font-family="'Helvetica Neue',Arial,sans-serif" font-size="16" font-weight="300" fill="#4E8C5F" letter-spacing="5">REVEALED</text>
+      </svg>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/articles.html">Articles</a></li>
+      <li><a href="/peptides.html">Peptides</a></li>
+      <li><a href="/meal-planner.html">Meal Planner</a></li>
+      <li><a href="/reconstitution-calculator.html">Calculator</a></li>
+      <li><a href="/stack-builder.html">Stack Builder</a></li>
+      <li><a href="/about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <main class="error-wrap">
+    <div class="error-inner">
+
+      <div class="error-svg" aria-hidden="true">
+        <svg viewBox="0 0 200 120" width="200" height="120" xmlns="http://www.w3.org/2000/svg">
+          <line x1="100" y1="60" x2="40" y2="25" stroke="#C6DFC8" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 4"/>
+          <line x1="100" y1="60" x2="160" y2="30" stroke="#C6DFC8" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 4"/>
+          <line x1="100" y1="60" x2="55" y2="95" stroke="#C6DFC8" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 4"/>
+          <line x1="100" y1="60" x2="150" y2="100" stroke="#C6DFC8" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 4"/>
+          <circle cx="40" cy="25" r="6" fill="none" stroke="#9FB4A1" stroke-width="1.5"/>
+          <circle cx="160" cy="30" r="5" fill="none" stroke="#9FB4A1" stroke-width="1.5"/>
+          <circle cx="55" cy="95" r="5" fill="none" stroke="#9FB4A1" stroke-width="1.5"/>
+          <circle cx="150" cy="100" r="4" fill="none" stroke="#9FB4A1" stroke-width="1.5"/>
+          <circle cx="100" cy="60" r="10" fill="#4E8C5F" opacity="0.15"/>
+          <circle cx="100" cy="60" r="5" fill="#4E8C5F" opacity="0.4"/>
+        </svg>
+      </div>
+
+      <p class="error-code">404</p>
+      <h1 class="error-heading">This bond didn't form</h1>
+      <p class="error-text">
+        The page you're looking for may have been moved or no longer exists.
+        Try one of these instead:
+      </p>
+
+      <div class="error-links">
+        <a href="/articles.html" class="primary-link">Browse All Articles</a>
+        <a href="/articles/what-are-peptides-beginners-guide.html">New to peptides? Start here</a>
+        <a href="/reconstitution-calculator.html">Reconstitution Calculator</a>
+        <a href="/peptides.html">Peptide Profiles</a>
+        <a href="/">Back to Home</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer aria-label="Site footer">
+    <svg class="footer-watermark" viewBox="0 0 520 500" width="520" height="500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="260" cy="250" r="22" fill="white"/>
+      <line x1="260" y1="250" x2="148" y2="155" stroke="white" stroke-width="2"/>
+      <line x1="260" y1="250" x2="358" y2="145" stroke="white" stroke-width="2"/>
+      <line x1="260" y1="250" x2="395" y2="285" stroke="white" stroke-width="1.5"/>
+      <line x1="260" y1="250" x2="310" y2="370" stroke="white" stroke-width="1.5"/>
+      <line x1="260" y1="250" x2="148" y2="348" stroke="white" stroke-width="1.5"/>
+      <circle cx="148" cy="155" r="15" fill="white" opacity="0.8"/>
+      <circle cx="358" cy="145" r="13" fill="white" opacity="0.8"/>
+      <circle cx="395" cy="285" r="10" fill="white" opacity="0.7"/>
+      <circle cx="310" cy="370" r="11" fill="white" opacity="0.7"/>
+      <circle cx="148" cy="348" r="9"  fill="white" opacity="0.6"/>
+    </svg>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" height="52" aria-label="Peptide Revealed">
+            <g transform="translate(10, 8) scale(1.28)">
+              <line x1="38" y1="38" x2="16" y2="18" stroke="#7AB88A" stroke-width="2" stroke-linecap="round"/>
+              <line x1="42" y1="36" x2="62" y2="16" stroke="#7AB88A" stroke-width="2" stroke-linecap="round"/>
+              <line x1="44" y1="40" x2="66" y2="44" stroke="#C6DFC8" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="40" y1="44" x2="32" y2="64" stroke="#C6DFC8" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="36" y1="42" x2="14" y2="58" stroke="rgba(198,223,200,0.5)" stroke-width="1.2" stroke-linecap="round"/>
+              <line x1="16" y1="18" x2="6"  y2="10" stroke="rgba(198,223,200,0.4)" stroke-width="1" stroke-linecap="round"/>
+              <line x1="16" y1="18" x2="18" y2="6"  stroke="rgba(198,223,200,0.4)" stroke-width="1" stroke-linecap="round"/>
+              <line x1="62" y1="16" x2="72" y2="8"  stroke="rgba(198,223,200,0.4)" stroke-width="1" stroke-linecap="round"/>
+              <circle cx="16" cy="18" r="6"   fill="#7AB88A"/>
+              <circle cx="62" cy="16" r="5"   fill="#7AB88A"/>
+              <circle cx="66" cy="44" r="4"   fill="#C6DFC8" opacity="0.8"/>
+              <circle cx="32" cy="64" r="4"   fill="#C6DFC8" opacity="0.8"/>
+              <circle cx="14" cy="58" r="3"   fill="#C6DFC8" opacity="0.6"/>
+              <circle cx="6"  cy="10" r="2"   fill="#C6DFC8" opacity="0.5"/>
+              <circle cx="18" cy="6"  r="2"   fill="#C6DFC8" opacity="0.5"/>
+              <circle cx="72" cy="8"  r="2"   fill="#C6DFC8" opacity="0.5"/>
+              <circle cx="40" cy="40" r="8"   fill="rgba(255,255,255,0.15)"/>
+              <circle cx="40" cy="40" r="4.5" fill="#7AB88A"/>
+            </g>
+            <text x="118" y="62"  font-family="Georgia,'Times New Roman',serif" font-size="44" font-weight="400" fill="white"   letter-spacing="-0.5">Peptide</text>
+            <text x="120" y="90" font-family="'Helvetica Neue',Arial,sans-serif" font-size="16" font-weight="300" fill="#7AB88A" letter-spacing="5">REVEALED</text>
+          </svg>
+          <p class="footer-brand-desc">
+            Rigorous, evidence-based analysis of peptide science for researchers, clinicians, and the intellectually curious.
+          </p>
+        </div>
+        <div>
+          <p class="footer-col-head">Topics</p>
+          <ul class="footer-links">
+            <li><a href="/peptides.html">Peptide Profiles</a></li>
+            <li><a href="/articles.html#beginner-guides">Beginner Guides</a></li>
+            <li><a href="/articles.html#legal">Legal &amp; Regulation</a></li>
+            <li><a href="/articles.html#sourcing">Sourcing &amp; Safety</a></li>
+            <li><a href="/articles.html#weight-loss">Weight Loss &amp; GLP-1</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-head">Company</p>
+          <ul class="footer-links">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/about.html#editorial-standards">Editorial Standards</a></li>
+            <li><a href="/about.html#disclaimer">Medical Disclaimer</a></li>
+            <li><a href="mailto:hello@peptiderevealed.com">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Peptide Revealed. All rights reserved. For informational purposes only — not medical advice.</p>
+        <nav class="footer-legal" aria-label="Legal links">
+          <a href="/privacy-policy.html">Privacy Policy</a>
+          <a href="/terms-of-use.html">Terms of Use</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 24);
+    }, { passive: true });
+
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      navToggle.classList.toggle('active', open);
+      navToggle.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+  </script>
+
+</body>
+</html>

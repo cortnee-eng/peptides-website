@@ -253,4 +253,16 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://peptiderevealed.com/half-life-calculator.html</loc>
+    <lastmod>2026-04-09</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://peptiderevealed.com/dosing-converter.html</loc>
+    <lastmod>2026-04-09</lastmod>
+    <priority>0.9</priority>
+  </url>
+
 </urlset>

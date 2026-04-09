@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0QX7QDH0J0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0QX7QDH0J0');
+  </script>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peptide Dosing Converter — mg, mcg, IU &amp; Syringe Units | Peptide Revealed</title>
+  <meta name="description" content="Free peptide unit converter. Convert between mg, mcg, IU, and insulin syringe units instantly. Includes visual syringe diagram and quick reference table for common peptides.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Peptide Revealed">
+  <meta property="og:title" content="Peptide Dosing Converter — mg, mcg, IU & Syringe Units">
+  <meta property="og:description" content="Free peptide unit converter. Convert between mg, mcg, IU, and insulin syringe units instantly. Includes visual syringe diagram and quick reference table for common peptides.">
+  <meta property="og:url" content="https://peptiderevealed.com/dosing-converter.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Peptide Dosing Converter — mg, mcg, IU & Syringe Units">
+  <meta name="twitter:description" content="Free peptide unit converter. Convert between mg, mcg, IU, and insulin syringe units instantly. Includes visual syringe diagram and quick reference table.">
+  <link rel="canonical" href="https://peptiderevealed.com/dosing-converter.html">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Peptide Dosing Unit Converter",
+    "description": "Convert between milligrams, micrograms, International Units, and insulin syringe units for peptide dosing. Includes visual syringe diagram.",
+    "url": "https://peptiderevealed.com/dosing-converter.html",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "All",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Peptide Revealed",
+      "url": "https://peptiderevealed.com"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do you convert mg to mcg for peptides?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Multiply milligrams by 1,000 to get micrograms. For example, 0.25 mg equals 250 mcg, and 2.5 mg equals 2,500 mcg. This is a standard metric conversion that applies to all peptides."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you convert IU to mg for HGH?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For human growth hormone (HGH), 1 mg equals approximately 3 IU. So 10 IU of HGH is about 3.33 mg. This conversion factor is specific to HGH — other peptides like BPC-157 and ipamorelin are measured in mcg, not IU."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you calculate syringe units for a peptide dose?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "First determine the concentration of your reconstituted solution in mcg/mL (vial mg × 1,000 ÷ water mL). Then divide your desired dose in mcg by the concentration to get mL. Multiply by 100 to convert to units on a U-100 insulin syringe. For example, 250 mcg from a 5 mg/2 mL solution = 0.10 mL = 10 units."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between units and mL on an insulin syringe?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "On a standard U-100 insulin syringe, 100 units equals 1 mL. Each unit is 0.01 mL. A 0.5 mL syringe holds 50 units and a 0.3 mL syringe holds 30 units. The tick marks on the syringe represent units, not milligrams or micrograms of peptide."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://peptiderevealed.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://peptiderevealed.com/#tools" },
+      { "@type": "ListItem", "position": 3, "name": "Dosing Converter", "item": "https://peptiderevealed.com/dosing-converter.html" }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --forest:#1C3A24; --sage:#4E8C5F; --fern:#7AB88A; --mint:#C6DFC8;
+      --mint-wash:#EBF4EC; --cream:#F4F0E8; --parchment:#EDE7DA; --white:#FFFFFF;
+      --ink:#161D18; --ink-mid:#3D4F40; --ink-soft:#6B7E6D; --ink-faint:#9FB4A1;
+      --serif:'Cormorant Garamond',Georgia,serif; --sans:'DM Sans','Helvetica Neue',Arial,sans-serif;
+      --ease-out:cubic-bezier(0.22,1,0.36,1);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family:var(--sans); font-weight:300; color:var(--ink); background:var(--cream); line-height:1.65; overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+
+    /* --- NAV --- */
+    .nav { position:fixed; inset:0 0 auto 0; z-index:200; display:flex; align-items:center; justify-content:space-between; padding:7px 52px; background:rgba(244,240,232,0.88); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-bottom:1px solid rgba(78,140,95,0.1); transition:box-shadow 0.4s var(--ease-out); }
+    .nav.scrolled { box-shadow:0 1px 32px rgba(28,58,36,0.09); }
+    .nav-logo { text-decoration:none; display:block; line-height:0; }
+    .nav-links { display:flex; align-items:center; gap:40px; list-style:none; }
+    .nav-links a { font-family:var(--sans); font-size:12px; font-weight:400; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-soft); text-decoration:none; transition:color 0.2s; }
+    .nav-links a:hover { color:var(--sage); }
+    .nav-btn { font-size:12px !important; font-weight:400 !important; letter-spacing:0.08em !important; color:var(--white) !important; background:var(--sage); padding:10px 24px; border-radius:2px; transition:background 0.25s !important; }
+    .nav-btn:hover { background:var(--forest); color:var(--white) !important; }
+    .nav-toggle { display:none; background:none; border:none; cursor:pointer; padding:8px; z-index:210; }
+    .nav-toggle span { display:block; width:24px; height:2px; background:var(--forest); margin:5px 0; border-radius:2px; transition:transform 0.3s var(--ease-out), opacity 0.3s var(--ease-out); }
+    .nav-toggle.active span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+    .nav-toggle.active span:nth-child(2) { opacity:0; }
+    .nav-toggle.active span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+
+    /* --- BREADCRUMB --- */
+    .breadcrumb { display:flex; align-items:center; gap:8px; font-size:12px; color:var(--ink-faint); margin-bottom:24px; }
+    .breadcrumb a { color:var(--ink-faint); text-decoration:none; transition:color 0.2s; }
+    .breadcrumb a:hover { color:var(--sage); }
+    .breadcrumb-sep { opacity:0.5; }
+
+    /* --- HERO --- */
+    .tool-hero {
+      padding:130px 52px 56px;
+      background:var(--white);
+      border-bottom:1px solid rgba(28,58,36,0.08);
+      position:relative;
+      overflow:hidden;
+    }
+    .tool-hero::before {
+      content:'';
+      position:absolute;
+      top:-60px; right:-120px;
+      width:500px; height:500px;
+      background:radial-gradient(circle, rgba(78,140,95,0.06) 0%, transparent 70%);
+      pointer-events:none;
+    }
+    .tool-hero-inner {
+      max-width:760px;
+      margin:0 auto;
+      position:relative;
+    }
+    .tool-badge {
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      font-size:10px;
+      font-weight:500;
+      letter-spacing:0.12em;
+      text-transform:uppercase;
+      color:var(--sage);
+      background:rgba(78,140,95,0.1);
+      padding:5px 14px;
+      border-radius:20px;
+      margin-bottom:20px;
+    }
+    .tool-badge svg { flex-shrink:0; }
+    .tool-hero h1 {
+      font-family:var(--serif);
+      font-size:clamp(32px,5vw,54px);
+      font-weight:400;
+      line-height:1.08;
+      color:var(--forest);
+      letter-spacing:-0.02em;
+      margin-bottom:18px;
+    }
+    .tool-hero p {
+      font-size:18px;
+      font-weight:300;
+      line-height:1.7;
+      color:var(--ink-soft);
+      max-width:600px;
+    }
+
+    /* --- CONVERTER SECTIONS --- */
+    .converter-section {
+      max-width:860px;
+      margin:0 auto;
+      padding:56px 52px 0;
+    }
+    .converter-section:last-of-type {
+      padding-bottom:56px;
+    }
+    .section-heading {
+      font-family:var(--serif);
+      font-size:30px;
+      font-weight:400;
+      color:var(--forest);
+      letter-spacing:-0.015em;
+      margin-bottom:8px;
+    }
+    .section-desc {
+      font-size:16px;
+      font-weight:300;
+      line-height:1.7;
+      color:var(--ink-soft);
+      margin-bottom:28px;
+      max-width:640px;
+    }
+    .section-desc a {
+      color:var(--sage);
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+
+    /* --- CALC CARD --- */
+    .calc-card {
+      background:var(--white);
+      border:1px solid rgba(28,58,36,0.08);
+      border-radius:6px;
+      padding:36px 32px;
+      margin-bottom:32px;
+    }
+    .card-label {
+      font-size:11px;
+      font-weight:500;
+      letter-spacing:0.12em;
+      text-transform:uppercase;
+      color:var(--ink-faint);
+      margin-bottom:20px;
+    }
+    .input-group {
+      margin-bottom:22px;
+    }
+    .input-group:last-of-type { margin-bottom:0; }
+    .input-label {
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      margin-bottom:6px;
+    }
+    .input-label span:first-child {
+      font-size:14px;
+      font-weight:400;
+      color:var(--ink-mid);
+    }
+    .input-label .input-hint {
+      font-size:12px;
+      font-weight:300;
+      color:var(--ink-faint);
+    }
+    .input-field {
+      width:100%;
+      font-family:var(--sans);
+      font-size:16px;
+      font-weight:300;
+      color:var(--ink);
+      background:var(--cream);
+      border:1px solid rgba(28,58,36,0.12);
+      border-radius:4px;
+      padding:12px 14px;
+      transition:border-color 0.2s, box-shadow 0.2s;
+    }
+    .input-field:focus {
+      outline:none;
+      border-color:var(--sage);
+      box-shadow:0 0 0 3px rgba(78,140,95,0.1);
+    }
+    .input-field::placeholder { color:var(--ink-faint); }
+    .preset-select {
+      width:100%;
+      font-family:var(--sans);
+      font-size:14px;
+      font-weight:300;
+      color:var(--ink);
+      background:var(--cream);
+      border:1px solid rgba(28,58,36,0.12);
+      border-radius:4px;
+      padding:11px 14px;
+      appearance:none;
+      -webkit-appearance:none;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B7E6D' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat:no-repeat;
+      background-position:right 14px center;
+      cursor:pointer;
+      transition:border-color 0.2s;
+    }
+    .preset-select:focus {
+      outline:none;
+      border-color:var(--sage);
+    }
+
+    /* --- RESULT DISPLAY (inline) --- */
+    .result-inline {
+      background:var(--forest);
+      border-radius:6px;
+      padding:28px 28px;
+      color:var(--white);
+      position:relative;
+      overflow:hidden;
+      margin-top:24px;
+    }
+    .result-inline::before {
+      content:'';
+      position:absolute;
+      top:-40px; right:-40px;
+      width:180px; height:180px;
+      background:radial-gradient(circle, rgba(122,184,138,0.15) 0%, transparent 70%);
+      pointer-events:none;
+    }
+    .result-row {
+      display:flex;
+      justify-content:space-between;
+      align-items:baseline;
+      padding:6px 0;
+    }
+    .result-row dt {
+      font-size:13px;
+      font-weight:300;
+      color:rgba(255,255,255,0.7);
+    }
+    .result-row dd {
+      font-size:15px;
+      font-weight:400;
+      color:rgba(255,255,255,0.95);
+      font-family:var(--sans);
+    }
+    .result-row dd.big {
+      font-family:var(--serif);
+      font-size:36px;
+      font-weight:400;
+      line-height:1;
+      letter-spacing:-0.02em;
+      color:var(--white);
+    }
+    .result-row dd.big .unit-label {
+      font-family:var(--sans);
+      font-size:15px;
+      font-weight:300;
+      letter-spacing:0;
+      color:rgba(255,255,255,0.7);
+      margin-left:5px;
+    }
+    .result-empty-inline {
+      font-family:var(--serif);
+      font-size:20px;
+      font-weight:300;
+      font-style:italic;
+      color:rgba(255,255,255,0.25);
+      text-align:center;
+      padding:8px 0;
+    }
+    .sep-line {
+      width:100%;
+      height:1px;
+      background:rgba(28,58,36,0.07);
+      margin:24px 0;
+    }
+    .sep-line-light {
+      width:100%;
+      height:1px;
+      background:rgba(255,255,255,0.1);
+      margin:12px 0;
+    }
+
+    /* --- CONVERTER GRID (side by side) --- */
+    .converter-grid {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:32px;
+      align-items:start;
+    }
+
+    /* --- IU NOTE --- */
+    .iu-note {
+      background:rgba(78,140,95,0.06);
+      border:1px solid rgba(78,140,95,0.12);
+      border-radius:4px;
+      padding:14px 16px;
+      font-size:13px;
+      font-weight:300;
+      color:var(--ink-mid);
+      line-height:1.7;
+      margin-top:20px;
+    }
+    .iu-note strong { font-weight:500; color:var(--ink); }
+
+    /* --- SYRINGE SECTION --- */
+    .syringe-card {
+      background:var(--forest);
+      border-radius:6px;
+      padding:36px 32px;
+      color:var(--white);
+      position:relative;
+      overflow:hidden;
+    }
+    .syringe-card::before {
+      content:'';
+      position:absolute;
+      top:-40px; right:-40px;
+      width:180px; height:180px;
+      background:radial-gradient(circle, rgba(122,184,138,0.15) 0%, transparent 70%);
+      pointer-events:none;
+    }
+    .syringe-card .card-label {
+      color:rgba(255,255,255,0.6);
+      margin-bottom:24px;
+    }
+    .syringe-result-number {
+      font-family:var(--serif);
+      font-size:56px;
+      font-weight:400;
+      line-height:1;
+      color:var(--white);
+      letter-spacing:-0.03em;
+      margin-bottom:4px;
+      transition:opacity 0.3s var(--ease-out);
+    }
+    .syringe-result-number .unit-label {
+      font-family:var(--sans);
+      font-size:17px;
+      font-weight:300;
+      letter-spacing:0;
+      color:rgba(255,255,255,0.7);
+      margin-left:5px;
+    }
+    .syringe-result-sub {
+      font-size:14px;
+      font-weight:300;
+      color:rgba(255,255,255,0.65);
+      margin-bottom:24px;
+    }
+    .syringe-empty {
+      font-family:var(--serif);
+      font-size:24px;
+      font-weight:300;
+      font-style:italic;
+      color:rgba(255,255,255,0.2);
+      margin-bottom:20px;
+      min-height:60px;
+      display:flex;
+      align-items:center;
+    }
+    .syringe-wrap { margin-bottom:20px; }
+    .syringe-svg { width:100%; height:auto; }
+    .syringe-tick-label {
+      font-family:var(--sans);
+      font-size:9px;
+      fill:rgba(255,255,255,0.35);
+    }
+    .syringe-detail-row {
+      display:flex;
+      justify-content:space-between;
+      align-items:baseline;
+      padding:6px 0;
+    }
+    .syringe-detail-row dt {
+      font-size:13px;
+      font-weight:300;
+      color:rgba(255,255,255,0.6);
+    }
+    .syringe-detail-row dd {
+      font-size:13px;
+      font-weight:400;
+      color:rgba(255,255,255,0.9);
+    }
+    .syringe-warning {
+      margin-top:16px;
+      background:rgba(255,255,255,0.07);
+      border-radius:4px;
+      padding:12px 14px;
+      font-size:12px;
+      font-weight:300;
+      color:rgba(255,255,255,0.8);
+      line-height:1.6;
+      display:none;
+    }
+    .syringe-warning.visible { display:block; }
+
+    /* --- REFERENCE TABLE --- */
+    .ref-section {
+      max-width:860px;
+      margin:0 auto;
+      padding:56px 52px 72px;
+    }
+    .ref-table {
+      width:100%;
+      border-collapse:collapse;
+      margin:28px 0;
+      font-size:14px;
+    }
+    .ref-table th {
+      font-size:11px;
+      font-weight:500;
+      letter-spacing:0.1em;
+      text-transform:uppercase;
+      color:var(--ink-faint);
+      text-align:left;
+      padding:10px 12px;
+      border-bottom:2px solid rgba(28,58,36,0.12);
+      white-space:nowrap;
+    }
+    .ref-table td {
+      font-size:14px;
+      font-weight:300;
+      color:var(--ink-mid);
+      padding:11px 12px;
+      border-bottom:1px solid rgba(28,58,36,0.06);
+    }
+    .ref-table td:last-child {
+      font-weight:400;
+      color:var(--forest);
+    }
+    .ref-table td a {
+      color:var(--sage);
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+    .ref-table tbody tr:hover {
+      background:rgba(78,140,95,0.04);
+    }
+    .table-note {
+      font-size:12px;
+      font-weight:300;
+      color:var(--ink-faint);
+      line-height:1.7;
+      margin-top:8px;
+    }
+
+    /* --- RELATED TOOLS --- */
+    .related-section {
+      max-width:860px;
+      margin:0 auto;
+      padding:0 52px 72px;
+    }
+    .related-grid {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+      margin-top:24px;
+    }
+    .related-link {
+      background:var(--white);
+      border:1px solid rgba(28,58,36,0.08);
+      border-radius:6px;
+      padding:22px 24px;
+      text-decoration:none;
+      transition:border-color 0.2s, box-shadow 0.2s;
+      display:block;
+    }
+    .related-link:hover {
+      border-color:var(--sage);
+      box-shadow:0 2px 16px rgba(28,58,36,0.06);
+    }
+    .related-link h3 {
+      font-family:var(--serif);
+      font-size:20px;
+      font-weight:400;
+      color:var(--forest);
+      margin-bottom:6px;
+    }
+    .related-link p {
+      font-size:13px;
+      font-weight:300;
+      color:var(--ink-soft);
+      line-height:1.6;
+    }
+
+    /* --- NEWSLETTER CTA --- */
+    .tool-cta {
+      max-width:760px;
+      margin:0 auto;
+      padding:0 52px 72px;
+    }
+    .cta-box {
+      background:var(--forest);
+      border-radius:6px;
+      padding:40px 36px;
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+    .cta-box::before {
+      content:'';
+      position:absolute;
+      bottom:-60px; left:-60px;
+      width:280px; height:280px;
+      background:radial-gradient(circle, rgba(122,184,138,0.12) 0%, transparent 70%);
+      pointer-events:none;
+    }
+    .cta-box h3 {
+      font-family:var(--serif);
+      font-size:26px;
+      font-weight:400;
+      color:var(--white);
+      margin-bottom:8px;
+      position:relative;
+    }
+    .cta-box p {
+      font-size:14px;
+      font-weight:300;
+      color:rgba(255,255,255,0.7);
+      margin-bottom:22px;
+      position:relative;
+    }
+    .cta-form {
+      display:flex;
+      gap:10px;
+      max-width:420px;
+      margin:0 auto;
+      position:relative;
+    }
+    .cta-input {
+      flex:1;
+      font-family:var(--sans);
+      font-size:14px;
+      font-weight:300;
+      color:var(--ink);
+      background:var(--white);
+      border:none;
+      border-radius:4px;
+      padding:12px 16px;
+    }
+    .cta-input::placeholder { color:var(--ink-faint); }
+    .cta-input:focus { outline:2px solid var(--fern); outline-offset:1px; }
+    .cta-submit {
+      font-family:var(--sans);
+      font-size:13px;
+      font-weight:400;
+      letter-spacing:0.05em;
+      color:var(--forest);
+      background:var(--mint);
+      border:none;
+      border-radius:4px;
+      padding:12px 22px;
+      cursor:pointer;
+      transition:background 0.2s;
+      white-space:nowrap;
+    }
+    .cta-submit:hover { background:var(--fern); }
+
+    /* --- DIVIDER --- */
+    .divider { width:48px; height:1px; background:linear-gradient(to right,var(--sage),transparent); margin:48px 0; }
+
+    /* --- DISCLAIMER / FOOTER --- */
+    .disclaimer-bar { background:var(--parchment); border-top:1px solid rgba(28,58,36,0.08); padding:28px 52px; text-align:center; }
+    .disclaimer-bar p { font-size:12px; color:var(--ink-soft); line-height:1.8; max-width:720px; margin:0 auto; }
+    footer { background:var(--forest); padding:48px 52px 36px; }
+    .footer-bottom { display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; }
+    .footer-copy { font-size:12px; font-weight:300; color:rgba(255,255,255,0.3); }
+    .footer-legal { display:flex; gap:28px; }
+    .footer-legal a { font-size:12px; font-weight:300; color:rgba(255,255,255,0.3); text-decoration:none; transition:color 0.2s; }
+    .footer-legal a:hover { color:rgba(255,255,255,0.65); }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width:680px) {
+      .nav { padding:7px 20px; }
+      .nav-toggle { display:block; }
+      .nav-links { display:none; position:absolute; top:0; left:0; width:100vw; height:100vh; flex-direction:column; align-items:center; justify-content:center; gap:32px; background:rgba(244,240,232,0.97); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); z-index:205; padding:80px 20px 40px; }
+      .nav-links.open { display:flex; }
+      .nav-links a { font-size:14px; letter-spacing:0.12em; }
+      .tool-hero { padding:110px 24px 40px; }
+      .converter-section { padding:40px 24px 0; }
+      .converter-grid { grid-template-columns:1fr; gap:24px; }
+      .calc-card { padding:28px 22px; }
+      .syringe-card { padding:28px 22px; }
+      .syringe-result-number { font-size:44px; }
+      .ref-section { padding:40px 24px 56px; }
+      .ref-table { font-size:13px; }
+      .ref-table th, .ref-table td { padding:9px 8px; }
+      .table-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+      .related-section { padding:0 24px 56px; }
+      .related-grid { grid-template-columns:1fr; }
+      .tool-cta { padding:0 24px 56px; }
+      .cta-box { padding:32px 22px; }
+      .cta-form { flex-direction:column; }
+      .disclaimer-bar { padding:24px; }
+      footer { padding:40px 24px 28px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav" id="mainNav">
+    <a href="index.html" class="nav-logo" aria-label="Peptide Revealed — Home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" height="34" aria-hidden="true">
+        <g transform="translate(10,8) scale(1.28)">
+          <line x1="38" y1="38" x2="16" y2="18" stroke="#4E8C5F" stroke-width="2" stroke-linecap="round"/>
+          <line x1="42" y1="36" x2="62" y2="16" stroke="#4E8C5F" stroke-width="2" stroke-linecap="round"/>
+          <line x1="44" y1="40" x2="66" y2="44" stroke="#7AB88A" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="40" y1="44" x2="32" y2="64" stroke="#7AB88A" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="36" y1="42" x2="14" y2="58" stroke="#C6DFC8" stroke-width="1.2" stroke-linecap="round"/>
+          <circle cx="16" cy="18" r="6" fill="#4E8C5F"/><circle cx="62" cy="16" r="5" fill="#4E8C5F"/>
+          <circle cx="66" cy="44" r="4" fill="#7AB88A"/><circle cx="32" cy="64" r="4" fill="#7AB88A"/>
+          <circle cx="40" cy="40" r="8" fill="#1C3A24"/><circle cx="40" cy="40" r="4.5" fill="#4E8C5F"/>
+        </g>
+        <text x="118" y="62" font-family="Georgia,serif" font-size="44" font-weight="400" fill="#1C3A24" letter-spacing="-0.5">Peptide</text>
+        <text x="120" y="90" font-family="'Helvetica Neue',Arial,sans-serif" font-size="16" font-weight="300" fill="#4E8C5F" letter-spacing="5">REVEALED</text>
+      </svg>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#covers">Topics</a></li>
+      <li><a href="articles.html">Articles</a></li>
+      <li><a href="peptides.html">Peptides</a></li>
+      <li><a href="meal-planner.html">Meal Planner</a></li>
+      <li><a href="reconstitution-calculator.html">Calculator</a></li>
+      <li><a href="stack-builder.html">Stack Builder</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#newsletter" class="nav-btn">Subscribe Free</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <div class="tool-hero">
+    <div class="tool-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">&rsaquo;</span>
+        <span>Tools</span>
+        <span class="breadcrumb-sep">&rsaquo;</span>
+        <span>Dosing Converter</span>
+      </div>
+      <div class="tool-badge">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <path d="M2 7h10M7 2v10" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          <circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.0" opacity="0.5"/>
+        </svg>
+        Free Tool
+      </div>
+      <h1>Peptide Dosing Unit Converter</h1>
+      <p>Convert between milligrams, micrograms, International Units, and insulin syringe units. Enter a value in any field and see the equivalents instantly — no guesswork, no math mistakes.</p>
+    </div>
+  </div>
+
+  <!-- Section 1: Weight Conversions -->
+  <section class="converter-section">
+    <h2 class="section-heading">Weight Conversion</h2>
+    <p class="section-desc">The most common source of dosing confusion. Milligrams (mg) and micrograms (mcg) differ by a factor of 1,000. Enter a value in either field to see the conversion.</p>
+
+    <div class="calc-card">
+      <div class="card-label">mg &harr; mcg converter</div>
+      <div class="converter-grid">
+        <div class="input-group">
+          <div class="input-label">
+            <span>Milligrams</span>
+            <span class="input-hint">mg</span>
+          </div>
+          <input type="number" class="input-field" id="weightMg" placeholder="e.g. 0.25" min="0" step="any" inputmode="decimal">
+        </div>
+        <div class="input-group">
+          <div class="input-label">
+            <span>Micrograms</span>
+            <span class="input-hint">mcg</span>
+          </div>
+          <input type="number" class="input-field" id="weightMcg" placeholder="e.g. 250" min="0" step="any" inputmode="decimal">
+        </div>
+      </div>
+      <div class="result-inline" id="weightResult">
+        <div class="result-empty-inline">Enter a value above</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: IU Converter -->
+  <section class="converter-section">
+    <h2 class="section-heading">IU Converter</h2>
+    <p class="section-desc">International Units (IU) are used for certain peptides where biological activity varies by preparation. The conversion factor depends on the specific peptide.</p>
+
+    <div class="calc-card">
+      <div class="card-label">IU &harr; mg / mcg</div>
+      <div class="input-group" style="margin-bottom:24px;">
+        <div class="input-label">
+          <span>Peptide</span>
+          <span class="input-hint">select to set conversion factor</span>
+        </div>
+        <select class="preset-select" id="iuPeptide">
+          <option value="hgh" data-factor="3" data-unit="mg">HGH (1 mg = 3 IU)</option>
+          <option value="hcg" data-factor="0" data-unit="">HCG (varies by preparation)</option>
+        </select>
+      </div>
+      <div class="converter-grid" id="iuInputs">
+        <div class="input-group">
+          <div class="input-label">
+            <span id="iuWeightLabel">Milligrams</span>
+            <span class="input-hint" id="iuWeightHint">mg</span>
+          </div>
+          <input type="number" class="input-field" id="iuWeight" placeholder="e.g. 1" min="0" step="any" inputmode="decimal">
+        </div>
+        <div class="input-group">
+          <div class="input-label">
+            <span>International Units</span>
+            <span class="input-hint">IU</span>
+          </div>
+          <input type="number" class="input-field" id="iuValue" placeholder="e.g. 3" min="0" step="any" inputmode="decimal">
+        </div>
+      </div>
+      <div class="result-inline" id="iuResult">
+        <div class="result-empty-inline">Select a peptide and enter a value</div>
+      </div>
+      <div class="iu-note">
+        <strong>Note:</strong> Most research peptides (BPC-157, ipamorelin, CJC-1295, GHK-Cu, semaglutide) are measured in mg or mcg, not IU. International Units are primarily used for HGH and HCG. If your peptide is dosed in mcg, use the weight converter above instead.
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Syringe Units Calculator -->
+  <section class="converter-section" style="padding-bottom:56px;">
+    <h2 class="section-heading">Syringe Units Calculator</h2>
+    <p class="section-desc">Given your reconstituted solution concentration and desired dose, see exactly how many units to draw on a U-100 insulin syringe. Need help with reconstitution? Use our <a href="reconstitution-calculator.html">reconstitution calculator</a>.</p>
+
+    <div class="converter-grid">
+      <!-- Inputs -->
+      <div class="calc-card" style="margin-bottom:0;">
+        <div class="card-label">Enter your values</div>
+
+        <div class="input-group">
+          <div class="input-label">
+            <span>Peptide vial size</span>
+            <span class="input-hint">mg</span>
+          </div>
+          <input type="number" class="input-field" id="syringeVial" placeholder="e.g. 5" min="0" step="any" inputmode="decimal">
+        </div>
+
+        <div class="input-group">
+          <div class="input-label">
+            <span>Water added</span>
+            <span class="input-hint">mL</span>
+          </div>
+          <input type="number" class="input-field" id="syringeWater" placeholder="e.g. 2" min="0" step="any" inputmode="decimal">
+        </div>
+
+        <div class="sep-line"></div>
+
+        <div class="input-group">
+          <div class="input-label">
+            <span>Concentration</span>
+            <span class="input-hint">mcg/mL (auto-calculated)</span>
+          </div>
+          <input type="number" class="input-field" id="syringeConc" placeholder="auto or enter manually" min="0" step="any" inputmode="decimal">
+        </div>
+
+        <div class="sep-line"></div>
+
+        <div class="input-group">
+          <div class="input-label">
+            <span>Desired dose</span>
+            <span class="input-hint">mcg</span>
+          </div>
+          <input type="number" class="input-field" id="syringeDose" placeholder="e.g. 250" min="0" step="any" inputmode="decimal">
+        </div>
+      </div>
+
+      <!-- Syringe Result -->
+      <div class="syringe-card" id="syringeResultCard">
+        <div class="card-label">Draw this amount</div>
+        <div id="syringeResultDisplay">
+          <div class="syringe-empty">Enter values to calculate</div>
+        </div>
+
+        <div class="syringe-wrap" id="syringeWrapEl" style="display:none;">
+          <svg class="syringe-svg" viewBox="0 0 240 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Insulin syringe diagram showing dose amount">
+            <!-- Syringe barrel -->
+            <rect x="32" y="20" width="176" height="40" rx="4" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+            <!-- Plunger handle -->
+            <rect x="208" y="28" width="24" height="24" rx="2" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
+            <!-- Needle -->
+            <line x1="32" y1="40" x2="8" y2="40" stroke="rgba(255,255,255,0.35)" stroke-width="1.5" stroke-linecap="round"/>
+            <!-- Tick marks -->
+            <line x1="40" y1="56" x2="40" y2="62" stroke="rgba(255,255,255,0.25)" stroke-width="0.8"/>
+            <text x="40" y="72" text-anchor="middle" class="syringe-tick-label">0</text>
+            <line x1="56" y1="56" x2="56" y2="60" stroke="rgba(255,255,255,0.15)" stroke-width="0.5"/>
+            <line x1="72" y1="56" x2="72" y2="62" stroke="rgba(255,255,255,0.25)" stroke-width="0.8"/>
+            <text x="72" y="72" text-anchor="middle" class="syringe-tick-label">20</text>
+            <line x1="88" y1="56" x2="88" y2="60" stroke="rgba(255,255,255,0.15)" stroke-width="0.5"/>
+            <line x1="104" y1="56" x2="104" y2="62" stroke="rgba(255,255,255,0.25)" stroke-width="0.8"/>
+            <text x="104" y="72" text-anchor="middle" class="syringe-tick-label">40</text>
+            <line x1="120" y1="56" x2="120" y2="60" stroke="rgba(255,255,255,0.15)" stroke-width="0.5"/>
+            <line x1="136" y1="56" x2="136" y2="62" stroke="rgba(255,255,255,0.25)" stroke-width="0.8"/>
+            <text x="136" y="72" text-anchor="middle" class="syringe-tick-label">60</text>
+            <line x1="152" y1="56" x2="152" y2="60" stroke="rgba(255,255,255,0.15)" stroke-width="0.5"/>
+            <line x1="168" y1="56" x2="168" y2="62" stroke="rgba(255,255,255,0.25)" stroke-width="0.8"/>
+            <text x="168" y="72" text-anchor="middle" class="syringe-tick-label">80</text>
+            <line x1="184" y1="56" x2="184" y2="60" stroke="rgba(255,255,255,0.15)" stroke-width="0.5"/>
+            <line x1="200" y1="56" x2="200" y2="62" stroke="rgba(255,255,255,0.25)" stroke-width="0.8"/>
+            <text x="200" y="72" text-anchor="middle" class="syringe-tick-label">100</text>
+            <!-- Liquid fill -->
+            <rect id="syringeFill" x="40" y="24" width="0" height="32" rx="2" fill="rgba(122,184,138,0.35)"/>
+            <!-- Dose indicator line -->
+            <line id="syringeDoseLine" x1="40" y1="18" x2="40" y2="62" stroke="var(--fern)" stroke-width="1.5" stroke-dasharray="3 2" style="display:none;"/>
+            <!-- Dose label -->
+            <text id="syringeDoseLabel" x="40" y="14" text-anchor="middle" class="syringe-dose-text" style="display:none; font-family:var(--sans); font-size:10px; font-weight:500; fill:var(--fern);"></text>
+          </svg>
+        </div>
+
+        <dl id="syringeDetails" style="display:none; border-top:1px solid rgba(255,255,255,0.1); padding-top:16px;">
+          <div class="syringe-detail-row">
+            <dt>Concentration</dt>
+            <dd id="sDetailConc">--</dd>
+          </div>
+          <div class="syringe-detail-row">
+            <dt>Volume to inject</dt>
+            <dd id="sDetailVol">--</dd>
+          </div>
+          <div class="syringe-detail-row">
+            <dt>Doses per vial</dt>
+            <dd id="sDetailDoses">--</dd>
+          </div>
+        </dl>
+
+        <div class="syringe-warning" id="syringeWarning"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Quick Reference Table -->
+  <section class="ref-section">
+    <h2 class="section-heading">Quick Reference Table</h2>
+    <p class="section-desc">Common peptide doses with their equivalents in different units. Syringe units assume a standard reconstitution of 5 mg peptide in 2 mL bacteriostatic water (concentration: 2,500 mcg/mL).</p>
+
+    <div class="table-scroll">
+      <table class="ref-table">
+        <thead>
+          <tr>
+            <th>Peptide</th>
+            <th>Common Dose</th>
+            <th>In mcg</th>
+            <th>In mg</th>
+            <th>Syringe Units</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="articles/bpc-157-guide.html">BPC-157</a></td>
+            <td>250 mcg</td>
+            <td>250</td>
+            <td>0.25</td>
+            <td>10 units</td>
+          </tr>
+          <tr>
+            <td><a href="articles/tb-500.html">TB-500</a></td>
+            <td>2.5 mg</td>
+            <td>2,500</td>
+            <td>2.5</td>
+            <td>100 units</td>
+          </tr>
+          <tr>
+            <td><a href="articles/cjc-1295-ipamorelin.html">Ipamorelin</a></td>
+            <td>200 mcg</td>
+            <td>200</td>
+            <td>0.2</td>
+            <td>8 units</td>
+          </tr>
+          <tr>
+            <td><a href="articles/cjc-1295-ipamorelin.html">CJC-1295</a></td>
+            <td>100 mcg</td>
+            <td>100</td>
+            <td>0.1</td>
+            <td>4 units</td>
+          </tr>
+          <tr>
+            <td><a href="articles/ghk-cu-copper-peptide.html">GHK-Cu</a></td>
+            <td>200 mcg</td>
+            <td>200</td>
+            <td>0.2</td>
+            <td>8 units</td>
+          </tr>
+          <tr>
+            <td><a href="articles/glp-1-peptides.html">Semaglutide</a></td>
+            <td>0.5 mg</td>
+            <td>500</td>
+            <td>0.5</td>
+            <td>20 units</td>
+          </tr>
+          <tr>
+            <td>Tirzepatide</td>
+            <td>5 mg</td>
+            <td>5,000</td>
+            <td>5.0</td>
+            <td>200 units</td>
+          </tr>
+          <tr>
+            <td><a href="articles/aod-9604-fat-loss-peptide.html">AOD-9604</a></td>
+            <td>300 mcg</td>
+            <td>300</td>
+            <td>0.3</td>
+            <td>12 units</td>
+          </tr>
+          <tr>
+            <td><a href="articles/dsip-sleep-peptide.html">DSIP</a></td>
+            <td>100 mcg</td>
+            <td>100</td>
+            <td>0.1</td>
+            <td>4 units</td>
+          </tr>
+          <tr>
+            <td><a href="articles/pt-141-bremelanotide.html">PT-141</a></td>
+            <td>1.75 mg</td>
+            <td>1,750</td>
+            <td>1.75</td>
+            <td>70 units</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">Syringe units based on 5 mg vial reconstituted with 2 mL bacteriostatic water (2,500 mcg/mL, 25 mcg per unit on a U-100 syringe). Your actual units will differ if you use a different vial size or water volume. For safety information, see our <a href="articles/peptide-side-effects-safety.html" style="color:var(--sage); text-decoration:underline; text-underline-offset:3px;">peptide side effects and safety guide</a>.</p>
+  </section>
+
+  <!-- Related Tools -->
+  <section class="related-section">
+    <h2 class="section-heading">Related Tools &amp; Guides</h2>
+    <div class="related-grid">
+      <a href="reconstitution-calculator.html" class="related-link">
+        <h3>Reconstitution Calculator</h3>
+        <p>Calculate exactly how many syringe units to draw after reconstituting your peptide vial with bacteriostatic water.</p>
+      </a>
+      <a href="half-life-calculator.html" class="related-link">
+        <h3>Half-Life Calculator</h3>
+        <p>Understand how long a peptide stays active in your system and optimize your dosing schedule.</p>
+      </a>
+      <a href="articles/how-to-reconstitute-peptides.html" class="related-link">
+        <h3>How to Reconstitute Peptides</h3>
+        <p>Step-by-step guide covering equipment, sterile technique, water ratios, and proper storage after mixing.</p>
+      </a>
+      <a href="articles/peptide-side-effects-safety.html" class="related-link">
+        <h3>Peptide Side Effects &amp; Safety</h3>
+        <p>What the research says about common side effects, contraindications, and how to minimize risk.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Newsletter CTA -->
+  <section class="tool-cta">
+    <div class="cta-box">
+      <h3>Get dosing guides &amp; conversion tips in your inbox</h3>
+      <p>Weekly peptide research, dosing best practices, and sourcing updates — written for people who actually use peptides.</p>
+      <form class="cta-form" onsubmit="handleSignup(event)" aria-label="Newsletter signup">
+        <input type="email" class="cta-input" placeholder="Your email address" required aria-label="Email address" autocomplete="email">
+        <button type="submit" class="cta-submit">Subscribe Free</button>
+      </form>
+    </div>
+  </section>
+
+  <div class="disclaimer-bar">
+    <p><strong>Medical disclaimer:</strong> This converter is an educational tool only. It does not constitute medical advice. Always consult a qualified healthcare professional before using any peptide or injectable substance. Verify all calculations independently before use.</p>
+  </div>
+  <footer>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 Peptide Revealed. For informational purposes only — not medical advice.</p>
+      <nav class="footer-legal">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-use.html">Terms of Use</a>
+        <a href="disclaimer.html">Disclaimer</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    /* --- Nav scroll + mobile toggle --- */
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 24), { passive: true });
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      navToggle.classList.toggle('active', open);
+      navToggle.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+
+    /* =========================================
+       SECTION 1: Weight Conversion (mg <-> mcg)
+       ========================================= */
+    const weightMg = document.getElementById('weightMg');
+    const weightMcg = document.getElementById('weightMcg');
+    const weightResult = document.getElementById('weightResult');
+
+    let weightSource = null; // track which field the user is typing in
+
+    weightMg.addEventListener('input', () => {
+      weightSource = 'mg';
+      const mg = parseFloat(weightMg.value);
+      if (isNaN(mg) || mg < 0) {
+        weightMcg.value = '';
+        weightResult.innerHTML = '<div class="result-empty-inline">Enter a value above</div>';
+        return;
+      }
+      const mcg = mg * 1000;
+      weightMcg.value = formatAuto(mcg);
+      showWeightResult(mg, mcg);
+    });
+
+    weightMcg.addEventListener('input', () => {
+      weightSource = 'mcg';
+      const mcg = parseFloat(weightMcg.value);
+      if (isNaN(mcg) || mcg < 0) {
+        weightMg.value = '';
+        weightResult.innerHTML = '<div class="result-empty-inline">Enter a value above</div>';
+        return;
+      }
+      const mg = mcg / 1000;
+      weightMg.value = formatAuto(mg);
+      showWeightResult(mg, mcg);
+    });
+
+    function showWeightResult(mg, mcg) {
+      weightResult.innerHTML =
+        '<dl>' +
+        '<div class="result-row"><dt>Milligrams</dt><dd class="big">' + formatDisplay(mg) + '<span class="unit-label">mg</span></dd></div>' +
+        '<div class="sep-line-light"></div>' +
+        '<div class="result-row"><dt>Micrograms</dt><dd class="big">' + formatDisplay(mcg) + '<span class="unit-label">mcg</span></dd></div>' +
+        '</dl>';
+    }
+
+    /* =========================================
+       SECTION 2: IU Converter
+       ========================================= */
+    const iuPeptide = document.getElementById('iuPeptide');
+    const iuWeight = document.getElementById('iuWeight');
+    const iuValue = document.getElementById('iuValue');
+    const iuResult = document.getElementById('iuResult');
+    const iuInputs = document.getElementById('iuInputs');
+
+    let iuSource = null;
+
+    iuPeptide.addEventListener('change', () => {
+      const opt = iuPeptide.options[iuPeptide.selectedIndex];
+      const factor = parseFloat(opt.dataset.factor);
+      if (factor === 0) {
+        // HCG - varies
+        iuInputs.style.opacity = '0.4';
+        iuInputs.style.pointerEvents = 'none';
+        iuResult.innerHTML = '<div class="result-empty-inline">HCG conversion varies by manufacturer and preparation. Check the product label for the specific IU-to-mg ratio.</div>';
+        iuWeight.value = '';
+        iuValue.value = '';
+      } else {
+        iuInputs.style.opacity = '1';
+        iuInputs.style.pointerEvents = 'auto';
+        // Recalculate if values exist
+        if (iuSource === 'weight') { iuWeight.dispatchEvent(new Event('input')); }
+        else if (iuSource === 'iu') { iuValue.dispatchEvent(new Event('input')); }
+        else { iuResult.innerHTML = '<div class="result-empty-inline">Select a peptide and enter a value</div>'; }
+      }
+    });
+
+    iuWeight.addEventListener('input', () => {
+      iuSource = 'weight';
+      const opt = iuPeptide.options[iuPeptide.selectedIndex];
+      const factor = parseFloat(opt.dataset.factor);
+      if (factor === 0) return;
+
+      const mg = parseFloat(iuWeight.value);
+      if (isNaN(mg) || mg < 0) {
+        iuValue.value = '';
+        iuResult.innerHTML = '<div class="result-empty-inline">Enter a value</div>';
+        return;
+      }
+      const iu = mg * factor;
+      iuValue.value = formatAuto(iu);
+      showIuResult(mg, iu, factor);
+    });
+
+    iuValue.addEventListener('input', () => {
+      iuSource = 'iu';
+      const opt = iuPeptide.options[iuPeptide.selectedIndex];
+      const factor = parseFloat(opt.dataset.factor);
+      if (factor === 0) return;
+
+      const iu = parseFloat(iuValue.value);
+      if (isNaN(iu) || iu < 0) {
+        iuWeight.value = '';
+        iuResult.innerHTML = '<div class="result-empty-inline">Enter a value</div>';
+        return;
+      }
+      const mg = iu / factor;
+      iuWeight.value = formatAuto(mg);
+      showIuResult(mg, iu, factor);
+    });
+
+    function showIuResult(mg, iu, factor) {
+      const mcg = mg * 1000;
+      iuResult.innerHTML =
+        '<dl>' +
+        '<div class="result-row"><dt>Milligrams</dt><dd>' + formatDisplay(mg) + ' mg</dd></div>' +
+        '<div class="result-row"><dt>Micrograms</dt><dd>' + formatDisplay(mcg) + ' mcg</dd></div>' +
+        '<div class="sep-line-light"></div>' +
+        '<div class="result-row"><dt>International Units</dt><dd class="big">' + formatDisplay(iu) + '<span class="unit-label">IU</span></dd></div>' +
+        '<div class="sep-line-light"></div>' +
+        '<div class="result-row"><dt>Conversion factor</dt><dd>1 mg = ' + factor + ' IU</dd></div>' +
+        '</dl>';
+    }
+
+    /* =========================================
+       SECTION 3: Syringe Units Calculator
+       ========================================= */
+    const syringeVial = document.getElementById('syringeVial');
+    const syringeWater = document.getElementById('syringeWater');
+    const syringeConc = document.getElementById('syringeConc');
+    const syringeDoseInput = document.getElementById('syringeDose');
+    const syringeResultDisplay = document.getElementById('syringeResultDisplay');
+    const syringeWrapEl = document.getElementById('syringeWrapEl');
+    const syringeFill = document.getElementById('syringeFill');
+    const syringeDoseLine = document.getElementById('syringeDoseLine');
+    const syringeDoseLabel = document.getElementById('syringeDoseLabel');
+    const syringeDetails = document.getElementById('syringeDetails');
+    const syringeWarning = document.getElementById('syringeWarning');
+
+    let concManual = false;
+
+    // Auto-calc concentration from vial + water
+    function updateConcentration() {
+      if (concManual) return;
+      const vialMg = parseFloat(syringeVial.value);
+      const waterMl = parseFloat(syringeWater.value);
+      if (vialMg > 0 && waterMl > 0) {
+        syringeConc.value = formatAuto((vialMg * 1000) / waterMl);
+      } else {
+        syringeConc.value = '';
+      }
+    }
+
+    syringeVial.addEventListener('input', () => { concManual = false; updateConcentration(); calcSyringe(); });
+    syringeWater.addEventListener('input', () => { concManual = false; updateConcentration(); calcSyringe(); });
+    syringeConc.addEventListener('input', () => { concManual = true; calcSyringe(); });
+    syringeDoseInput.addEventListener('input', calcSyringe);
+
+    function calcSyringe() {
+      const conc = parseFloat(syringeConc.value);
+      const dose = parseFloat(syringeDoseInput.value);
+
+      syringeWarning.classList.remove('visible');
+      syringeWarning.textContent = '';
+
+      if (!conc || !dose || conc <= 0 || dose <= 0) {
+        syringeResultDisplay.innerHTML = '<div class="syringe-empty">Enter values to calculate</div>';
+        syringeWrapEl.style.display = 'none';
+        syringeDetails.style.display = 'none';
+        return;
+      }
+
+      const volumeMl = dose / conc;
+      const units = volumeMl * 100;
+      const unitsRounded = Math.round(units * 10) / 10;
+      const unitsStr = unitsRounded % 1 === 0 ? unitsRounded.toFixed(0) : unitsRounded.toFixed(1);
+
+      syringeResultDisplay.innerHTML =
+        '<div class="syringe-result-number">' + unitsStr + '<span class="unit-label">units</span></div>' +
+        '<div class="syringe-result-sub">' + formatVolume(volumeMl) + ' mL on a U-100 insulin syringe</div>';
+
+      // Syringe visualization
+      syringeWrapEl.style.display = 'block';
+      const maxUnits = 100;
+      const clampedUnits = Math.min(units, maxUnits);
+      const fillWidth = (clampedUnits / maxUnits) * 160;
+      syringeFill.setAttribute('width', fillWidth);
+
+      const lineX = 40 + (clampedUnits / maxUnits) * 160;
+      syringeDoseLine.setAttribute('x1', lineX);
+      syringeDoseLine.setAttribute('x2', lineX);
+      syringeDoseLine.style.display = units > 0 ? 'block' : 'none';
+      syringeDoseLabel.setAttribute('x', lineX);
+      syringeDoseLabel.textContent = unitsStr + 'u';
+      syringeDoseLabel.style.display = units > 0 ? 'block' : 'none';
+
+      // Details
+      syringeDetails.style.display = 'block';
+      document.getElementById('sDetailConc').textContent = formatNumber(conc) + ' mcg/mL';
+      document.getElementById('sDetailVol').textContent = formatVolume(volumeMl) + ' mL';
+
+      const vialMg = parseFloat(syringeVial.value);
+      if (vialMg > 0) {
+        const totalDoses = Math.floor((vialMg * 1000) / dose);
+        document.getElementById('sDetailDoses').textContent = totalDoses + (totalDoses === 1 ? ' dose' : ' doses');
+      } else {
+        document.getElementById('sDetailDoses').textContent = '--';
+      }
+
+      // Warnings
+      if (units > 100) {
+        syringeWarning.textContent = 'This dose exceeds the capacity of a standard 1 mL insulin syringe (100 units). Use a larger syringe, or add less water to increase concentration.';
+        syringeWarning.classList.add('visible');
+      } else if (units < 3) {
+        syringeWarning.textContent = 'Very small doses (under 3 units) are difficult to measure accurately. Consider adding less water to increase the volume per dose.';
+        syringeWarning.classList.add('visible');
+      }
+    }
+
+    /* =========================================
+       UTILITY FUNCTIONS
+       ========================================= */
+    function formatAuto(n) {
+      if (n === 0) return '0';
+      // Remove trailing zeros
+      if (Number.isInteger(n)) return n.toString();
+      // Up to 6 decimal places, strip trailing zeros
+      return parseFloat(n.toPrecision(10)).toString();
+    }
+
+    function formatDisplay(n) {
+      if (n >= 1000) return n.toLocaleString('en-US', { maximumFractionDigits: 2 });
+      if (n >= 1) return parseFloat(n.toPrecision(6)).toString();
+      if (n >= 0.001) return parseFloat(n.toPrecision(4)).toString();
+      return n.toExponential(2);
+    }
+
+    function formatNumber(n) {
+      if (n >= 1000) return n.toLocaleString('en-US', { maximumFractionDigits: 0 });
+      if (n >= 100) return n.toFixed(0);
+      if (n >= 10) return n.toFixed(1);
+      return n.toFixed(2);
+    }
+
+    function formatVolume(ml) {
+      if (ml >= 1) return ml.toFixed(2);
+      if (ml >= 0.1) return ml.toFixed(2);
+      return ml.toFixed(3);
+    }
+
+    /* --- Newsletter signup (ConvertKit form 9267405) --- */
+    function handleSignup(e) {
+      e.preventDefault();
+      const form  = e.currentTarget;
+      const input = form.querySelector('input[type="email"]');
+      const btn   = form.querySelector('button');
+      const email = input.value.trim();
+
+      if (!email) return;
+
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+
+      const formData = new FormData();
+      formData.append('email_address', email);
+
+      fetch('https://app.kit.com/forms/9267405/subscriptions', {
+        method: 'POST',
+        body: formData,
+        redirect: 'manual'
+      })
+      .then(r => {
+        if (r.ok || r.status === 0 || r.status === 200 || r.status === 302 || r.type === 'opaqueredirect') {
+          btn.textContent = 'Check your email!';
+          btn.style.background = 'var(--forest)';
+          input.value = '';
+          input.disabled = true;
+        } else {
+          btn.textContent = 'Try again';
+        }
+      })
+      .catch(() => {
+        btn.textContent = 'Try again';
+      })
+      .finally(() => {
+        setTimeout(() => {
+          btn.textContent = 'Subscribe Free';
+          btn.style.background = '';
+          input.disabled = false;
+          btn.disabled = false;
+        }, 4000);
+      });
+    }
+  </script>
+</body>
+</html>

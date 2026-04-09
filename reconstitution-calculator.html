@@ -636,6 +636,15 @@
       color:var(--ink-faint);
     }
 
+    /* ─── MORE TOOLS ─── */
+    .more-tools { padding:0 52px 56px; max-width:900px; margin:0 auto; }
+    .more-tools h3 { font-family:var(--serif); font-size:24px; font-weight:400; color:var(--forest); margin-bottom:20px; }
+    .tools-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+    .tool-link-card { display:block; padding:20px 24px; background:var(--white); border:1px solid rgba(28,58,36,0.08); border-radius:4px; text-decoration:none; transition:border-color 0.2s, box-shadow 0.2s; }
+    .tool-link-card:hover { border-color:var(--sage); box-shadow:0 2px 12px rgba(28,58,36,0.06); }
+    .tool-link-card strong { display:block; font-size:15px; font-weight:500; color:var(--forest); margin-bottom:4px; }
+    .tool-link-card span { font-size:13px; font-weight:300; color:var(--ink-soft); line-height:1.5; }
+
     /* ─── DISCLAIMER / FOOTER ─── */
     .disclaimer-bar { background:var(--parchment); border-top:1px solid rgba(28,58,36,0.08); padding:28px 52px; text-align:center; }
     .disclaimer-bar p { font-size:12px; color:var(--ink-soft); line-height:1.8; max-width:720px; margin:0 auto; }
@@ -663,6 +672,8 @@
       .how-section { padding:0 24px 56px; }
       .formula-box { padding:22px 18px; }
       .formula-step { font-size:17px; }
+      .more-tools { padding:0 24px 40px; }
+      .tools-grid { grid-template-columns:1fr; }
       .disclaimer-bar { padding:24px; }
       footer { padding:40px 24px 28px; }
     }
@@ -1114,6 +1125,29 @@
       </table>
     </div>
   </section>
+
+  <!-- More Tools -->
+  <div class="more-tools">
+    <h3>More peptide tools</h3>
+    <div class="tools-grid">
+      <a href="half-life-calculator.html" class="tool-link-card">
+        <strong>Half-Life Calculator</strong>
+        <span>See how long each peptide stays active, when to re-dose, and how many days to reach steady state.</span>
+      </a>
+      <a href="dosing-converter.html" class="tool-link-card">
+        <strong>Dosing Unit Converter</strong>
+        <span>Convert between mg, mcg, IU, and insulin syringe units for any peptide.</span>
+      </a>
+      <a href="stack-builder.html" class="tool-link-card">
+        <strong>Stack Builder</strong>
+        <span>Build a peptide stack based on your goals and check for interactions.</span>
+      </a>
+      <a href="meal-planner.html" class="tool-link-card">
+        <strong>GLP-1 Meal Planner</strong>
+        <span>Protein-focused meal plans designed for people on GLP-1 peptides.</span>
+      </a>
+    </div>
+  </div>
 
   <!-- Newsletter CTA -->
   <section class="tool-cta">

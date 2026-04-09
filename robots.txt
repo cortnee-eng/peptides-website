@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /twitter-banner-export.html
+Disallow: /twitter-profile-pic-export.html
 
 Sitemap: https://peptiderevealed.com/sitemap.xml
