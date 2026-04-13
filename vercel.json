@@ -1,6 +1,13 @@
 {
   "trailingSlash": false,
   "cleanUrls": false,
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "statusCode": 301 },
+    { "source": "/privacy-policy/", "destination": "/privacy-policy.html", "statusCode": 301 },
+    { "source": "/author/:path*", "destination": "/about.html", "statusCode": 301 },
+    { "source": "/wp-content/:path*", "destination": "/", "statusCode": 410 },
+    { "source": "/wp-includes/:path*", "destination": "/", "statusCode": 410 }
+  ],
   "headers": [
     {
       "source": "/(.*)",
